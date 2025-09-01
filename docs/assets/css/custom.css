@@ -1,0 +1,79 @@
+/* style.css para personalização do MkDocs Material */
+
+/* Exemplo: Ajuste de cores para elementos principais */
+
+
+:root {
+  --md-primary-fg-color: #193A6A;   /* Azul Pantone 654 */
+  --md-secondary-fg-color: #00543C; /* Verde Pantone 348 */
+  --md-auxiliary-fg-color: #FFD600; /* Amarelo Pantone 012C */
+  --md-bg-color: #F8F9FA;           /* Cinza claro */
+  --md-font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+}
+
+/* Personalização do cabeçalho */
+
+
+.md-header {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-auxiliary-fg-color);
+}
+
+/* Personalização de links */
+
+
+a {
+  color: var(--md-secondary-fg-color);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--md-auxiliary-fg-color);
+}
+
+/* Personalização de botões */
+
+
+.md-button {
+  background-color: var(--md-primary-fg-color);
+  color: #fff;
+  border: 2px solid var(--md-secondary-fg-color);
+}
+.md-button:hover {
+  background-color: var(--md-secondary-fg-color);
+  color: var(--md-auxiliary-fg-color);
+}
+
+/* Personalização de títulos */
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--md-auxiliary-fg-color);
+  font-weight: bold;
+}
+
+
+body, .md-typeset {
+  background-color: var(--md-bg-color);
+  font-family: var(--md-font-family);
+  color: var(--md-primary-fg-color);
+}
+
+p, li, td, th {
+  color: var(--md-primary-fg-color);
+}
+
+
+.markdown-alert, .md-typeset .admonition {
+  background-color: var(--md-auxiliary-fg-color);
+  color: var(--md-primary-fg-color);
+  border-left: 5px solid var(--md-secondary-fg-color);
+}
+
+.md-footer {
+  background-color: var(--md-secondary-fg-color);
+  color: #fff;
+}
+
+/* Adicione outras regras conforme necessário */
