@@ -31,15 +31,6 @@ Os commits devem seguir o formato:
 | cleanup     | Limpeza de código (remoção de código comentado/obsoleto)                  |
 | remove      | Remoção de arquivos ou funcionalidades                                    |
 
-### 1.3 Regras de Validação
-- Instale o hook `commit-msg.sh` para validação automática :
-  ```bash
-  cp commit-msg.sh .git/hooks/commit-msg
-  chmod +x .git/hooks/commit-msg
-  ```
-- Descrição limitada a 4 palavras na primeira linha
-- Emoji opcional no início da mensagem
-- Links must be provided in their full form (no shorteners) 
 
 
 ---
