@@ -1,25 +1,21 @@
-# RepositorioTemplate
-Esse repositório é para ser utilizado pelos grupos como um template inicial.
-As seções do Template NÃO DEVEM SER OMITIDAS, sendo TODAS RELEVANTES.
-Demais diretrizes constam no Moodle.
-
-**!! Atenção: Renomeie o seu repositório para (Ano.Semestre)(Turma)_(Grupo)_(NomeDoProjeto)_(Entrega_01)*. !!** 
-
-**!! *Não coloque os nomes dos alunos no título do repositório*. !!**
-
-**!! *Exemplo de título correto: 2025.1(T01)_G1_Embarcado_Entrega_01*. !!** 
- 
- (Apague esses comentários)
-
 # Nome do Projeto
 
 **Código da Disciplina**: FGA0208<br>
-**Número do Grupo**: XX<br>
-**Entrega**: 01<br>
+**Número do Grupo**: G5<br>
+**Entrega**: 01 (Módulo Base)<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
+| 22/1008786  |  [Mateus Villela](https://github.com/MVConsorte) |
+| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| xx/xxxxxx  |  xxxx xxxx xxxxx |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 | xx/xxxxxx  |  xxxx xxxx xxxxx |
 
@@ -31,11 +27,13 @@ Adicione 2 ou mais screenshots em termos de artefatos realizados na entrega.
 
 ## Há algo a ser executado?
 
-( ) SIM
-
-( ) NÃO
-
-Se SIM, insira um manual (ou um script) para auxiliar ainda mais os interessados na execução.
+- [ ] SIM
+- [x] NÃO
 
 ## Informações Complementares 
 Quaisquer outras informações adicionais podem ser descritas nessa seção.
+
+## Histórico de Versõa
+| ID | Descrição | Autor |Revisor | Data |
+| -- | -- | -- | -- | -- |
+| 01  |  Ajustes no documento template inicial | [Mateus](https://github.com/MVConsorte) | - | 02/09/25 |
