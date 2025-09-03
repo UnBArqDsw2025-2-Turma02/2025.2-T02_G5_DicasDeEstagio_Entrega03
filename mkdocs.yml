@@ -1,7 +1,7 @@
 site_name: DicasDeEstagio - G5
 #site_author: Mateus Villela
 site_description: Site voltado para a documentação do Grupo 5 de Arquitetura e Desenvolvimento de Software - 2025.2
-repo_url: https://github.com/UnBArqDsw2025-2-Turma02/G5_DicasDeEstagio_Entrega01
+repo_url: https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02_G5_DicasDeEstagio_Entrega01
 repo_name: 2025.2-DicasDeEstagio-Entrega1
 
 theme:
@@ -27,35 +27,33 @@ theme:
         name: Modo claro
 
 nav:
-  - Home: home.md
-  
-  #- Gravações:
-    #- Entregas: 'gravacoes/entregas/grav-entrega.md'
-    #- Reuniões: 'gravacoes/reunioes/grav-reunioes.md'
-    #- Ata de reunião 10/04/2025:
-    
-  # - Pré-Rastreabilidade:
-  #   - Rich-Picture: 'pre-rastreabilidade/rich-picture.md' 
-  
-  #- Planejamento:
-  #  - Políticas do Repositório:
-  #      - Branches: 'planejamento/politicas_repositorio/politica_branches.md'
-  #      - Commits:  'planejamento/politicas_repositorio/politica_commits.md'
-  #  - Cronograma:              'planejamento/cronograma.md'
-  #  - Cronograma Executado:    'planejamento/cronograma-executado.md'
-  #  - Ferramentas:             'planejamento/ferramentas.md'
-  #  - Heatmap:                 'planejamento/heatmap.md'
-  #  - Aplicativo: 'planejamento/lista-de-apps-avaliados.md'
-  #  - Termo de Uso:            'planejamento/termo-de-uso.md'
-
-  - Projetos: docs/Projeto/Projeto.md
+  - Home: docs/home.md
   - Base:
-      - 1. Desenho de Software (Base): docs/Base/1.Base.md
-      - 1.1. Design Sprint: docs/Base/1.1.DesignSprint.md
-      - 1.2. Artefato Generalista: docs/Base/1.2.ArtefatoGeneralista.md
-      - 1.3. Modelagem BPMN: docs/Base/1.3.ModelagemBPMN.md
-      - 1.4. Participações - Base: docs/Base/1.4.ParticipacoesBase.md
-      - 1.5. Iniciativas Extras - Base: docs/Base/1.5.IniciativasExtras.md
+    - Introdução: docs/Base/Base.md
+    - Participações: docs/Base/ParticipacoesBase.md
+    - Artefatos Generalistas: docs/Base/Artefatos-generalistas/ArtefatosGeneralistas.md
+    - BPMN: docs/Base/BPMN/ModelagemBPMN.md
+    - Design Sprint:
+      - Decide: docs/Base/Design-sprint/Decide.md
+      - Design Sprint: docs/Base/Design-sprint/DesignSprint.md
+      - Prototype: docs/Base/Design-sprint/Prototype.md
+      - Sketch: docs/Base/Design-sprint/Sketch.md
+      - Unpack: docs/Base/Design-sprint/Unpack.md
+      - Validate: docs/Base/Design-sprint/Validate.md
+    - Iniciativas Extras:
+      - Gravações: docs/Base/Iniciativas-extras/Gravacoes.md
+      - Iniciativas Extras: docs/Base/Iniciativas-extras/IniciativasExtras.md
+      - Atas de Reunião: docs/Base/Iniciativas-extras/Atas-de-reuniao/
+      - Planejamento:
+        - Cronograma Executado: docs/Base/Iniciativas-extras/Planejamento/CronogramaExecutado.md
+        - Cronograma Planejado: docs/Base/Iniciativas-extras/Planejamento/CronogramaPlanejado.md
+        - Ferramentas: docs/Base/Iniciativas-extras/Planejamento/Ferramentas.md
+        - Heatmap Disponibilidade: docs/Base/Iniciativas-extras/Planejamento/HeatmapDisponibilidade.md
+        - Políticas de Repositório:
+          - Política de Branches: docs/Base/Iniciativas-extras/Planejamento/Politicas-de-repositorio/PoliticaBranches.md
+          - Política de Commits: docs/Base/Iniciativas-extras/Planejamento/Politicas-de-repositorio/PoliticaCommits.md
+  - Projeto:
+    - Projeto: docs/Projeto/Projeto.md
 
         
 markdown_extensions:
