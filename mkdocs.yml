@@ -27,33 +27,33 @@ theme:
         name: Modo claro
 
 nav:
-  - Home: docs/home.md
+  - Home: home.md
   - Base:
-    - Introdução: docs/Base/Base.md
-    - Participações: docs/Base/ParticipacoesBase.md
-    - Artefatos Generalistas: docs/Base/Artefatos-generalistas/ArtefatosGeneralistas.md
-    - BPMN: docs/Base/BPMN/ModelagemBPMN.md
+    - Introdução: Base/Base.md
+    - Participações: Base/ParticipacoesBase.md
+    - Artefatos Generalistas: Base/Artefatos-generalistas/ArtefatosGeneralistas.md
+    - BPMN: Base/BPMN/ModelagemBPMN.md
     - Design Sprint:
-      - Decide: docs/Base/Design-sprint/Decide.md
-      - Design Sprint: docs/Base/Design-sprint/DesignSprint.md
-      - Prototype: docs/Base/Design-sprint/Prototype.md
-      - Sketch: docs/Base/Design-sprint/Sketch.md
-      - Unpack: docs/Base/Design-sprint/Unpack.md
-      - Validate: docs/Base/Design-sprint/Validate.md
+      - Decide: Base/Design-sprint/Decide.md
+      - Design Sprint: Base/Design-sprint/DesignSprint.md
+      - Prototype: Base/Design-sprint/Prototype.md
+      - Sketch: Base/Design-sprint/Sketch.md
+      - Unpack: Base/Design-sprint/Unpack.md
+      - Validate: Base/Design-sprint/Validate.md
     - Iniciativas Extras:
-      - Gravações: docs/Base/Iniciativas-extras/Gravacoes.md
-      - Iniciativas Extras: docs/Base/Iniciativas-extras/IniciativasExtras.md
-      - Atas de Reunião: docs/Base/Iniciativas-extras/Atas-de-reuniao/
+      - Gravações: Base/Iniciativas-extras/Gravacoes.md
+      - Iniciativas Extras: Base/Iniciativas-extras/IniciativasExtras.md
+      - Atas de Reunião: Base/Iniciativas-extras/Atas-de-reuniao/
       - Planejamento:
-        - Cronograma Executado: docs/Base/Iniciativas-extras/Planejamento/CronogramaExecutado.md
-        - Cronograma Planejado: docs/Base/Iniciativas-extras/Planejamento/CronogramaPlanejado.md
-        - Ferramentas: docs/Base/Iniciativas-extras/Planejamento/Ferramentas.md
-        - Heatmap Disponibilidade: docs/Base/Iniciativas-extras/Planejamento/HeatmapDisponibilidade.md
+        - Cronograma Executado: Base/Iniciativas-extras/Planejamento/CronogramaExecutado.md
+        - Cronograma Planejado: Base/Iniciativas-extras/Planejamento/CronogramaPlanejado.md
+        - Ferramentas: Base/Iniciativas-extras/Planejamento/Ferramentas.md
+        - Heatmap Disponibilidade: Base/Iniciativas-extras/Planejamento/HeatmapDisponibilidade.md
         - Políticas de Repositório:
-          - Política de Branches: docs/Base/Iniciativas-extras/Planejamento/Politicas-de-repositorio/PoliticaBranches.md
-          - Política de Commits: docs/Base/Iniciativas-extras/Planejamento/Politicas-de-repositorio/PoliticaCommits.md
+          - Política de Branches: Base/Iniciativas-extras/Planejamento/Politicas-de-repositorio/PoliticaBranches.md
+          - Política de Commits: Base/Iniciativas-extras/Planejamento/Politicas-de-repositorio/PoliticaCommits.md
   - Projeto:
-    - Projeto: docs/Projeto/Projeto.md
+    - Projeto: Projeto/Projeto.md
 
         
 markdown_extensions:
