@@ -42,9 +42,13 @@ Este diagrama representa as tarefas realizadas durante a etapa de design sprint.
 
 Este diagrama representa como a equipe se organizará utilizando o framework Unified Process.
 
+![BPMN Unified Process - G5](../../assets/imgs/BPMNUnified.jpg)
+
 ### **Software**
 
 Este diagrama representa o fluxo principal da aplicação, incluindo suas principais funções, como acessar o guia de estágio, candidatar a uma vaga e avaliar empresas.
+
+![BPMN Software - G5](../../assets/imgs/BPMNSoftware.png)
 
 ## **Conclusão**
 
@@ -57,6 +61,8 @@ A notação BPMN se mostrou uma ferramenta muito útil na diagramação de fluxo
 
 ## **Histórico de Versão**
 
-| Versão  | Descrição             | Autor                                   | Revisor | Data     |
-| :-: | --------------------- | --------------------------------------- | ------- | :------: |
-| 1.0  |  Criação do documento | [Henrique](https://github.com/henryqma) |   [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo)      | 04/09/25 |
+| Versão | Descrição | Autor | Data | Revisor |
+|--------|-------------------------------------------------------------|------------------------------------------|------------|------------------------------------------|
+| 1.0    | Criação do documento e organização de todo o conteúdo       | [Henrique Martins Alencar](https://github.com/henryqma) | 04/09/2025 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) |
+| 1.1    | Adição de imagens dos diagramas       | [Henrique Martins Alencar](https://github.com/henryqma) | 05/09/2025 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) |
+
