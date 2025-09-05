@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#politica-de-repositorio-padroes-de-branches" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -876,6 +881,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Política de Branches
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -888,6 +908,85 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-politica-de-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Política de Branches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Política de Branches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-estrutura-semantica-para-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Estrutura Semântica para pull request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-protecao-de-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Proteção de Branches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-padrao-de-nomenclatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Padrão de Nomenclatura
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1033,6 +1132,76 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-politica-de-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Política de Branches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Política de Branches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-estrutura-semantica-para-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Estrutura Semântica para pull request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-protecao-de-branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Proteção de Branches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-padrao-de-nomenclatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Padrão de Nomenclatura
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1051,9 +1220,76 @@
   
 
 
-  <h1>Política de Branches</h1>
+<h1 id="politica-de-repositorio-padroes-de-branches">Política de Repositório - Padrões de Branches</h1>
+<h2 id="1-politica-de-branches">1. Política de Branches</h2>
+<h3 id="11-estrutura-semantica-para-pull-request">1.1 Estrutura Semântica para pull request</h3>
+<p>Os requests devem seguir o formato:</p>
+<pre><code>## Descrição das Alterações
+Breve descrição das modificações realizadas
 
+## Tipo de Mudança
+- [ ] Feature (nova funcionalidade)
+- [ ] Fix (correção de bug)
+- [ ] Docs (mudança na documentação)
+- [ ] Refactor (refatoração de código)
+- [ ] Test (adição/atualização de testes)
 
+## Checklist de Validação
+### Pré-requisitos
+- [ ] Branch atualizada com develop/main
+- [ ] Commits seguem padrão semântico
+
+### Documentação
+- [ ] README atualizado (se necessário)
+- [ ] Comentários de código adicionados
+- [ ] Changelog atualizado
+
+### Revisão
+- [ ] Self-review do código realizada
+
+## Observações Adicionais
+&lt;!-- Comentários extras para os revisores --&gt;
+</code></pre>
+<h3 id="12-protecao-de-branches">1.2 Proteção de Branches</h3>
+<p>Branches protegidas (main, develop, release/<em>) devem ter:
+- </em><em>Requer pull request antes do merge</em><em>
+  - Requer review from Code Owners
+- </em><em>Status checks obrigatórios</em>*
+  - Requer status checks para passar
+  - Requer que as branches estejam atualizadas com base na main</p>
+<h3 id="13-padrao-de-nomenclatura">1.3 Padrão de Nomenclatura</h3>
+<ul>
+<li><code>main</code>: Branch principal de produção</li>
+<li><code>&lt;nome_participante&gt;</code>: Branch de integração e recursos</li>
+<li><code>feature/*</code>: Novos recursos</li>
+<li><code>release/*</code>: Preparação de releases</li>
+</ul>
+<hr />
+<h2 id="bibliografia">Bibliografia</h2>
+<ul>
+<li>Conventional Commits. Disponível em: https://www.conventionalcommits.org/. Acesso em: 02 set. 2025.</li>
+</ul>
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Descrição</th>
+<th>Autor</th>
+<th>Revisor</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Adição dos dados</td>
+<td><a href="https://github.com/aqela-batata-alt">Víctor Moreira</a></td>
+<td>-</td>
+<td>02/09/25</td>
+</tr>
+</tbody>
+</table>
 
 
 

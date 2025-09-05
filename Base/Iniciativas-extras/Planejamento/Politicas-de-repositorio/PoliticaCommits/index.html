@@ -75,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#politica-de-repositorio-padroes-de-commits" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -899,6 +904,21 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Política de Commits
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -911,6 +931,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-padroes-de-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Padrões de Commits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Padrões de Commits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-estrutura-semantica" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Estrutura Semântica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-tipos-de-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Tipos de Commit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1033,6 +1123,67 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-padroes-de-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Padrões de Commits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Padrões de Commits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-estrutura-semantica" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Estrutura Semântica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-tipos-de-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Tipos de Commit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1051,9 +1202,101 @@
   
 
 
-  <h1>Política de Commits</h1>
+<h1 id="politica-de-repositorio-padroes-de-commits">Política de Repositório - Padrões de Commits</h1>
+<h2 id="1-padroes-de-commits">1. Padrões de Commits</h2>
+<h3 id="11-estrutura-semantica">1.1 Estrutura Semântica</h3>
+<p>Os commits devem seguir o formato:</p>
+<pre><code>&lt;tipo&gt;[escopo opcional]: &lt;descrição breve&gt;
 
+[corpo opcional]
 
+[rodapé opcional]
+</code></pre>
+<p><strong>Exemplos</strong>:
+- <code>feat: adiciona autenticação JWT</code>
+- <code>fix(core): corrige loop infinito na linha 50</code>
+- <code>docs: atualiza guia de instalação</code></p>
+<h3 id="12-tipos-de-commit">1.2 Tipos de Commit</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>feat</td>
+<td>Novo recurso (relacionado ao MINOR do versionamento semântico)</td>
+</tr>
+<tr>
+<td>fix</td>
+<td>Correção de bug (relacionado ao PATCH do versionamento semântico)</td>
+</tr>
+<tr>
+<td>docs</td>
+<td>Alterações na documentação</td>
+</tr>
+<tr>
+<td>test</td>
+<td>Adição/ajuste de testes</td>
+</tr>
+<tr>
+<td>refactor</td>
+<td>Refatoração sem mudança de funcionalidade</td>
+</tr>
+<tr>
+<td>perf</td>
+<td>Melhorias de performance</td>
+</tr>
+<tr>
+<td>build</td>
+<td>Mudanças em dependências ou ferramentas de build</td>
+</tr>
+<tr>
+<td>ci</td>
+<td>Mudanças na configuração de CI/CD</td>
+</tr>
+<tr>
+<td>chore</td>
+<td>Tarefas administrativas (ex: atualizar .gitignore)</td>
+</tr>
+<tr>
+<td>cleanup</td>
+<td>Limpeza de código (remoção de código comentado/obsoleto)</td>
+</tr>
+<tr>
+<td>remove</td>
+<td>Remoção de arquivos ou funcionalidades</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="bibliografia">Bibliografia</h2>
+<ul>
+<li>Conventional Commits. Disponível em: https://www.conventionalcommits.org/. Acesso em: 02 set. 2025.</li>
+</ul>
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Descrição</th>
+<th>Autor</th>
+<th>Revisor</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>Adição dos dados</td>
+<td><a href="https://github.com/aqela-batata-alt">Víctor Moreira</a></td>
+<td>-</td>
+<td>02/09/25</td>
+</tr>
+</tbody>
+</table>
 
 
 
