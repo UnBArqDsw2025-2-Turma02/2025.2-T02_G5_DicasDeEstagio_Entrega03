@@ -120,7 +120,7 @@ A identificação dessas causas permite direcionar esforços para **reduzir a bu
 | Versão | Descrição | Autor | Data | Revisor |
 |--------|-------------------------------------------------------------|------------------------------------------|------------|------------------------------------------|
 | 1.0    | Criação do documento e organização de todo o conteúdo       | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | 04/09/2025 | [Henrique Martins Alencar](https://github.com/henryqma) |
-| 1.1    | Melhorias estruturais no documento                         | [Luiz Henrique Gomes Soares](https://github.com/luizhgsoares)    | 05/09/2025 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) |
+| 1.1    | Melhorias estruturais no documento                         | [Luiz Henrique Gomes Soares](https://github.com/luizh-gsoares)    | 05/09/2025 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) |
 
 ---
 
