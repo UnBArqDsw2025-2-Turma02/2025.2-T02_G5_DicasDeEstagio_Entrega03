@@ -8,7 +8,24 @@ Usando a lista de projetos indicados por grupo para o período letivo vigente, r
 Descreva aqui como foi realizada a etapa de compreensão do problema.
 
 ## 2. Esboçar (Sketch)
-Descreva aqui como foi realizada a etapa de esboço das soluções.
+
+### **Introdução**
+
+A etapa de esboço (sketch) tem como objetivo principal traduzir as ideias e desafios identificados no primeiro dia (mapeamento) em soluções visuais. O princípio fundamental dessa etapa é "trabalhar junto, mas sozinho". Essa fase incentiva cada membro da equipe a desenvolver suas próprias soluções de forma independente, isso garante que uma amplha gama de ideias seja explorada sem o viés de pensamento de grupo. O resultado final desta etapa não é um consenso, mas sim um conjunto de ideias e propostas para serem votadas na próxima etapa.
+
+### **Metodologia**
+
+Para a realização desta etapa, o grupo decidiu que cada membro deveria expor suas ideias fazendo Rich Pictures, que foram utilizados na próxima etapa para auxiliar na decisão do artefato generalista. Além disso, outros artefatos também foram produzidos como o 5W2H.
+
+### **Resultados**
+
+#### Rich Pictures
+
+<iframe width="768" height="496" src="https://miro.com/app/live-embed/uXjVJNoiQ50=/?focusWidget=3458764639522669176&embedMode=view_only_without_ui&embedId=231337506577" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+
+#### 5W2H
+
+<iframe width="768" height="496" src="https://miro.com/app/live-embed/uXjVJNoiQ50=/?focusWidget=3458764639523264579&embedMode=view_only_without_ui&embedId=836594742614" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 
 ## 3. Decidir (Decide)
 Descreva aqui como foi realizada a etapa de decisão sobre a melhor solução.
@@ -19,7 +36,7 @@ Descreva aqui como foi realizada a etapa de decisão sobre a melhor solução.
 
 A prototipação é uma etapa essencial no desenvolvimento de produtos, especialmente em projetos de software. Consiste na criação de __modelos iniciais__ que simulam funcionalidades e interfaces, permitindo a validação de ideias, identificação de falhas e refinamento de requisitos antes do investimento em desenvolvimento completo. Essa abordagem reduz custos, melhora a comunicação entre equipes e garante maior alinhamento com as expectativas dos usuários.
 
-## __Metodologia__
+### __Metodologia__
 
 Optamos por desenvolver um protótipo de alta fidelidade utilizando a plataforma [Figma](https://figma.com), visando proporcionar uma visão clara e interativa do produto final.
 
@@ -30,7 +47,7 @@ Os membros envolvidos na elaboração do protótipo foram:
 - Daniel Ferreira
 - Paulo Cerqueira
 
-## __Resultados__
+### __Resultados__
 
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/lB8oMh7D1uVZTKp1AudwF0/GRUPO-5--ARQUITETURA?node-id=7-17&embed-host=share" allowfullscreen></iframe>
 
@@ -137,22 +154,23 @@ Com base na análise, o resultado da validação se enquadrará em uma de três 
 *   [ ] Reunião de síntese e análise realizada com a equipe de validação.
 *   [ ] Relatório de insights e plano de próximos passos definido e acordado com toda a equipe.
 
-### Participações & Commits
+## Participações & Commits
 Inclua o quadro de participações e os commits dos membros.
 
-### Justificativas & Senso Crítico
+## Justificativas & Senso Crítico
 Inclua as justificativas e o senso crítico sobre o trabalho realizado.
 
-### Comentários Gerais sobre o Trabalho em Equipe
+## Comentários Gerais sobre o Trabalho em Equipe
 Inclua comentários gerais sobre o trabalho em equipe.
 
-### Referências
+## Referências
 *   [GV Design Sprint Guide](https://www.gv.com/sprint/) 
 *   [The Product Design Sprint: Validate (Day 5) - GV Library](https://library.gv.com/the-product-design-sprint-validate-day-5-761292b20d05) 
 *   [Interaction Design Foundation - Design Sprints](https://www.interaction-design.org/literature/topics/design-sprints) 
 
-### __Histórico de Versão__
+## __Histórico de Versão__
 
 | Versão | Alteração                 | Autor(es)      | Revisor(es)   |
 | ------ | ------------------------- | -------------- | ------------- |
 | 1.0    | Criação do documento      | Paulo Cerqueira    | Daniel Ferreira |
+| 1.1    | Adição da etapa Sketch     | [Henrique Martins Alencar](https://github.com/henryqma)    |  |
