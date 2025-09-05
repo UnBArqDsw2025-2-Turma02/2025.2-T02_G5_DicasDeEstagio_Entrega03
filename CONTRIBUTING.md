@@ -119,7 +119,7 @@ git add .
 git commit -m "tipo: descrição clara da mudança"
 
 # Envie para seu fork
-git push origin sua-branch
+git push origin <sua-branch>
 ```
 
 ## Diretrizes de Commit
