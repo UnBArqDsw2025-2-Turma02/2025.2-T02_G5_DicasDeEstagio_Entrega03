@@ -20,7 +20,7 @@ Abaixo está o diagrama de Causa-Efeito elaborado pelo Grupo 5.
 
 ![Diagrama de Causa-Efeito — G5](/assets/imgs/G5_ARQDSW_1.jpg)
 
-Figura: Diagrama de Causa-Efeito (arquivo: `assets/imgs/G5_ARQDSW_1.jpg`).
+Figura: Diagrama de Causa-Efeito (arquivo: `../../assets/imgs/G5_ARQDSW_1.jpg`).
 
 
 ## Categorias e Causas Identificadas
