@@ -18,7 +18,7 @@ O Diagrama de Causa-Efeito foi utilizado para identificar, de forma estruturada,
 
 Abaixo está o diagrama de Causa-Efeito elaborado pelo Grupo 5.
 
-![Diagrama de Causa-Efeito — G5](../../assets/imgs/G5_ARQDSW_1.jpg)
+![Diagrama de Causa-Efeito — G5](/assets/imgs/G5_ARQDSW_1.jpg)
 
 Figura: Diagrama de Causa-Efeito (arquivo: `assets/imgs/G5_ARQDSW_1.jpg`).
 
