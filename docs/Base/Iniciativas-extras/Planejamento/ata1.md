@@ -25,7 +25,7 @@ Discutiu-se sobre os modelos e templates de artefatos (cronogroma, ata de reuni�
     <li>WhatsApp: Comunicação rápida da equipe;
     <li>Teams: Gravação das reuniões e discussões formais;
     <li>GitHub: Versionamento da documentação e códigos;
-    <li>MkDocs: Criação e hospedagem da documentação do projeto;e.
+    <li>MkDocs: Criação e hospedagem da documentação do projeto;
 </ul>
 </div>
 --- 
