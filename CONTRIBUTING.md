@@ -62,7 +62,7 @@ Existem várias maneiras de contribuir com o projeto:
 
 2. **Clone seu fork**
    ```bash
-   git clone https://github.com/SEU_USUARIO/2025.2-T02_G5_DicasDeEstagio_Entrega01.git
+   git clone https://github.com/<seu-usuario>/2025.2-T02_G5_DicasDeEstagio_Entrega01.git
    cd 2025.2-T02_G5_DicasDeEstagio_Entrega01
    ```
 
