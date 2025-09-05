@@ -28,9 +28,6 @@ Produzir **artefatos independente de metodologia** que sintetize o escopo e os p
 
 <img src="../../assets/imgs/RichPicture.jpg" alt="Rich Picture" width="600"/>
 
-
-
-
 </div>
 
 **O que o Rich Picture cobre:**

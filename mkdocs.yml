@@ -27,7 +27,7 @@ theme:
         name: Modo claro
 
 nav:
-  - Home: home.md
+  - Início: README.md
   - Base:
     - Introdução: Base/Base.md
     - Participações: Base/ParticipacoesBase.md
@@ -57,8 +57,6 @@ nav:
         - Políticas de Repositório:
           - Política de Branches: Base/Iniciativas-extras/Planejamento/Politicas-de-repositorio/PoliticaBranches.md
           - Política de Commits: Base/Iniciativas-extras/Planejamento/Politicas-de-repositorio/PoliticaCommits.md
-  - Projeto:
-    - Projeto: Projeto/Projeto.md
 
         
 markdown_extensions:
