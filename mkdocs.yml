@@ -31,7 +31,9 @@ nav:
   - Base:
     - Introdução: Base/Base.md
     - Participações: Base/ParticipacoesBase.md
-    - Artefatos Generalistas: Base/Artefatos-generalistas/ArtefatosGeneralistas.md
+    - Artefatos Generalistas:
+      - Visão geral: Base/Artefatos-generalistas/ArtefatosGeneralistas.md
+      - Diagrama Causa-Efeito: Base/Artefatos-generalistas/CausaEfeito.md
     - BPMN: Base/BPMN/ModelagemBPMN.md
     - Design Sprint:
       - Decide: Base/Design-sprint/Decide.md
