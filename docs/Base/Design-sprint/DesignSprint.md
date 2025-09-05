@@ -1,62 +1,158 @@
 # 1.1. Módulo Design Sprint
 
-# Design Sprint
+Usando a lista de projetos indicados por grupo para o período letivo vigente, realizar Design Sprint para levantamento dos requisitos.
 
-O **Design Sprint** é uma metodologia desenvolvida pelo Google Ventures que permite **validar ideias, reduzir riscos de desenvolvimento e orientar decisões estratégicas** em apenas cinco dias.  
-Sua estrutura baseia-se em cinco etapas sequenciais, conduzindo a equipe de uma análise inicial ampla até a validação prática de hipóteses com usuários.
+## Estrutura do Design Sprint
+
+## 1. Compreender (Unpack)
+Descreva aqui como foi realizada a etapa de compreensão do problema.
+
+## 2. Esboçar (Sketch)
+Descreva aqui como foi realizada a etapa de esboço das soluções.
+
+## 3. Decidir (Decide)
+Descreva aqui como foi realizada a etapa de decisão sobre a melhor solução.
+
+## 4. Prototipar (Prototype)
+
+### __Introdução__
+
+A prototipação é uma etapa essencial no desenvolvimento de produtos, especialmente em projetos de software. Consiste na criação de __modelos iniciais__ que simulam funcionalidades e interfaces, permitindo a validação de ideias, identificação de falhas e refinamento de requisitos antes do investimento em desenvolvimento completo. Essa abordagem reduz custos, melhora a comunicação entre equipes e garante maior alinhamento com as expectativas dos usuários.
+
+## __Metodologia__
+
+Optamos por desenvolver um protótipo de alta fidelidade utilizando a plataforma [Figma](https://figma.com), visando proporcionar uma visão clara e interativa do produto final.
+
+Os membros envolvidos na elaboração do protótipo foram:
+
+- Letícia da Silva Monteiro
+- Breno Alexandre
+- Daniel Ferreira
+- Paulo Cerqueira
+
+## __Resultados__
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/lB8oMh7D1uVZTKp1AudwF0/GRUPO-5--ARQUITETURA?node-id=7-17&embed-host=share" allowfullscreen></iframe>
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/lB8oMh7D1uVZTKp1AudwF0/GRUPO-5--ARQUITETURA?node-id=92-31&embed-host=share" allowfullscreen></iframe>
 
 
----
 
-## 1. Entender  
-Nesta fase, a equipe realiza um **diagnóstico aprofundado do problema**. São coletados dados de mercado, análises técnicas e feedbacks de stakeholders para estabelecer uma visão compartilhada.  
-O objetivo é construir uma **base sólida de conhecimento** que alinhe todos os envolvidos e permita identificar os principais pontos críticos do desafio.
+## 5. Validar (Validate)
 
+### 1. **Objetivos de Validação**
 
----
+O objetivo principal da validação é testar o protótipo de alta fidelidade com usuários reais para aprender o que funciona, o que não funciona e como melhorar o produto antes de qualquer desenvolvimento dispendioso.
 
-## 2. Divergir  
-O momento é destinado à **exploração ampla de soluções**. Técnicas como *brainstorming estruturado* e *crazy 8’s* são aplicadas para incentivar a criatividade e garantir diversidade de abordagens.  
-Essa fase é essencial para ampliar o leque de alternativas antes da convergência, reduzindo vieses individuais e promovendo inovação.
+*   **Objetivos de Aprendizado:**
+    *   Validar se a proposta de valor (conectar estudantes a dicas de estágio valiosas) é clara e atraente.
+    *   Identificar pontos de atrito no fluxo de navegação e usabilidade da interface.
+    *   Coletar feedback sobre a clareza e utilidade.
 
-[Link dos Requisitos Organizados](https://github.com/orgs/UnBArqDsw2025-2-Turma02/projects/3/views/1?pane=issue&itemId=127573402)
+*   **Métricas de Sucesso Qualitativas:**
+    *   **Reação Emocional:** Entusiasmo, confusão ou frustração durante a apresentação do protótipo.
+    *   **Intenção de Uso:** Se o usuário expressa desejo de usar o produto no futuro.
+    *   **Compreensibilidade:** Se o usuário entende o propósito do app sem explicações prévias.
 
+### 2. **Preparação para a Validação**
 
-## 3. Decidir  
-Aqui ocorre a **seleção e priorização das ideias mais viáveis**. São aplicados métodos de votação e critérios técnicos (ex.: impacto, esforço, viabilidade técnica e valor para o usuário).  
-A etapa assegura que a decisão não seja arbitrária, mas fundamentada em dados e alinhada aos objetivos estratégicos do projeto.
+### a) Participantes
+*   **Perfil Alvo:** Estudantes universitários de qualquer semestre, que estejam ativamente buscando ou realizando estágios.
+*   **Quantidade:** Pelo menos 1 usuário.
 
+### b) Protótipo e Ambiente de Teste
+*   **Ferramenta de Prototipagem:** Figma.
+*   **Estado do Protótipo:** Estático e de alta fidelidade, simulando o visual desejado do produto.
+*   **Configuração do Teste:** O teste será realizado presencialmente. A sessão será gravada (com consentimento) para análise posterior.
+*   **Checklist de Preparação:**
+    *   [X] Link do protótipo.
+    *   [X] Guia de roteiro de entrevista revisado.
+    *   [X] Termo de consentimento preparado para os participantes.
 
+### c) Termo de consentimento
+```
+Eu autorizo o uso das respostas fornecidas por mim na entrevista realizada para a matéria Arquitetura e Desenho de Software.
+Declaro estar ciente de que:
+Minhas respostas poderão ser utilizadas parcial ou integralmente, respeitando o contexto original.
+O uso será exclusivamente para os fins informados acima, sem qualquer finalidade comercial indevida.
+Tenho direito de solicitar a retirada de minha identificação, caso não queira ser citado(a) nominalmente.
+Esta autorização é concedida de forma gratuita e por tempo indeterminado, salvo manifestação em contrário.
+Por ser expressão da verdade, firmo o presente termo.
 
-<iframe width="100%" height="400" src="https://miro.com/app/board/uXjVJNoiQ50=/" frameborder="0" scrolling="no" allowfullscreen></iframe>
+Assinado _____________________________________________
 
+______/_____/_______.
+```
 
+### 3. **Roteiro da Sessão de Validação (Script)**
 
-**Importância dos esboços:**  
-Durante essas três primeiras etapas, a produção de **esboços de processos, fluxos de interação e possíveis interfaces** foi decisiva para a clareza do trabalho.  
-Esse exercício visual permitiu mapear relações entre componentes do software e tornar a discussão mais objetiva, criando um ponto de referência concreto para validações posteriores.
+**Duração Total:** 37 minutos por sessão.
 
----
+| Tempo | Fase | Objetivo | Perguntas/Tarefas Chave | Importância |
+| :--- | :--- | :--- | :--- | :--- |
+| **2 min** | **Introdução** | Explicar o formato. | "Agradeço por participar. Hoje vamos testar um protótipo de um novo app." | Baixa |
+| **5 min** | **Contexto & Hábitos** | Entender o background do usuário. | "Você já buscou informações sobre estágios? Se sim, onde? E como foi sua experiência?"  | Alta |
+| **25 min** | **Teste do Protótipo** | Coletar feedback. | **Tarefa 1:** "Com base no protótipo, qual sua opinião sobre o design escolhido?" <br> **Tarefa 2:** "Sobre as funções, quais você acha mais importantes e quais você acha que estão faltando?" | Alta |
+| **5 min** | **Debriefing & Encerramento** | Coletar impressões gerais e agradecer. | "No geral, o que você achou? Você usaria um app como esse? Algo que poderia mudar?" | Alta |
 
-## 4. Prototipar  
-Nesta etapa, a equipe desenvolve um **protótipo funcional de baixa ou média fidelidade**. O protótipo deve simular de maneira realista a experiência do usuário, possibilitando testes de usabilidade sem a necessidade de codificação completa.  
-A prototipagem reduz custos e acelera a iteração, transformando ideias abstratas em algo tangível e testável.
+### 4. **Papéis e Responsabilidades da Equipe**
 
-<iframe width="100%" height="400" src="https://embed.figma.com/design/lB8oMh7D1uVZTKp1AudwF0/GRUPO-5--ARQUITETURA?node-id=0-1&embed-host=share" allowfullscreen></iframe>" 
+*   **Facilitador/Interviewer (1 pessoa):** Conduz a sessão, faz as perguntas e guia o participante. Deve criar um ambiente confortável e neutro.
+*   **Reporter/Anotador (1 pessoa):** Responsável por tomar notas detalhadas em tempo real, focando em citações literais e comportamentos observados. Pode usar uma planilha compartilhada.
 
-## 5. Testar  
-O protótipo é submetido a **testes com usuários representativos**, coletando evidências qualitativas e quantitativas sobre sua aceitação e eficácia.  
-Essa fase fornece **validação empírica das hipóteses** e direciona ajustes no design ou nas funcionalidades, reduzindo o risco de insucesso na implementação final.
+### 5. **Técnica de Análise de Dados: Mapeamento de Padrões**
 
----
+Após a sessão, os dados serão revisados pela equipe e usados para ver se os resultados são esperados ou não.
 
-## Histórico de versões
+1.  **Compilação de Notas:** A gravação será publicada e adicionada ao Pages.
+2.  **Identificação de Padrões:** A equipe busca por:
+    *   **Problemas de Usabilidade:** Onde o usuário se frustrou.
+    *   **Reações Positivas:** O que os usuários amaram e elogiaram.
+    *   **Insights Surpreendentes:** Comportamentos ou feedbacks não antecipados.
+3.  **Priorização:** Os problemas são categorizados por **Gravidade** (Bloqueador, Major, Minor).
 
-<font size="3"><p style="text-align: center">Tabela 1: Histórico de versões</p></font>
+### 6. **Resultados e Próximos Passos**
 
-| Versão | Descrição            | Autor                                                                 | Data       | Revisor                                                                 |
-|:------:|:--------------------:|:---------------------------------------------------------------------:|:----------:|:----------------------------------------------------------------------:|
-| 1.0   | Criação do documento | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo)     | 04/09/2025 | [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares)|
+[Vídeo da validação com usuário]() (Não disponível ainda.)
 
-<font size="2"><p style="text-align: center">Fonte: [Breno Alexandre Soares Garcia](https://github.com/brenoalexandre0), [Daniel Ferreira Nunes](https://github.com/Mach1r0), [Eduardo Ferreira de Aquino](https://github.com/fxred), [Felipe Nunes de Mello](https://github.com/FelipeNunesdM), [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares), [Henrique Martins Alencar](https://github.com/henryqma), [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo), [Mateus Villela Consorte](https://github.com/MVConsorte), [Paulo Henrique Virgilio Cerqueira](https://github.com/paulocerqr) e [Víctor Moreira Almeida](https://github.com/aqela-batata-alt) 2025.</p></font>
+Com base na análise, o resultado da validação se enquadrará em uma de três categorias:
 
+| Resultado | Descrição | Ação Recomendada para o Projeto |
+| :--- | :--- | :--- |
+| **Sucesso** | A maioria das ideias funcionou; o conceito central foi validado. | **Iterar no protótipo:** Ajustar os problemas de usabilidade identificados e prosseguir para o desenvolvimento. |
+| **Misto** | Algumas coisas funcionaram, outras falharam criticamente. | **Iterar profundamente:** Manter as soluções que funcionaram e refazer as que falharam. Realizar um novo ciclo de teste focado nas partes problemáticas. |
+| **Falha** | O conceito central não foi compreendido ou foi rejeitado pelos usuários. | **Refazer:** Reavaliar a premissa do problema e as suposições iniciais. É um ótimo aprendizado que evitou um grande desperdício de recursos. |
+
+**Decisão Final do Decider:**
+*   [ ] Prosseguir para desenvolvimento
+*   [ ] Realizar uma segunda sprint de iteração
+*   [ ] Redefinir o escopo e a direção do projeto
+
+### 7. **Checklist de Validação**
+
+*   [ ] Protótipo estático de alta fidelidade finalizado.
+*   [ ] Roteiro de entrevista aprovado pela equipe.
+*   [ ] Tecnologia (gravação) testada e funcionando.
+*   [ ] Sessão realizada e notas detalhadas tomadas.
+*   [ ] Reunião de síntese e análise realizada com a equipe de validação.
+*   [ ] Relatório de insights e plano de próximos passos definido e acordado com toda a equipe.
+
+### Participações & Commits
+Inclua o quadro de participações e os commits dos membros.
+
+### Justificativas & Senso Crítico
+Inclua as justificativas e o senso crítico sobre o trabalho realizado.
+
+### Comentários Gerais sobre o Trabalho em Equipe
+Inclua comentários gerais sobre o trabalho em equipe.
+
+### Referências
+*   [GV Design Sprint Guide](https://www.gv.com/sprint/) 
+*   [The Product Design Sprint: Validate (Day 5) - GV Library](https://library.gv.com/the-product-design-sprint-validate-day-5-761292b20d05) 
+*   [Interaction Design Foundation - Design Sprints](https://www.interaction-design.org/literature/topics/design-sprints) 
+
+### __Histórico de Versão__
+
+| Versão | Alteração                 | Autor(es)      | Revisor(es)   |
+| ------ | ------------------------- | -------------- | ------------- |
+| 1.0    | Criação do documento      | Paulo Cerqueira    | Daniel Ferreira |
