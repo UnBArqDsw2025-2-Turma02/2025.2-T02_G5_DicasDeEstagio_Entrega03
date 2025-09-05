@@ -26,7 +26,7 @@ Produzir **artefatos independente de metodologia** que sintetize o escopo e os p
 > Por que Rich Picture? É expressivo, generalista e não amarra a equipe a uma metodologia específica — ideal para comunicar **visão de sistema**, **atores**, **fluxos** e **pontos de dor** do nosso portal de estágios.
 <div align="center">
 
-<img src="./../../assets/imgs/RichPicture.jpg" alt="Rich Picture" width="600"/>
+<img src="../../assets/imgs/RichPicture.jpg" alt="Rich Picture" width="600"/>
 
 
 
@@ -46,14 +46,17 @@ Produzir **artefatos independente de metodologia** que sintetize o escopo e os p
 
 
 <div align="center">
-  <img src="./../../assets/imgs/EspinhadePeixe.jpeg" alt="Espinha de Peixe" width="600"/>
+  <img src="../../assets/imgs/EspinhadePeixe.jpeg" alt="Espinha de Peixe" width="600"/>
 </div>
 
 
 ## Mapa Mental 
 
+<div align="center">
+  <img src="../../assets/imgs/MapaMental.png" alt="Mapa Mental" width="600"/>
+</div>
 
-- **Uso do Mapa Mental:** Além do Rich Picture e do Ishikawa, também elaboramos um **Mapa Mental**. Escolhemos esse artefato por ser extremamente intuitivo e de fácil construção, principalmente em uma etapa inicial e ainda bastante **experimental** do projeto, em que não temos pleno domínio do software a ser desenvolvido. O mapa mental nos ajudou a organizar ideias de forma rápida, visualizar conexões entre conceitos e levantar hipóteses sem nos prender a estruturas rígidas. Dessa forma, ele serviu como um guia flexível para explorar possibilidades antes de definir requisitos mais detalhados.
+**Uso do Mapa Mental:** Além do Desenho inspirado no Rich Picture e do Ishikawa, também elaboramos um **Mapa Mental**. Escolhemos esse artefato por ser intuitivo e de fácil construção, principalmente em uma etapa inicial do projeto. O mapa mental nos ajudou a organizar ideias de forma rápida, visualizar conexões entre conceitos e levantar hipóteses sem nos prender a estruturas rígidas.
 
 
 ## Justificativas & Senso Crítico
