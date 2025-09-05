@@ -43,7 +43,10 @@ nav:
     - Iniciativas Extras:
       - Gravações: Base/Iniciativas-extras/Gravacoes.md
       - Iniciativas Extras: Base/Iniciativas-extras/IniciativasExtras.md
-      - Atas de Reunião: Base/Iniciativas-extras/Atas-de-reuniao/
+      - Atas de Reunião:
+        - Ata 1 - 24/08/2025: Base/Iniciativas-extras/Planejamento/ata1.md
+        - Ata 2 - 27/08/2025: Base/Iniciativas-extras/Planejamento/ata2.md
+        - Ata 3 - 02/09/2025: Base/Iniciativas-extras/Planejamento/ata3.md
       - Planejamento:
         - Cronograma Executado: Base/Iniciativas-extras/Planejamento/CronogramaExecutado.md
         - Cronograma Planejado: Base/Iniciativas-extras/Planejamento/CronogramaPlanejado.md
