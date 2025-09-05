@@ -57,6 +57,6 @@ A notação BPMN se mostrou uma ferramenta muito útil na diagramação de fluxo
 
 ## **Histórico de Versão**
 
-| ID  | Descrição             | Autor                                   | Revisor | Data     |
+| Versão  | Descrição             | Autor                                   | Revisor | Data     |
 | :-: | --------------------- | --------------------------------------- | ------- | :------: |
-| 01  |  Criação do documento | [Henrique](https://github.com/henryqma) |         | 04/09/25 |
+| 1.0  |  Criação do documento | [Henrique](https://github.com/henryqma) |   [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo)      | 04/09/25 |

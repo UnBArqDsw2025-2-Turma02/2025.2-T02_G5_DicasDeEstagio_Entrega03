@@ -10,6 +10,7 @@ Para fundamentar nossa aplicação e compreender melhor o que é nosso produto, 
 - **Rich Picture**  
 - **Diagrama Causa–Efeito/Ishikawa**  
 - **Mapa Mental**
+- **5W2H**
 
 
 
@@ -125,4 +126,4 @@ A identificação dessas causas permite direcionar esforços para **reduzir a bu
 ---
 
 
-
+<font size="2"><p style="text-align: center">Fonte: [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) e [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) 2025.</p></font>
