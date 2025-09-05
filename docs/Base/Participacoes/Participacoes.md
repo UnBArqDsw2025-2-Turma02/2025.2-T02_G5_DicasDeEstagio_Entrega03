@@ -49,9 +49,9 @@ A entrega contempla três frentes principais de trabalho: **Design Sprint - Foco
 | Daniel Ferreira Nunes | Modelagem no Grupo 1 (Unified Process). | [Commits](#) |
 | Eduardo Ferreira de Aquino | Modelagem no Grupo 1 (Unified Process). | [Commits](#) |
 | Felipe Nunes de Mello | Modelagem no Grupo 3 (Design Sprint). | [Commits](#) |
-| Luiz Henrique Guimarães Soares | Modelagem no Grupo 2. | [Commits](#) |
-| Henrique Martins Alencar | Modelagem no Grupo 2. | [Commits](#) |
-| Letícia da Silva Monteiro | Modelagem no Grupo 2. | [Commits](#) |
+| Luiz Henrique Guimarães Soares | Modelagem no Grupo 2. | https://drive.google.com/file/d/1iw03zlItztZxxTCjDqrLGWTnDr2oeBRh/view |
+| Henrique Martins Alencar | Modelagem no Grupo 2. | https://drive.google.com/file/d/1iw03zlItztZxxTCjDqrLGWTnDr2oeBRh/view |
+| Letícia da Silva Monteiro | Modelagem no Grupo 2. | https://drive.google.com/file/d/1iw03zlItztZxxTCjDqrLGWTnDr2oeBRh/view |
 | Mateus Villela Consorte | Modelagem no Grupo 3 (Design Sprint). | [Commits](#) |
 | Paulo Henrique Virgilio Cerqueira | Modelagem no Grupo 1 (Unified Process). | [Commits](#) |
 | Víctor Moreira Almeida | Modelagem no Grupo 3 (Design Sprint). | [Commits](#) |
