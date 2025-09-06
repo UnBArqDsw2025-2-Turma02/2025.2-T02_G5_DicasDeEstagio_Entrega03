@@ -113,6 +113,7 @@ A identificação dessas causas permite direcionar esforços para **reduzir a bu
 
 ![5W2H — G5](../../assets/imgs/5W2H.jpg)
 
+<font size="2"><p style="text-align: center">Fonte: [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo), [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) e [Felipe Nunes]https://github.com/FelipeNunesdM.png?size=100() 2025.</p></font>
 
   
 ## Referências
