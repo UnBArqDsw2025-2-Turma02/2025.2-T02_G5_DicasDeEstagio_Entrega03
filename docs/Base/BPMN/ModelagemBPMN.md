@@ -43,12 +43,17 @@ Este diagrama representa as tarefas realizadas durante a etapa de design sprint.
 Este diagrama representa como a equipe se organizará utilizando o framework Unified Process.
 
 ![BPMN Unified Process - G5](../../assets/imgs/BPMNUnified.jpg)
+<font size="2"><p style="text-align: center">Fonte: [Eduardo Ferreira de Aquino](https://github.com/fxred), [Daniel Ferreira Nunes](https://github.com/Mach1r0) e [Paulo Henrique Virgilio Cerqueira](https://github.com/paulocerqr), 2025.</p></font>
+
 
 ### **Software**
 
 Este diagrama representa o fluxo principal da aplicação, incluindo suas principais funções, como acessar o guia de estágio, candidatar a uma vaga e avaliar empresas.
 
 ![BPMN Software - G5](../../assets/imgs/BPMNSoftware.png)
+<font size="2"><p style="text-align: center">Fonte: [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo), [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) e [Henrique Martins](https://github.com/henryqma.png?size=100), 2025.</p></font>
+
+
 
 ## **Conclusão**
 
@@ -61,8 +66,9 @@ A notação BPMN se mostrou uma ferramenta muito útil na diagramação de fluxo
 
 ## **Histórico de Versão**
 
-| Versão | Descrição | Autor | Data | Revisor |
+| Versão | Descrição | Autor | Revisor | Data |
 |--------|-------------------------------------------------------------|------------------------------------------|------------|------------------------------------------|
-| 1.0    | Criação do documento e organização de todo o conteúdo       | [Henrique Martins Alencar](https://github.com/henryqma) | 04/09/2025 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) |
-| 1.1    | Adição de imagens dos diagramas       | [Henrique Martins Alencar](https://github.com/henryqma) | 05/09/2025 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) |
+| 1.0    | Criação do documento e organização de todo o conteúdo       | [Henrique Martins Alencar](https://github.com/henryqma) | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | 04/09/2025 |
+| 1.1    | Adição de imagens dos diagramas       | [Henrique Martins Alencar](https://github.com/henryqma) |  [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | 05/09/2025 |
+| 1.2   | Adicionando fontes e outros diagramas  |[Letícia da Silva Monteiro](https://github.com/leticiamonteiroo)| [Henrique Martins Alencar](https://github.com/henryqma) | 05/09/2025 |  |
 

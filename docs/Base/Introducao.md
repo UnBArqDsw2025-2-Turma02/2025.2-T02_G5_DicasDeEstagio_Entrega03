@@ -1,6 +1,5 @@
 # 1. Desenho de Software (Base)
 
-<img src="../assets/imgs/LogoPrincipalG5.png" alt="Logo do Grupo 5" width="200">
 
 **Projeto DicasDeEstagio - Grupo 5**  
 *Arquitetura e Desenho de Software - UnB/FCTE - 2025.2*
@@ -38,9 +37,9 @@ Metodologia aplicada para levantamento de requisitos e prototipação.
 
 - Decide: Decisões de design
 
-- Prototype: Protótipos interativos
+- Prototype: Protótipos
 
-- Validate: Validação com usuários
+- Validate: Validação
 
 ### [1.2. Artefatos Generalistas](Artefatos-generalistas/ArtefatosGeneralistas.md)
 Artefatos independentes de metodologia para compreensão sistêmica.
@@ -69,8 +68,6 @@ Atividades complementares realizadas pela equipe.
 - Gravações do processo
 
 - Planejamento e atas de reunião
-
-- Cronogramas
 
 - Ferramentas utilizadas
 
@@ -108,27 +105,17 @@ Atividades complementares realizadas pela equipe.
 
 - Rotação de papéis
 
----
+**Estatísticas da Fase Base**  
 
-## Metodologia Aplicada
+- 5 etapas da Design Sprint concluídas  
 
-**Framework Principal:** Design Sprint (Google Ventures)
+- 3 artefatos generalistas produzidos  
 
-- 5 etapas adaptadas para o contexto acadêmico
+- 2 processos BPMN modelados  
 
-- Ferramentas: Miro, Figma, Microsoft Teams
+- 1 protótipos de alta fidelidade criados  
 
-**Técnicas Complementares:**
-
-- Rich Picture
-
-- Diagrama Ishikawa
-
-- BPMN 2.0
-
-- Prototipação de Alta Fidelidade
-
----
+- 10 membros participantes
 
 ## Referências
 
@@ -142,24 +129,11 @@ Atividades complementares realizadas pela equipe.
 
 ## Versionamento & Participações
 
-| Versão | Data | Descrição | Autor(es) | Revisor(es) |
+| Versão | Descrição | Autor | Revisor | Data|
 |:------:|:----:|:---------:|:---------:|:-----------:|
-| 1.0 | 05/09/2025 | Criação da versão melhorada do documento Base | [Luiz Henrique G. Soares](https://github.com/luizh-gsoares) | Leticia Monteiro |
+| 1.0 | Criação da versão melhorada do documento Base | [Luiz Henrique G. Soares](https://github.com/luizh-gsoares) | Leticia Monteiro | 05/09/2025 | 
 
----
+<font size="2"><p style="text-align: center">Fonte: [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) e [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) 2025.</p></font>
 
-**Próximo Módulo:** Projeto
 
----
 
-**Estatísticas da Fase Base**  
-
-- 5 etapas da Design Sprint concluídas  
-
-- 3 artefatos generalistas produzidos  
-
-- 3 processos BPMN modelados  
-
-- 4+ protótipos de alta fidelidade criados  
-
-- 10 membros participantes

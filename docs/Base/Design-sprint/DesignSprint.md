@@ -25,12 +25,13 @@ Optamos por desenvolver um protótipo de alta fidelidade utilizando a plataforma
 
 Os membros envolvidos na elaboração do protótipo foram:
 
-- Letícia da Silva Monteiro
-- Breno Alexandre
+- Letícia Monteiro
 - Daniel Ferreira
 - Paulo Cerqueira
 
 ## __Resultados__
+
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/lB8oMh7D1uVZTKp1AudwF0/GRUPO-5--ARQUITETURA?node-id=0-1&embed-host=share" allowfullscreen></iframe>
 
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/lB8oMh7D1uVZTKp1AudwF0/GRUPO-5--ARQUITETURA?node-id=7-17&embed-host=share" allowfullscreen></iframe>
 
@@ -64,24 +65,9 @@ O objetivo principal da validação é testar o protótipo de alta fidelidade co
 *   **Ferramenta de Prototipagem:** Figma.
 *   **Estado do Protótipo:** Estático e de alta fidelidade, simulando o visual desejado do produto.
 *   **Configuração do Teste:** O teste será realizado presencialmente. A sessão será gravada (com consentimento) para análise posterior.
-*   **Checklist de Preparação:**
-    *   [X] Link do protótipo.
-    *   [X] Guia de roteiro de entrevista revisado.
-    *   [X] Termo de consentimento preparado para os participantes.
 
-### c) Termo de consentimento
-```
-Eu autorizo o uso das respostas fornecidas por mim na entrevista realizada para a matéria Arquitetura e Desenho de Software.
-Declaro estar ciente de que:
-Minhas respostas poderão ser utilizadas parcial ou integralmente, respeitando o contexto original.
-O uso será exclusivamente para os fins informados acima, sem qualquer finalidade comercial indevida.
-Tenho direito de solicitar a retirada de minha identificação, caso não queira ser citado(a) nominalmente.
-Esta autorização é concedida de forma gratuita e por tempo indeterminado, salvo manifestação em contrário.
-Por ser expressão da verdade, firmo o presente termo.
 
-Assinado _____________________________________________
 
-______/_____/_______.
 ```
 
 ### 3. **Roteiro da Sessão de Validação (Script)**
@@ -130,21 +116,18 @@ Com base na análise, o resultado da validação se enquadrará em uma de três 
 
 ### 7. **Checklist de Validação**
 
-*   [ ] Protótipo estático de alta fidelidade finalizado.
-*   [ ] Roteiro de entrevista aprovado pela equipe.
-*   [ ] Tecnologia (gravação) testada e funcionando.
-*   [ ] Sessão realizada e notas detalhadas tomadas.
-*   [ ] Reunião de síntese e análise realizada com a equipe de validação.
-*   [ ] Relatório de insights e plano de próximos passos definido e acordado com toda a equipe.
 
-### Participações & Commits
-Inclua o quadro de participações e os commits dos membros.
+| Pergunta | Avaliação |
+|----------|-----------|
+| 1. A navegação pelo site é clara e intuitiva para estudantes universitários? | |
+| 2. Os guias de estágio e informações sobre contratos estão fáceis de encontrar e entender? | |
+| 3. O processo de buscar e se candidatar a vagas para alunos da UnB é simples e direto? | |
+| 4. As avaliações de empresas e estágios estão acessíveis e ajudam na escolha do estágio? | |
+| 5. O site permite que o estudante filtre e encontre rapidamente as oportunidades mais relevantes? | |
+| 6. As informações sobre cada empresa ou estágio são completas e confiáveis? | |
+| 7. Existe confiança suficiente no site para que o estudante utilize os recursos oferecidos? | |
+| 8. O protótipo incentiva o engajamento e a participação dos estudantes (ex.: deixar avaliações, interagir)? | |
 
-### Justificativas & Senso Crítico
-Inclua as justificativas e o senso crítico sobre o trabalho realizado.
-
-### Comentários Gerais sobre o Trabalho em Equipe
-Inclua comentários gerais sobre o trabalho em equipe.
 
 ### Referências
 *   [GV Design Sprint Guide](https://www.gv.com/sprint/) 
@@ -153,6 +136,9 @@ Inclua comentários gerais sobre o trabalho em equipe.
 
 ### __Histórico de Versão__
 
-| Versão | Alteração                 | Autor(es)      | Revisor(es)   |
+| Versão | Descrição                 | Autor     | Revisor   | Data |
 | ------ | ------------------------- | -------------- | ------------- |
-| 1.0    | Criação do documento      | Paulo Cerqueira    | Daniel Ferreira |
+| 1.0    | Criação do Documento      | [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares)  | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | 05/09/2025 |
+| 1.1    | Parte sobre Validação     | [Felipe Nunes](https://github.com/FelipeNunesdM.png?size=100) e [Victor](https://github.com/aqela-batata-alt.png?size=100)  | [Felipe Nunes](https://github.com/FelipeNunesdM.png?size=100) | 05/09/2025 |
+
+<font size="2"><p style="text-align: center">Fonte: [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) e [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) 2025.</p></font>

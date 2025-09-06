@@ -12,8 +12,8 @@ Esse recurso foi fundamental para planejar reuniões, dividir tarefas de forma e
 
 <font size="3"><p style="text-align: center">Tabela 1: Histórico de versões</p></font>
 
-| ID | Descrição                           | Autor                                                                 | Data       | Revisor                                                                 |
+| Versão | Descrição                           | Autor                                                                 | Data       | Revisor                                                                 |
 |:--:|:-----------------------------------:|:----------------------------------------------------------------------:|:----------:|:----------------------------------------------------------------------:|
-| 01 | Criação da Tabela de Disponibilidade | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo)       | 05/09/2025 | [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares)     |
+| 1.0 | Criação da Tabela de Disponibilidade | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo)       | [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares)  | 05/09/2025   |
 
 <font size="2"><p style="text-align: center">Fonte: [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) e [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) 2025.</p></font>
