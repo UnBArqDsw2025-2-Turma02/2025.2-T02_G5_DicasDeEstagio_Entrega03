@@ -53,6 +53,8 @@ Este diagrama representa o fluxo principal da aplicação, incluindo suas princi
 ![BPMN Software - G5](../../assets/imgs/BPMNSoftware.png)
 <font size="2"><p style="text-align: center">Fonte: [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo), [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) e [Henrique Martins](https://github.com/henryqma.png?size=100), 2025.</p></font>
 
+
+
 ## **Conclusão**
 
 A notação BPMN se mostrou uma ferramenta muito útil na diagramação de fluxos, trazendo uma linguagem visual padrão e intuitiva que facilita o entendimento dos processos de negócio entre diferentes áreas e também fornece uma base sólida para análise e otimização de qualquer projeto. A adoção dessa notação ajuda a alcançar a excelência operacional, promover a melhoria contínua e garantir que os processos estejam devidamente alinhados.
@@ -68,5 +70,5 @@ A notação BPMN se mostrou uma ferramenta muito útil na diagramação de fluxo
 |--------|-------------------------------------------------------------|------------------------------------------|------------|------------------------------------------|
 | 1.0    | Criação do documento e organização de todo o conteúdo       | [Henrique Martins Alencar](https://github.com/henryqma) | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | 04/09/2025 |
 | 1.1    | Adição de imagens dos diagramas       | [Henrique Martins Alencar](https://github.com/henryqma) |  [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | 05/09/2025 |
-| 1.2   | Adição de imagens dos diagramas       |[Letícia da Silva Monteiro](https://github.com/leticiamonteiroo)| [Henrique Martins Alencar](https://github.com/henryqma) | 05/09/2025 |  |
+| 1.2   | Adicionando fontes e outros diagramas  |[Letícia da Silva Monteiro](https://github.com/leticiamonteiroo)| [Henrique Martins Alencar](https://github.com/henryqma) | 05/09/2025 |  |
 
