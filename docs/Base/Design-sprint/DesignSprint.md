@@ -50,12 +50,13 @@ Anexar BPMN do Brainstorming: a ser adicionado.
 |---------------------|-------------------------|
 | Mateus Villela      | Facilitador/Mediador    |
 | Milene Serrano      | Contribuidor  |
-| -         | Contribuidor           |
-| -        | Contribuidor |
-| -     | Contribuidor                |
-| -           | Contribuidor             |
-| -      | Contribuidor          |
-| -      | Contribuidor           |
+|   Paulo Henrique       | Contribuidor           |
+| Letícia da Silva        | Contribuidor |
+| Henrique Martins     | Contribuidor                |
+| Eduardo            | Contribuidor             |
+| Daniel Ferreira      | Contribuidor          |
+| Breno Alexandre       | Contribuidor           |
+| Víctor Moreira      | Contribuidor           |
 
 
 3. **Seleção do mediador:**  
