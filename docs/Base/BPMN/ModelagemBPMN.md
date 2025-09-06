@@ -57,6 +57,12 @@ Este diagrama representa o fluxo principal da aplicação, incluindo suas princi
 
 
 
+### **Fases do (GitHub Projects + Kanban)**
+
+Este diagrama representa o fluxo principal do Kanban feito pelo grupo no Projects do Github.
+
+![BPMN (GitHub Projects + Kanban) - G5](../../assets/imgs/BPMNProjectsKanban.png)
+
 ## **Conclusão**
 
 A notação BPMN se mostrou uma ferramenta muito útil na diagramação de fluxos, trazendo uma linguagem visual padrão e intuitiva que facilita o entendimento dos processos de negócio entre diferentes áreas e também fornece uma base sólida para análise e otimização de qualquer projeto. A adoção dessa notação ajuda a alcançar a excelência operacional, promover a melhoria contínua e garantir que os processos estejam devidamente alinhados.
@@ -70,7 +76,7 @@ A notação BPMN se mostrou uma ferramenta muito útil na diagramação de fluxo
 
 | Versão | Descrição | Autor | Revisor | Data |
 |--------|-------------------------------------------------------------|------------------------------------------|------------|------------------------------------------|
-| 1.0    | Criação do documento e organização de todo o conteúdo       | [Henrique Martins Alencar](https://github.com/henryqma) | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | 04/09/2025 |
-| 1.1    | Adição de imagens dos diagramas       | [Henrique Martins Alencar](https://github.com/henryqma) |  [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | 05/09/2025 |
+| 1.0    | Criação do documento e organização de todo o conteúdo       | [Henrique Martins Alencar](https://github.com/henryqma) | 04/09/2025 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) |
+| 1.1    | Adição de imagens dos diagramas       | [Henrique Martins Alencar](https://github.com/henryqma) | 05/09/2025 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) |
 | 1.2   | Adicionando fontes e outros diagramas  |[Letícia da Silva Monteiro](https://github.com/leticiamonteiroo)| [Henrique Martins Alencar](https://github.com/henryqma) | 05/09/2025 |  |
-
+| 1.3    | Adição de imagens dos diagramas       | [Breno Alexandre](https://github.com/brenoalexandre0) | 05/09/2025 | [Mateus Villela](https://github.com/MVConsorte) |
