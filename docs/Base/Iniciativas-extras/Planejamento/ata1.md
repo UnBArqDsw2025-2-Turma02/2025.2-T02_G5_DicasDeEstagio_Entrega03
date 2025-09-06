@@ -61,7 +61,6 @@ Ficou definido o que cada membro ira fazer:
 
 ## 5. Histórico de Versões
 
-| Versão |Descrição     |Autor                                       |Data    |Revisor|
+| Versão |Descrição     |Autor                                       |Revisor    | Data|
 |:-:     | :-:          | :-:                                        | :-:        |:-:|
-|1.0     |Criação da ata|[Paulo Cerqueira](https://github.com/paulocerqr)| 24/08/2025 |[NULL](NULL)|
-|1.1     |NULL|[NULL](NULL)| 00/00/0000 |[NULL](NULL)|
+|1.0     |Criação da ata|[Paulo Cerqueira](https://github.com/paulocerqr)|  |[Felipe Nunes](https://github.com/FelipeNunesdM.png?size=100)| 05/09/2025|

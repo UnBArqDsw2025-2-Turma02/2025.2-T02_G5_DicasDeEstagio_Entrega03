@@ -1,8 +1,5 @@
 # DicasDeEstagio - G5
 
-<div align="center">
-  <img src="assets/imgs/LogoPrincipalG5.png" alt="Logo do Grupo 5" width="200">
-</div>
 
 ## Informações da Disciplina
 
@@ -80,13 +77,11 @@ Nosso grupo está desenvolvendo a **modelagem de um site sobre dicas de estágio
 
 ## Navegação da Documentação
 
-📚 **[Acesse a documentação completa aqui](home.md)**
-
 ### Principais Seções:
-- **[Base](Base/Base.md)** - Artefatos e documentação base do projeto
+- **[Base](Base/Introducao.md)** - Artefatos e documentação base do projeto
 - **[BPMN](Base/BPMN/ModelagemBPMN.md)** - Modelagem de processos
 - **[Design Sprint](Base/Design-sprint/DesignSprint.md)** - Metodologia de design aplicada
-- **[Projeto](Projeto/Projeto.md)** - Detalhes do projeto
+-
 
 ## Screenshots da Primeira Entrega
 Adicione 2 ou mais screenshots em termos de artefatos realizados na entrega.
@@ -120,4 +115,4 @@ Adicione 2 ou mais screenshots em termos de artefatos realizados na entrega.
 | 02 | Ajuste no documento | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | [Mateus Villela Consorte](https://github.com/MVConsorte) | 04/09/25 |
 | 03 | Melhoria na estrutura e navegação | [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) | - | 05/09/25 |
 
-<font size="2"><p style="text-align: center">Fonte: Grupo 5 - DicasDeEstagio, 2025.</p></font>
+<font size="2"><p style="text-align: center">Fonte: [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) e [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) 2025.</p></font>
