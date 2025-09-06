@@ -77,33 +77,7 @@ Atividades complementares realizadas pela equipe.
 
 ---
 
-## Senso Crítico & Lições Aprendidas
 
-**Pontos Fortes:**
-
-- Aplicação da Design Sprint
-
-- Colaboração na criação dos artefatos
-
-- Diversidade de perspectivas
-
-- Protótipos funcionais para validação
-
-**Desafios:**
-
-- Coordenação entre membros
-
-- Padronização dos artefatos
-
-- Refinamento visual
-
-**Oportunidades de Melhoria:**
-
-- Automação na sincronização de artefatos
-
-- Definição de padrões visuais
-
-- Rotação de papéis
 
 **Estatísticas da Fase Base**  
 

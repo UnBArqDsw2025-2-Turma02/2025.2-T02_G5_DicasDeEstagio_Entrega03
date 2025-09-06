@@ -52,7 +52,7 @@ A entrega contempla três frentes principais de trabalho: **Design Sprint - Foco
 | Luiz Henrique Guimarães Soares | BPMN - Produto  | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
 | Henrique Martins Alencar | BPMN - Produto  | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
 | Letícia da Silva Monteiro | BPMN - Produto | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
-| Mateus Villela Consorte |  | |
+| Mateus Villela Consorte | BPMN - Design Sprint  | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
 | Paulo Henrique Virgilio Cerqueira | BPMN - Unified Process | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
 | Víctor Moreira Almeida |  |  |
 
