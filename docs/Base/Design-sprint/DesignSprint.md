@@ -73,9 +73,7 @@ Anexar BPMN do Brainstorming: a ser adicionado.
 - **"Vez de falar"**: bate-papo intermediado por facilitador, visando equilibrar as vozes de contribuição.
 - **Resultado do Whiteboard de mapa de ideias:** 
 
-Imagem do whiteboard do brainstorming: a ser adicionada.
-
-[Melhor visualização](#miro-iframe)
+<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVJNoiQ50=/?embedMode=view_only_without_ui&moveToViewport=7146,-6957,14995,8568&embedId=521774646907" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 
 ---
 ### Refinamento do Brainstorming
@@ -94,19 +92,12 @@ Utilizamos o Diagrama de Causa-Efeito para analisar e identificar as causas-raiz
 
 A técnica 5W2H foi aplicada para detalhar as ações e plano de solução, ajudando a esclarecer: What (O quê), Why (Por quê), Where (Onde), When (Quando), Who (Quem), How (Como) e How much (Quanto).
 
-Artefato 5W2H: a ser adicionado.
+![5W2H](../../assets/imgs/5W2H.jpeg)
 
----
-
-#### Visualização de artefatos no Miro {#miro-iframe}
 
 ### Conclusão
 
-A fase Unpack foi fundamental para alinhar a equipe em torno do problema central e construir uma base sólida de conhecimento. A aplicação das técnicas mencionadas, especialmente a adaptação do Rose, Thorn, Bud e a utilização do Diagrama de Ishikawa, permitiu uma visão holística e aprofundada das complexidades do projeto. O uso do Mapa de Ideias se mostrou crucial para a visualização das conexões entre os conceitos, facilitando a identificação de padrões. De um ponto de vista crítico, a riqueza de detalhes e a clareza obtidas nesta fase são proporcionais à qualidade dos insights gerados, o que é um bom indício para o sucesso das próximas etapas da Design Sprint.
-
-### Conclusão
-
-A utilização do Brainstorming, aliada aos artefatos Ishikawa e 5W2H, proporcionou uma análise abrangente e colaborativa do problema. Essa abordagem permitiu identificar pontos críticos e definir ações concretas para o desenvolvimento de soluções eficazes nas etapas seguintes do Design Sprint.
+A fase Unpack foi fundamental para alinhar a equipe em torno do problema central e construir uma base sólida de conhecimento. A aplicação das técnicas mencionadas, especialmente a adaptação do Rose, Thorn, Bud e a utilização do Diagrama de Ishikawa, permitiu uma visão holística e aprofundada das complexidades do projeto. O uso do Mapa de Ideias se mostrou crucial para a visualização dosos conceitos, facilitando a identificação de padrões. No próximo topico, segue para a etapa de esboço do Design Sprint.
 
 ### Referencias Bibliograficas
 
@@ -128,8 +119,8 @@ A utilização do Brainstorming, aliada aos artefatos Ishikawa e 5W2H, proporcio
 
 | Id  | Descrição                                   | Autor         | Revisor      | Data       |
 |-----|---------------------------------------------|---------------|--------------|------------|
-| 1.0 | Criação inicial do documento                | [Mateus](https://github.com/MVConsorte)     | - | 05/09/2025 |
-| 1.1 | Adição de metodologia e artefatos           | [Mateus](https://github.com/MVConsorte)      | - | 05/09/2025 |
+| 1.0 | Criação inicial do documento                | [Mateus](https://github.com/MVConsorte)     | [Paulo](https://github.com/paulocerqr) | 05/09/2025 |
+| 1.1 | Desenvolvimento da etapa 1 (Unpack) da Design Sprint      | [Mateus](https://github.com/MVConsorte)      | [Paulo](https://github.com/paulocerqr) | 05/09/2025 |
 
 
 ## 2. Esboçar (Sketch)
