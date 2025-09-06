@@ -60,6 +60,8 @@ A entrega contempla três frentes principais de trabalho: **Design Sprint - Foco
 
 ## Tabela de Commits 
 
+![Rich Picture — G5](../../assets/imgs/Quadro.png)
+
 ## Gravações 
 
 | Atividade | Integrantes | Link para gravação |
