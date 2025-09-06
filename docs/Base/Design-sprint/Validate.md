@@ -73,7 +73,7 @@ Após a sessão, os dados serão revisados pela equipe e usados para ver se os r
 
 ## 6. **Resultados e Próximos Passos**
 
-[Vídeo da validação com usuário]() (Não disponível ainda.)
+[Vídeo da validação com usuário](https://youtu.be/soIByeI9JI4)
 
 Com base na análise, o resultado da validação se enquadrará em uma de três categorias:
 
@@ -84,18 +84,23 @@ Com base na análise, o resultado da validação se enquadrará em uma de três 
 | **Falha** | O conceito central não foi compreendido ou foi rejeitado pelos usuários. | **Refazer:** Reavaliar a premissa do problema e as suposições iniciais. É um ótimo aprendizado que evitou um grande desperdício de recursos. |
 
 **Decisão Final do Decider:**
-*   [ ] Prosseguir para desenvolvimento
-*   [ ] Realizar uma segunda sprint de iteração
+*   [X] Prosseguir para desenvolvimento
+*   [X] Realizar uma segunda sprint de iteração
 *   [ ] Redefinir o escopo e a direção do projeto
+
+**Extras**:
+O entrevistado aprovou e gostou da ideia do projeto e deu o aval para prosseguir com a maioria das coisas. Algumas ideias chave já foram implementadas no planejamento de produto final e os elementos de design que foram classificados como "quebrados" já foram comunicados para a modificação, e por isso está marcada a opção de uma segunda sprint, para poder ajustar esses problemas e dialogar sobre possíveis melhorias.
+
 
 ## 7. **Checklist de Validação**
 
-*   [ ] Protótipo estático de alta fidelidade finalizado.
-*   [ ] Roteiro de entrevista aprovado pela equipe.
-*   [ ] Tecnologia (gravação) testada e funcionando.
-*   [ ] Sessão realizada e notas detalhadas tomadas.
+*   [X] Protótipo estático de alta fidelidade finalizado.
+*   [X] Roteiro de entrevista aprovado pela equipe.
+*   [X] Tecnologia (gravação) testada e funcionando.
+*   [X] Sessão realizada e notas detalhadas tomadas.
 *   [ ] Reunião de síntese e análise realizada com a equipe de validação.
 *   [ ] Relatório de insights e plano de próximos passos definido e acordado com toda a equipe.
+
 
 ---
 
@@ -109,3 +114,4 @@ Com base na análise, o resultado da validação se enquadrará em uma de três 
 | ID | Descrição | Autor | Revisor | Data |
 | -- | -- | -- | -- | -- |
 | 01  | Criação do template de validação | [Víctor Moreira](https://github.com/aqela-batata-alt) e [Felipe Nunes](https://github.com/FelipeNunesdM) | - | 04/09/25 |
+| 02  | Adição da Entrevista de validação e dos dados | [Víctor Moreira](https://github.com/aqela-batata-alt) | - | 05/09/25 |
