@@ -32,7 +32,7 @@ A entrega contempla três frentes principais de trabalho: **Design Sprint - Foco
 | Daniel Ferreira Nunes | Elaboração do Diagrama Ishikawa | [Miro](https://miro.com/app/board/uXjVJNoiQ50=/)  |
 | Eduardo Ferreira de Aquino | Elaboração do Diagrama Ishikawa | [Miro](https://miro.com/app/board/uXjVJNoiQ50=/)  |
 | Felipe Nunes de Mello | 5W2H | [Miro](https://miro.com/app/board/uXjVJNoiQ50=/)  |
-| Luiz Henrique Guimarães Soares | Rich Picture | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
+| Luiz Henrique Guimarães Soares | Rich Picture | [Arquivo](/Base/BPMN/ModelagemBPMN/) |
 | Henrique Martins Alencar | Mapa Mental e Rich Picture  | [Miro](https://miro.com/app/board/uXjVJNoiQ50=/)  |
 | Letícia da Silva Monteiro | Rich Picture | [Miro](https://miro.com/app/board/uXjVJNoiQ50=/)  |
 | Mateus Villela Consorte | Rich Picture  | [Miro](https://miro.com/app/board/uXjVJNoiQ50=/)  |
@@ -46,14 +46,14 @@ A entrega contempla três frentes principais de trabalho: **Design Sprint - Foco
 | Nome do Membro | Contribuição | Comprobatórios Claros (com link) |
 |----------------|--------------|----------------------------------|
 | Breno Alexandre Soares Garcia |  |  |
-| Daniel Ferreira Nunes | Modelagem no Grupo 1 - Unified Process | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
-| Eduardo Ferreira de Aquino | Modelagem no Grupo 1 - Unified Process | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
-| Felipe Nunes de Mello |  | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
-| Luiz Henrique Guimarães Soares | BPMN - Produto  | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
-| Henrique Martins Alencar | BPMN - Produto  | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
-| Letícia da Silva Monteiro | BPMN - Produto | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
-| Mateus Villela Consorte | BPMN - Design Sprint  | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
-| Paulo Henrique Virgilio Cerqueira | BPMN - Unified Process | [Arquivo](/docs/Base/BPMN/ModelagemBPMN.md) |
+| Daniel Ferreira Nunes | Modelagem no Grupo 1 - Unified Process | [Arquivo](/Base/BPMN/ModelagemBPMN/) |
+| Eduardo Ferreira de Aquino | Modelagem no Grupo 1 - Unified Process | [Arquivo](/Base/BPMN/ModelagemBPMN/) |
+| Felipe Nunes de Mello |  | [Arquivo](/Base/BPMN/ModelagemBPMN/) |
+| Luiz Henrique Guimarães Soares | BPMN - Produto  | [Arquivo](/Base/BPMN/ModelagemBPMN/) |
+| Henrique Martins Alencar | BPMN - Produto  | [Arquivo](/Base/BPMN/ModelagemBPMN/) |
+| Letícia da Silva Monteiro | BPMN - Produto | [Arquivo](/Base/BPMN/ModelagemBPMN/) |
+| Mateus Villela Consorte |  | |
+| Paulo Henrique Virgilio Cerqueira | BPMN - Unified Process | [Arquivo](/Base/BPMN/ModelagemBPMN/) |
 | Víctor Moreira Almeida |  |  |
 
 ---
