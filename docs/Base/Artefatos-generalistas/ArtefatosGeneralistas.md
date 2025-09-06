@@ -49,9 +49,6 @@ Durante a análise do processo de empregabilidade dos alunos da Universidade de 
 
 Esse tipo de diagrama permite visualizar, de forma clara e estruturada, as possíveis causas de um problema central, organizando-as em categorias que abrangem diferentes aspectos do sistema. A partir dessa análise, é possível identificar os principais pontos de melhoria e orientar ações estratégicas para aumentar a empregabilidade dos alunos.
 
-## Diagrama (imagem)
-
-Abaixo está o diagrama de Causa-Efeito elaborado pelo Grupo 5.
 
 ![Diagrama de Causa-Efeito — G5](../../assets/imgs/G5_ARQDSW_1.jpg)
 
@@ -98,18 +95,25 @@ A identificação dessas causas permite direcionar esforços para **reduzir a bu
 
 ## Mapa Mental 
 
-![Mapa Mental — G5](../../assets/imgs/MapaMental.png)
+
 
 **Uso do Mapa Mental:** Além do Desenho inspirado no Rich Picture e do Ishikawa, também elaboramos um **Mapa Mental**. Escolhemos esse artefato por ser intuitivo e de fácil construção, principalmente em uma etapa inicial do projeto. O mapa mental nos ajudou a organizar ideias de forma rápida, visualizar conexões entre conceitos e levantar hipóteses sem nos prender a estruturas rígidas.
 
+![Mapa Mental — G5](../../assets/imgs/MapaMental.png)
 
-## Justificativas & Senso Crítico
-
-- **Independência metodológica:** Rich Picture, Mapa Mental e Ishikawa são **Artefatos Generalistas**, úteis tanto em contextos ágeis quanto preditivos.  
-
-- **Lições aprendidas:** Trabalhar no Miro de forma colaborativa aumentou a clareza entre os membros. Entretanto, tivemos de refinar símbolos e legendas para que ficassem compreensíveis a quem não participou da construção.  
 
 ---
+
+## 5W2H
+
+
+
+**Uso do 5W2H:** Assim como outros artefatos utilizados no início do projeto, também elaboramos um **5W2H**. Esse instrumento de gestão foi escolhido por sua clareza e objetividade, permitindo detalhar as ações necessárias em torno do nosso projeto. Através dele, conseguimos responder de forma estruturada **o que será feito (What)**, **por que será feito (Why)**, **onde será realizado (Where)**, **quando (When)**, **quem será responsável (Who)**, **como será executado (How)** e **quanto custará (How much)**.  
+
+
+![5W2H — G5](../../assets/imgs/5W2H.jpg)
+
+<font size="2"><p style="text-align: center">Fonte: [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo), [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) e [Felipe Nunes]https://github.com/FelipeNunesdM.png?size=100() 2025.</p></font>
 
   
 ## Referências

@@ -36,6 +36,8 @@ Seu principal objetivo, é fornecer uma notação que seja intuitiva para todos 
 ### **Design Sprint**
 
 Este diagrama representa as tarefas realizadas durante a etapa de design sprint.
+![BPMN Unified Process - G5](../../assets/imgs/MatheusBPMN.svg)
+<font size="2"><p style="text-align: center">Fonte: [Mateus Villela](https://github.com/MVConsorte.png?size=100), 2025.</p></font>
 
 
 ### **Unified Process**
