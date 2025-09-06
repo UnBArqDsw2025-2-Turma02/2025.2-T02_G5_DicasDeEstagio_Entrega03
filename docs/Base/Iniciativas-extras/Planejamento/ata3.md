@@ -13,7 +13,7 @@
 | [Eduardo Ferreira de Aquino](https://github.com/fxred) | Presente |
 | [Felipe Nunes de Mello](https://github.com/FelipeNunesdM) | Faltou |
 | [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) | Presente |
-| [Henrique Martins Alencar](https://github.com/henryqma) | Faltou |
+| [Henrique Martins Alencar](https://github.com/henryqma) | Presente |
 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | Presente |
 | [Mateus Vilella Consorte](https://github.com/MVConsorte) | Presente |
 | [Paulo Henrique Virgílio Cerqueira](https://github.com/paulocerqr) | Presente |
