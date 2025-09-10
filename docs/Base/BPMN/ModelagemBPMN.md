@@ -83,4 +83,4 @@ A notação BPMN se mostrou uma ferramenta muito útil na diagramação de fluxo
 | 1.1    | Adição de imagens dos diagramas        | [Henrique Martins Alencar](https://github.com/henryqma) | 05/09/2025 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) |
 | 1.2   | Adicionando fontes e outros diagramas  |[Letícia da Silva Monteiro](https://github.com/leticiamonteiroo)| 05/09/2025 | [Henrique Martins Alencar](https://github.com/henryqma) |
 | 1.3    | Adição de imagens dos diagramas       | [Breno Alexandre](https://github.com/brenoalexandre0) | 05/09/2025 | [Mateus Villela](https://github.com/MVConsorte) |
-| 1.4    | Adição de fonte ao diagrama 4 | [Breno Alexandre](https://github.com/brenoalexandre0) | 10/09/2025 |  |
+| 1.4    | Adição de fonte ao diagrama 4 | [Breno Alexandre](https://github.com/brenoalexandre0) | 10/09/2025 | [Mateus Villela](https://github.com/MVConsorte) |
