@@ -8,24 +8,40 @@ Este repositório traz um template de repo de documentação a ser seguido pelos
 
 ## Tecnologia
 
-A geração do site estático é realizada utilizando o [docsify](https://docsify.js.org/).
+A documentação do projeto é gerenciada com [MkDocs](https://www.mkdocs.org/) e está disponível em: 
 
-```shell
-"Docsify generates your documentation website on the fly. Unlike GitBook, it does not generate static html files. Instead, it smartly loads and parses your Markdown files and displays them as a website. To start using it, all you need to do is create an index.html and deploy it on GitHub Pages."
-```
+https://unbarqdsw2025-2-turma02.github.io/2025.2-T02_G5_DicasDeEstagio_Entrega01/
 
-### Instalando o docsify
+## 🚀 Executando a Documentação Localmente
 
-Execute o comando:
+Para visualizar a documentação em seu ambiente local:
 
-```shell
-npm i docsify-cli -g
-```
+1. Clone o repositório:
+   ```bash
+   git clone git@github.com:UnBArqDsw2025-2-Turma02/2025.2-T02_G5_DicasDeEstagio_Entrega02.git
+   cd 2025.2-T02_G5_DicasDeEstagio_Entrega02
+   ```
 
-### Executando localmente
+2. Crie e ative um ambiente virtual:
+   ```bash
+   # No Linux/macOS
+   python -m venv .venv
+   source .venv/bin/activate
 
-Para iniciar o site localmente, utilize o comando:
+   # No Windows
+   python -m venv .venv
+   .venv\Scripts\activate
+   ```
 
-```shell
-docsify serve ./docs
-```
+3. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Execute o servidor MkDocs:
+   ```bash
+   mkdocs serve
+   ```
+   
+5. O terminal fornecerá um link (geralmente http://127.0.0.1:8000). Clique nele ou copie para seu navegador.
+
