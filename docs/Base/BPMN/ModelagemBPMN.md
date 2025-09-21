@@ -61,9 +61,8 @@ Este diagrama representa o fluxo principal da aplicação, incluindo suas princi
 
 Este diagrama representa o fluxo principal do Kanban feito pelo grupo no Projects do Github.
 
-<img src="../../assets/imgs/BPMNProjectsKanban.png" alt="BPMN (GitHub Projects + Kanban) - G5"></img>
-Fonte: [Breno Alexandre](https://github.com/brenoalexandre0), 2025.
-
+![BPMN Software - G5- Breno](../../assets/imgs/BPMNSoftware.png)
+<font size="2"><p style="text-align: center">Fonte: [Breno Alexandre](https://github.com/brenoalexandre0), 2025.</p></font>
 
 
 ## **Conclusão**
