@@ -1,7 +1,7 @@
 site_name: DicasDeEstagio - G5
 #site_author: Mateus Villela
 site_description: Site voltado para a documentação do Grupo 5 de Arquitetura e Desenvolvimento de Software - 2025.2
-repo_url: https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02_G5_DicasDeEstagio_Entrega01
+repo_url: https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02_G5_DicasDeEstagio_Entrega02
 repo_name: 2025.2-DicasDeEstagio-Entrega1
 
 theme:
@@ -28,16 +28,19 @@ theme:
 
 nav:
   - Início: index.md
-  - Modelagem:
-    - Introdução: modelagem/index_modelagem.md
-    - UML Estático: 
-      - Visao Geral: modelagem/estatica_uml/modelagem_estatica.md
-    - UML Dinâmico: 
-      - Visao Geral: modelagem/dinamica_uml/modelagem_dinamica.md
-    - UML Organizacional:
-      - Visao Geral: modelagem/organizacional_uml/modelagem_organizacional.md
-  - Iniciativas Extras:
-    - Introdução: iniciativas_extras/index_iniciativas.md
+  - 2. Desenho de Software (Modelagem):
+    - 2.1. Introdução: modelagem/index_modelagem.md
+    - 2.2. UML Estático: 
+      - 2.2.1. Visão Geral: modelagem/estatica_uml/modelagem_estatica.md
+      - 2.2.2. Diagrama de Classes: modelagem/estatica_uml/diagrama_classes.md
+    - 2.3. UML Dinâmico: 
+      - 2.3.1. Visão Geral: modelagem/dinamica_uml/modelagem_dinamica.md
+      - 2.3.2. Diagrama de Estados: modelagem/dinamica_uml/diagrama_estados.md
+    - 2.4. UML Organizacional:
+      - 2.4.1. Visão Geral: modelagem/organizacional_uml/modelagem_organizacional.md
+      - 2.4.2. Diagrama de Casos de Uso: modelagem/organizacional_uml/diagrama_casos_uso.md
+    - 2.5. Iniciativas Extras:
+      - 2.5.1. Introdução: iniciativas_extras/index_iniciativas.md
 
 markdown_extensions:
   - pymdownx.details
