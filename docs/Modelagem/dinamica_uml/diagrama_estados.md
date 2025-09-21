@@ -10,7 +10,7 @@ Para a criação do diagrama de estados, nosso grupo utilizou a notação UML (U
 
 ## __Tabela de Participação na Produção do Artefato__
 
-*Conforme documentado na [Ata 5](../../iniciativas_extras/Planejamento/atas/ata5.md) da reunião de 19/09/2025.*
+*Conforme documentado na [Ata 5](../../iniciativas_extras/Planejamento/atas/ata5.md) da reunião de 20/09/2025.*
 
 <label><input type="checkbox" checked abled>[ Mateus Villela Consorte ](https://github.com/MVConsorte)</label><br>
 <label><input type="checkbox" checked abled>[ Paulo Henrique Virgilio Cerqueira ](https://github.com/paulocerqr)</label><br>

@@ -1,4 +1,4 @@
-Reunião 1 : 19/09/2025
+Reunião 1 : 20/09/2025
 
 ## Introdução
 
@@ -31,7 +31,7 @@ Este artefato resume como se deu todo o andamento da reunião realizada na data 
 
 | Data | Início | Fim | Local |
 |:-:|:-:|:-:|:-:|
-| 19/09/2025  | 21:00 | 23:30  | Teams |
+| 20/09/2025  | 21:00 | 23:30  | Teams |
 
 <font size="2" >
 
