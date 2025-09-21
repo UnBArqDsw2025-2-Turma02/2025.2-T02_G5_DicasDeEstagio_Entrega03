@@ -29,16 +29,16 @@ theme:
 nav:
   - Início: index.md
   - 2. Desenho de Software (Modelagem):
-    - 2.1. Introdução: modelagem/index_modelagem.md
+    - 2.1. Introdução: Modelagem/index_modelagem.md
     - 2.2. UML Estático: 
-      - 2.2.1. Visão Geral: modelagem/estatica_uml/modelagem_estatica.md
-      - 2.2.2. Diagrama de Classes: modelagem/estatica_uml/diagrama_classes.md
+      - 2.2.1. Visão Geral: Modelagem/estatica_uml/modelagem_estatica.md
+      - 2.2.2. Diagrama de Classes: Modelagem/estatica_uml/diagrama_classes.md
     - 2.3. UML Dinâmico: 
-      - 2.3.1. Visão Geral: modelagem/dinamica_uml/modelagem_dinamica.md
-      - 2.3.2. Diagrama de Estados: modelagem/dinamica_uml/diagrama_estados.md
+      - 2.3.1. Visão Geral: Modelagem/dinamica_uml/modelagem_dinamica.md
+      - 2.3.2. Diagrama de Estados: Modelagem/dinamica_uml/diagrama_estados.md
     - 2.4. UML Organizacional:
-      - 2.4.1. Visão Geral: modelagem/organizacional_uml/modelagem_organizacional.md
-      - 2.4.2. Diagrama de Casos de Uso: modelagem/organizacional_uml/diagrama_casos_uso.md
+      - 2.4.1. Visão Geral: Modelagem/organizacional_uml/modelagem_organizacional.md
+      - 2.4.2. Diagrama de Casos de Uso: Modelagem/organizacional_uml/diagrama_casos_uso.md
     - 2.5. Iniciativas Extras:
       - 2.5.1. Introdução: iniciativas_extras/index_iniciativas.md
 
