@@ -44,6 +44,12 @@ Para garantir a correta aplicação da notação UML e dos princípios de modela
 - GUEDES, Gilleanes T. A. *UML 2: Uma Abordagem Prática*. 2ª ed. São Paulo: Novatec Editora, 2011.
 
 
+## Gravação da Produção do Artefato
+
+A gravação do processo de elaboração do diagrama de atividades pode ser visualizada no vídeo abaixo:
+
+<iframe width="1065" height="608" src="https://www.youtube.com/embed/0H_18S5ejIo" title="Diagrama de atividades" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## **Histórico de Versão**
 
 | ID | Descrição | Autor | Revisor | Data |
