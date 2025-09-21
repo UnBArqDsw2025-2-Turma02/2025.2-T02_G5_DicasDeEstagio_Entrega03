@@ -11,54 +11,53 @@ theme:
 
   palette:
     - scheme: default
-      primary: "#00543C"   # Verde Pantone 348
-      accent: "#193A6A"    # Azul Pantone 654
-      auxiliary: "#FFD600" # Amarelo Pantone 012C (contraste)
+      primary: "#1A2B45"   # Azul escuro 
+      accent: "#00A86B"    # Verde 
+      auxiliary: "#36A9E1" # Azul claro 
       toggle:
         icon: material/weather-night
         name: Modo escuro
 
     - scheme: slate
-      primary: "#00543C"   # Verde Pantone 348
-      accent: "#193A6A"    # Azul Pantone 654
-      auxiliary: "#FFD600" # Amarelo Pantone 012C (contraste)
+      primary: "#1A2B45"   # Azul escuro
+      accent: "#00A86B"    # Verde
+      auxiliary: "#36A9E1" # Azul claro
       toggle:
         icon: material/weather-sunny
         name: Modo claro
 
 nav:
   - Início: index.md
-  - Participações: participacoes.md
   - 2. Desenho de Software (Modelagem):
     - 2.1. Introdução: Modelagem/index_modelagem.md
-    - 2.2. UML Estático: 
+    - 2.2. UML Estático:
       - 2.2.1. Visão Geral: Modelagem/estatica_uml/modelagem_estatica.md
       - 2.2.2. Diagrama de Classes: Modelagem/estatica_uml/diagrama_classes.md
-    - 2.3. UML Dinâmico: 
+    - 2.3. UML Dinâmico:
       - 2.3.1. Visão Geral: Modelagem/dinamica_uml/modelagem_dinamica.md
       - 2.3.2. Diagrama de Estados: Modelagem/dinamica_uml/diagrama_estados.md
     - 2.4. UML Organizacional:
       - 2.4.1. Visão Geral: Modelagem/organizacional_uml/modelagem_organizacional.md
       - 2.4.2. Diagrama de Casos de Uso: Modelagem/organizacional_uml/diagrama_casos_uso.md
-    - 2.5. Iniciativas Extras: Modelagem/indexExtras.md
-  - 3. Iniciativas Extras:
-    - Índice: iniciativas_extras/index_iniciativas.md
-    - Backlog do Produto: iniciativas_extras/Backlog/backlog.md
-    - Planejamento:
-      - Ferramentas: iniciativas_extras/Planejamento/Ferramentas.md
-      - Heatmap Disponibilidade: iniciativas_extras/Planejamento/HeatmapDisponibilidade.md
-      - Políticas de Repositório:
-        - Política de Branches: iniciativas_extras/Planejamento/Politicas-de-repositorio/PoliticaBranches.md
-        - Política de Commits: iniciativas_extras/Planejamento/Politicas-de-repositorio/PoliticaCommits.md
-      - Atas de Reunião:
-        - Ata 1 - 24/08/2025: iniciativas_extras/Planejamento/atas/ata1.md
-        - Ata 2 - 27/08/2025: iniciativas_extras/Planejamento/atas/ata2.md
-        - Ata 3 - 02/09/2025: iniciativas_extras/Planejamento/atas/ata3.md
-        - Ata 4 - 10/09/2025: iniciativas_extras/Planejamento/atas/ata4.md
-        - Ata 5 - 17/09/2025: iniciativas_extras/Planejamento/atas/ata5.md
-    - Incremento de Elicitação:
-      - Questionário: iniciativas_extras/incremento_elicitacao/questionario.md
-      - Tabela Geral de Requisitos: iniciativas_extras/incremento_elicitacao/tabela_geral_requisitos.md
+    - 2.5. Iniciativas Extras:
+      - 2.5.1. Índice: iniciativas_extras/index_iniciativas.md
+      - 2.5.2. Backlog do Produto: iniciativas_extras/Backlog/backlog.md
+      - 2.5.3. Planejamento:
+        - Ferramentas: iniciativas_extras/Planejamento/Ferramentas.md
+        - Heatmap Disponibilidade: iniciativas_extras/Planejamento/HeatmapDisponibilidade.md
+        - Políticas de Repositório:
+          - Política de Branches: iniciativas_extras/Planejamento/Politicas-de-repositorio/PoliticaBranches.md
+          - Política de Commits: iniciativas_extras/Planejamento/Politicas-de-repositorio/PoliticaCommits.md
+      - 2.5.4. Incremento de Elicitação:
+        - Questionário: iniciativas_extras/incremento_elicitacao/questionario.md
+        - Tabela Geral de Requisitos: iniciativas_extras/incremento_elicitacao/tabela_geral_requisitos.md
+    - 2.6. Participações: participacoes.md
+    - 2.7. Reuniões - Atas:
+      - Ata 1 - 24/08/2025: iniciativas_extras/Planejamento/atas/ata1.md
+      - Ata 2 - 27/08/2025: iniciativas_extras/Planejamento/atas/ata2.md
+      - Ata 3 - 02/09/2025: iniciativas_extras/Planejamento/atas/ata3.md
+      - Ata 4 - 10/09/2025: iniciativas_extras/Planejamento/atas/ata4.md
+      - Ata 5 - 17/09/2025: iniciativas_extras/Planejamento/atas/ata5.md
 
 markdown_extensions:
   - pymdownx.details
