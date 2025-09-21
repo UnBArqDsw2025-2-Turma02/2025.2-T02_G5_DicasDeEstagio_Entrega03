@@ -36,6 +36,8 @@ nav:
     - 2.3. UML Dinâmico:
       - 2.3.1. Visão Geral: Modelagem/dinamica_uml/modelagem_dinamica.md
       - 2.3.2. Diagrama de Estados: Modelagem/dinamica_uml/diagrama_estados.md
+      - 2.3.3. Diagrama de Atividades: Modelagem/dinamica_uml/diagrama_atividades.md
+      - 2.3.4. Diagrama de Comunicação: Modelagem/dinamica_uml/diagrama_comunicacao.md
     - 2.4. UML Organizacional:
       - 2.4.1. Visão Geral: Modelagem/organizacional_uml/modelagem_organizacional.md
       - 2.4.2. Diagrama de Casos de Uso: Modelagem/organizacional_uml/diagrama_casos_uso.md

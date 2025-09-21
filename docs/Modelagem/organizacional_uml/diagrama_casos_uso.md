@@ -27,7 +27,7 @@ A elaboração do Diagrama de Caso de Uso foi realizada de forma colaborativa pe
 
 <font size="3"><p style="text-align: center"> **Figura 1** - Diagrama de Casos de Uso </p>
 
-![Diagrama Casos de Uso](../../assets/imgs/outros/entrega2/diagrama_caso_uso.png)
+![Diagrama Casos de Uso](../../assets/imgs/entrega2/diagrama_caso_uso.png)
 
 <font size="3"><p style="text-align: center"> **Autores**: [Breno](https://github.com/brenoalexandre0), [Daniel](https://github.com/Mach1r0), [Eduardo](https://github.com/fxred), [Felipe](https://github.com/FelipeNunesdM), [Henrique](https://github.com/henryqma), [Mateus](https://github.com/MVConsorte), [Paulo](https://github.com/paulocerqr), [Victor](https://github.com/aqela-batata-alt) </p>
 
