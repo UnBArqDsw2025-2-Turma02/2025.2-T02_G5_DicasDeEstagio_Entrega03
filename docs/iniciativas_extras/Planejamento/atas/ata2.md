@@ -43,7 +43,7 @@ Reunião para priorização de User Stories/definição de RF/RNFs.
 
 ## Gravação da reunião
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=8nUCQX5Bwjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8nUCQX5Bwjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Histórico de Versão
 
