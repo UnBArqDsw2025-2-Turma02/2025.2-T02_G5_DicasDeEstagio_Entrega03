@@ -16,7 +16,7 @@ As etapas da metodologia foram:
     O ponto de partida foi a análise dos requisitos funcionais do sistema. Foram utilizados diagramas de pacotes para entender a arquitetura geral, além dos fluxos de usuário e protótipos de alta fidelidade criados no Figma, que serviram como guia para mapear a jornada de interação do usuário de forma precisa.
 
 2. **Ferramenta de Modelagem:**  
-    Para a criação e edição do diagrama, foi utilizada a plataforma de colaboração visual [Miro](https://miro.com). A ferramenta foi escolhida por sua flexibilidade para criar diagramas UML de forma colaborativa e permitir o refinamento iterativo do modelo.
+    Para a criação e edição do diagrama, foi utilizada a plataforma de colaboração visual [Miro](https://miro.com) e [Draw.io](https://draw.io). As ferramentas foram escolhidas por suas flexibilidades para criar diagramas UML de forma colaborativa e permitir o refinamento iterativo do modelo.
 
 3. **Padrão de Notação (UML):**  
     Toda a simbologia e as convenções do diagrama seguem o padrão da Linguagem de Modelagem Unificada (UML). Foram empregados elementos como estados de início e fim, atividades, nós de decisão e barras de fork/join para representar o fluxo de controle de maneira clara e padronizada.
@@ -24,16 +24,29 @@ As etapas da metodologia foram:
 4. **Fundamentação Teórica:**  
     O desenvolvimento do diagrama foi embasado em conceitos e boas práticas de análise e projeto de sistemas, consolidados na literatura técnica da área.
 
+## __Tabela de Participação na Produção do Artefato__
+
+<label><input type="checkbox" checked abled> Paulo Henrique Virgilio Cerqueira</label><br>
+<label><input type="checkbox" checked abled> Daniel Ferreira Nunes</label><br>
+<label><input type="checkbox" checked abled> Eduardo Ferreira de Aquino</label><br>
 
 ## Resultados
 
-O diagrama de atividades resultante ilustra de forma clara e detalhada o fluxo de interação do usuário com a plataforma **Dicas de Estágio**. A seguir, são destacados os principais componentes e fluxos representados no diagrama:
+### __Visão Geral do Sistema:__
 
-### Diagrama de Atividades
+![Diagrama Geral](../../assets/imgs/entrega2/diagrama-de-atividades.png)
 
-![Diagrama de Atividades do Sistema Dicas de Estágio](../../assets/imgs/outros/entrega2/diagrama_de_atividades.png)
+### __Tela inicial, login e cadastro:__
 
-*Figura 1: Fluxo de interação do usuário com a plataforma Dicas de Estágio.*
+![Diagrama Tela Inicial](../../assets/imgs/entrega2/tela-inicial-login-cadastro.png)
+
+### __Listagem de tópicos e avaliações:__
+
+![Diagrama Tópicos e Avaliações](../../assets/imgs/entrega2/listagem-topicos-avaliacoes.png)
+
+### __Guia de estágios, perfil do usuário e currículo:__
+
+![Diagrama Guia de Estágio/Currículo](../../assets/imgs/entrega2/guia-estagios-curriculo.png)
 
 ## Referências Bibliográficas
 
@@ -48,10 +61,11 @@ Para garantir a correta aplicação da notação UML e dos princípios de modela
 
 A gravação do processo de elaboração do diagrama de atividades pode ser visualizada no vídeo abaixo:
 
-<iframe width="1065" height="608" src="https://www.youtube.com/embed/0H_18S5ejIo" title="Diagrama de atividades" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="1065" height="608" src="https://www.youtube.com/embed/0H_18S5ejIo" title="Diagrama de Atividades" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## **Histórico de Versão**
 
 | ID | Descrição | Autor | Revisor | Data |
 |:--:|:---------|:------|:--------|:----:|
 | 1.0 | Criação do documento | [Daniel Ferreira Nunes](https://github.com/mach1r0) | [Eduardo Ferreira](https://github.com/fxred) | 21/09/2025 |
+| 1.1 | Edição do documento e adição do draw.io | [Eduardo Ferreira](https://github.com/fxred) | [Daniel Ferreira Nunes](https://github.com/mach1r0) | 21/09/2025 |
