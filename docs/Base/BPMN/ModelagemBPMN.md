@@ -61,7 +61,9 @@ Este diagrama representa o fluxo principal da aplicação, incluindo suas princi
 
 Este diagrama representa o fluxo principal do Kanban feito pelo grupo no Projects do Github.
 
-![BPMN (GitHub Projects + Kanban) - G5](../../assets/imgs/BPMNProjectsKanban.png)
+![BPMN Software - G5- Breno](../../assets/imgs/BPMNSoftware.png)
+<font size="2"><p style="text-align: center">Fonte: [Breno Alexandre](https://github.com/brenoalexandre0), 2025.</p></font>
+
 
 ## **Conclusão**
 
@@ -74,9 +76,10 @@ A notação BPMN se mostrou uma ferramenta muito útil na diagramação de fluxo
 
 ## **Histórico de Versão**
 
-| Versão | Descrição | Autor | Revisor | Data |
+| Versão | Descrição | Autor | Data | Revisor |
 |--------|-------------------------------------------------------------|------------------------------------------|------------|------------------------------------------|
 | 1.0    | Criação do documento e organização de todo o conteúdo       | [Henrique Martins Alencar](https://github.com/henryqma) | 04/09/2025 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) |
-| 1.1    | Adição de imagens dos diagramas       | [Henrique Martins Alencar](https://github.com/henryqma) | 05/09/2025 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) |
-| 1.2   | Adicionando fontes e outros diagramas  |[Letícia da Silva Monteiro](https://github.com/leticiamonteiroo)| [Henrique Martins Alencar](https://github.com/henryqma) | 05/09/2025 |  |
+| 1.1    | Adição de imagens dos diagramas        | [Henrique Martins Alencar](https://github.com/henryqma) | 05/09/2025 | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) |
+| 1.2   | Adicionando fontes e outros diagramas  |[Letícia da Silva Monteiro](https://github.com/leticiamonteiroo)| 05/09/2025 | [Henrique Martins Alencar](https://github.com/henryqma) |
 | 1.3    | Adição de imagens dos diagramas       | [Breno Alexandre](https://github.com/brenoalexandre0) | 05/09/2025 | [Mateus Villela](https://github.com/MVConsorte) |
+| 1.4    | Adição de fonte ao diagrama 4 | [Breno Alexandre](https://github.com/brenoalexandre0) | 10/09/2025 | [Mateus Villela](https://github.com/MVConsorte) |
