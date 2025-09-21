@@ -1,14 +1,13 @@
- Reunião 1 : 17/09/2025
+Reunião 1 : 19/09/2025
 
 ## Introdução
 
-Este artefato resume como se deu todo o andamento da reunião realizada na data especificada acima, mostrando a produção do artefato "Diagrama de Classes".
+Este artefato resume como se deu todo o andamento da reunião realizada na data especificada acima, mostrando a produção do artefato "Diagrama de Estados.
 
 
 ## Pautas da reunião:
 
-- Brainstorm
-- Desenvolvimento do Diagrama de Classes.
+- Desenvolvimento do Diagrama de Estados.
 
 
 ## Integrantes presentes:
@@ -32,7 +31,7 @@ Este artefato resume como se deu todo o andamento da reunião realizada na data 
 
 | Data | Início | Fim | Local |
 |:-:|:-:|:-:|:-:|
-| 17/09/2025  | 21:00 | 23:30  | Teams |
+| 19/09/2025  | 21:00 | 23:30  | Teams |
 
 <font size="2" >
 
@@ -44,15 +43,15 @@ Este artefato resume como se deu todo o andamento da reunião realizada na data 
 
 Os resultados alcançados pelo grupo foram:
 
- - Criação do Diagrama de Classes.
+ - Criação do Diagrama de Estados.
 
 
 ## Gravação da reunião
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JWmqjNTjG2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rpV2knZ_jj4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Histórico de Versão
 
 | Versão | Data | Descrição | Autor | Revisor
 |:-:|:-:|:-:|:-:|:-:|
-|`1.0`| 18/09/2025 | Criação do documento| [Paulo Cerqueira](https://github.com/paulocerqr)| []() |
+|`1.0`| 21/09/2025 | Criação do documento| [Paulo Cerqueira](https://github.com/paulocerqr)| []() |

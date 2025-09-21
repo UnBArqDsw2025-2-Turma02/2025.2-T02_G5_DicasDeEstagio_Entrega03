@@ -2,12 +2,12 @@ site_name: DicasDeEstagio - G5
 #site_author: Mateus Villela
 site_description: Site voltado para a documentação do Grupo 5 de Arquitetura e Desenvolvimento de Software - 2025.2
 repo_url: https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02_G5_DicasDeEstagio_Entrega02
-repo_name: 2025.2-DicasDeEstagio-Entrega1
+repo_name: 2025.2-DicasDeEstagio-Entrega02
 
 theme:
   name: material
-  logo: 'assets/imgs/LogoPrincipalG5.png'
-  favicon: 'assets/imgs/LogoPrincipalG5.png'
+  logo: 'assets/imgs/outros/entrega1/LogoPrincipalG5.png'
+  favicon: 'assets/imgs/outros/entrega1/LogoPrincipalG5.png'
 
   palette:
     - scheme: default
@@ -28,6 +28,7 @@ theme:
 
 nav:
   - Início: index.md
+  - Participações: participacoes.md
   - 2. Desenho de Software (Modelagem):
     - 2.1. Introdução: Modelagem/index_modelagem.md
     - 2.2. UML Estático: 
@@ -39,8 +40,26 @@ nav:
     - 2.4. UML Organizacional:
       - 2.4.1. Visão Geral: Modelagem/organizacional_uml/modelagem_organizacional.md
       - 2.4.2. Diagrama de Casos de Uso: Modelagem/organizacional_uml/diagrama_casos_uso.md
-    - 2.5. Iniciativas Extras:
-      - 2.5.1. Introdução: iniciativas_extras/index_iniciativas.md
+    - 2.5. Iniciativas Extras: Modelagem/indexExtras.md
+  - 3. Iniciativas Extras:
+    - Índice: iniciativas_extras/index_iniciativas.md
+    - Gravações: iniciativas_extras/Gravacoes.md
+    - Backlog do Produto: iniciativas_extras/Backlog/backlog.md
+    - Planejamento:
+      - Ferramentas: iniciativas_extras/Planejamento/Ferramentas.md
+      - Heatmap Disponibilidade: iniciativas_extras/Planejamento/HeatmapDisponibilidade.md
+      - Políticas de Repositório:
+        - Política de Branches: iniciativas_extras/Planejamento/Politicas-de-repositorio/PoliticaBranches.md
+        - Política de Commits: iniciativas_extras/Planejamento/Politicas-de-repositorio/PoliticaCommits.md
+      - Atas de Reunião:
+        - Ata 1 - 24/08/2025: iniciativas_extras/Planejamento/atas/ata1.md
+        - Ata 2 - 27/08/2025: iniciativas_extras/Planejamento/atas/ata2.md
+        - Ata 3 - 02/09/2025: iniciativas_extras/Planejamento/atas/ata3.md
+        - Ata 4 - 10/09/2025: iniciativas_extras/Planejamento/atas/ata4.md
+        - Ata 5 - 17/09/2025: iniciativas_extras/Planejamento/atas/ata5.md
+    - Incremento de Elicitação:
+      - Questionário: iniciativas_extras/incremento_elicitacao/questionario.md
+      - Tabela Geral de Requisitos: iniciativas_extras/incremento_elicitacao/tabela_geral_requisitos.md
 
 markdown_extensions:
   - pymdownx.details

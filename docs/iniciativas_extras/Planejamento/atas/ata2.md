@@ -1,52 +1,53 @@
-# Ata da Reunião – 27/08/2025
 
-**Faculdade:** UnB Gama  
-**Data:** Quarta-feira, 27 de Agosto de 2025 – 20h  
-**Próxima reunião:** INDEFINIDO
+# Reunião de Abertura
 
-## Integrantes do grupo
+## Introdução
 
-| Nome | Situação |
-|:----:|:-------:|
-| [Breno Alexandre Soares Garcia](https://github.com/brenoalexandre0) | Presente |
-| [Daniel Ferreira Nunes](https://github.com/Mach1r0) | Presente |
-| [Eduardo Ferreira de Aquino](https://github.com/fxred) | Presente |
-| [Felipe Nunes de Mello](https://github.com/FelipeNunesdM) | Faltou |
-| [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) | Faltou |
-| [Henrique Martins Alencar](https://github.com/henryqma) | Faltou |
-| [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | Presente |
-| [Mateus Vilella Consorte](https://github.com/MVConsorte) | Presente |
-| [Paulo Henrique Virgílio Cerqueira](https://github.com/paulocerqr) | Presente |
-| [Victor Moreira Almeida](https://github.com/aqela-batata-alt) | Presente |
+Reunião para priorização de User Stories/definição de RF/RNFs.
+
+## Pautas da reunião:
+
+- Priorização das Users Storys.
+- Priorização dos Requisitos Funcionais.
+- Priorização dos Requisitos Não-Funcionais.
+
+## Integrantes presentes:
+
+<label><input type="checkbox" checked abled>[ Eduardo Ferreira de Aquino ](https://github.com/fxred)</label><br>
+<label><input type="checkbox" checked abled>[ Daniel Ferreira Nunes ](https://github.com/Mach1r0)</label><br>
+
+
+## Informações da reunião
+
+<font size="2" >
+
+<p > Tabela 1: Informações da reunião. </p>
+
+</font>
+
+| Data | Início | Fim | Local |
+|:-:|:-:|:-:|:-:|
+| 14/09/2025  | 21:00 | 22:00  | Discord |
+
+<font size="2" >
+
+<p>Fonte:<a href= "https://github.com/paulocerqr"> Paulo Cerqueira</a>, 2025.</p>
+
+</font>
+
+## Resultados da reunião 
+
+- Foi feita a priorização:
+    - User Storys
+    - Requisitos Funcionais e não Funcionais 
 
 ## Gravação da reunião
 
-<iframe width="560" height="315" src="https://www.youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8nUCQX5Bwjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## Histórico de Versão
 
-## Decisões e Próximos Passos:
+| Versão | Data | Descrição | Autor | Revisor|
+|--------|------|-----------|-------|--------|
+|`1.0`| 12/09/2025 | Criação do documento| [Paulo Cerqueira]()| - |
 
-Os tópicos que vimos até agora são:
-- Readme
-- Code Of Conduct
-- Contributing
-- Cronograma planejado e Cronograma Executado
-- Ferramentas
-- Heatmap
-- Políticas de repositório (branches, commits)
-- Rastreabilidade (Backward-From, Forward-From, Pós-rastreabilidade e Pré-rastreabilidade, matriz geral).
-- Artefatos a serem produzidos do Módulo Base (será dividido melhor em subequipes)
-
-Será criada uma enquete para decidirmos a data para a realização do design sprint.
-
-Anotações:
-- Sites de referências: LinkedIn, Gupy, CIEE, Nube, Universidade Patativa, Super Estágios, (IMDb pela interface)
-- Pro projeto: lugares da FCTE: Lapis e AILab
-- Pro projeto: dicas também institucionais para guiar os alunos da UnB
-
-## Histórico de Versões
-
-| Versão |Descrição     |Autor                                       |Data    |Revisor|
-|:-:     | :-:          | :-:                                        | :-:        |:-:|
-|1.0     |Criação da ata|[Paulo Cerqueira](https://github.com/paulocerqr)| 02/09/2025 |[NULL](NULL)|
-|1.1     |NULL|[NULL](NULL)| 00/00/0000 |[NULL](NULL)|

@@ -1,66 +1,65 @@
-# Ata da 1ª Reunião
 
-**Data**:24/08/2025  <br>
-**Horário**: 16:00 - 18:00 <br>
-**Local**: Microsoft Teams  <br>
-**Participantes**: Mateus Villela, Leticia Monteiro, Paulo Cerqueira, Henrique Alencar, Eduardo Ferreira, Felipe Nunes, Breno Alexandre, Vitor Moreira
----
-## 1. Objetivo da reunião
-<div style="text-align: justify; text-indent: 2cm;">
-    Realizar o planejamento inicial para o desenvolvimento do projeto da disciplina. A pauta incluiu a apresentação dos artefatos de organização, e tarefas semanais.
-</div>
+# Reunião de Abertura
 
+## Introdução
 
----
-## 2. Discussões 
-### 2.1 Apresentação dos artefatos 
-<div style="text-align: justify; text-indent: 2cm;">
-Discutiu-se sobre os modelos e templates de artefatos (cronogroma, ata de reunião, heat map) que serão utilizados para a organização e documentação do projeto nesse primeiro momento.
-</div>
+Reunião de abertura da entrega 2.
 
+## Pautas da reunião:
 
-### 2.3 Ferramentas selecionadas
-<div style="text-align: justify; padding-left: 4em; margin-top: 1em;">
-<ul>
-    <li>WhatsApp: Comunicação rápida da equipe;
-    <li>Teams: Gravação das reuniões e discussões formais;
-    <li>GitHub: Versionamento da documentação e códigos;
-    <li>MkDocs: Criação e hospedagem da documentação do projeto;
-</ul>
-</div>
---- 
+- Leitura dos feedbacks indicados pela professora na primeira entrega.
+- Resumo do que é a segunda entrega.
+- Apresentação da estrutura dos artefatos
+
+## Integrantes presentes:
+
+<label><input type="checkbox" checked abled>[ Mateus Villela Consorte ](https://github.com/MVConsorte)</label><br>
+<label><input type="checkbox" checked abled>[ Paulo Henrique Virgilio Cerqueira ](https://github.com/paulocerqr)</label><br>
+<label><input type="checkbox" checked abled>[ Daniel Ferreira Nunes ](https://github.com/Mach1r0)</label><br>
+<label><input type="checkbox" checked abled>[ Breno Alexandre Soares Garcia ](https://github.com/brenoalexandre0)</label><br>
+<label><input type="checkbox" checked abled>[Henrique Martins Alencar](https://github.com/henryqma)</label><br>
 
 
-## 3. Decisões e Próximos Passos:
-<p style="text-align: justify;text-indent: 2cm;">
-Ficou definido o que cada membro ira fazer:
-<ul style="text-align: justify; padding-left: 4em; margin-top: 1em;">
-    <li>Cronograma Planejado e executado: Mateus Villela;</li>
-    <li>Ata de reuniao: Paulo Cerqueira;</li>
-    <li>Editar video e envio (youtube): Eduardo, Felipe, Breno;</li>
-    <li>Label Issues e colocar o git template: Breno Alexandre;</li>
-    <li>Configurar Repositorio (Politica de branch e commit) Vitor;</li>
-    <li>CI de automacao de deploy do docs: Matheus, Eduardo;</li>
-    <li>Gerente de verificacao: Leticia;</li>
-  </ul>
-</p>
+## Informações da reunião
 
-### 3.1 Próximo Encontro
-<div style="text-align: justify; padding-left: 4em; margin-top: 1em;">
-<b>Data</b>: INDEFINIDO
-</div>
+<font size="2" >
 
----
+<p > Tabela 1: Informações da reunião. </p>
 
-## 4. Link para a Gravação da Reunião
-<div style="text-align: justify; padding-left: 4em; margin-top: 1em;">
-<a href="https://www.youtube.com/watch?v=qDyLrtiNPg0" target="_blank">Gravação da reunião</a>
-</div>
+</font>
 
----
+| Data | Início | Fim | Local |
+|:-:|:-:|:-:|:-:|
+| 10/09/2025  | 21:00 | 21:35  | Teams |
 
-## 5. Histórico de Versões
+<font size="2" >
 
-| Versão |Descrição     |Autor                                       |Revisor    | Data|
-|:-:     | :-:          | :-:                                        | :-:        |:-:|
-|1.0     |Criação da ata|[Paulo Cerqueira](https://github.com/paulocerqr)|  |[Felipe Nunes](https://github.com/FelipeNunesdM.png?size=100)| 05/09/2025|
+<p>Fonte:<a href= "https://github.com/paulocerqr"> Paulo Cerqueira</a>, 2025.</p>
+
+</font>
+
+## Resultados da reunião 
+
+- Destribuição dos diagramas de cada FOCO para as células
+- Modelagem UML Estática
+    - Diagrama de Classe
+- Modelagem UML Dinâmica
+    - Diagrama de Estados
+- Modelagem UML Organizacional ou Caso de Uso
+    - Casos de Uso
+- Iniciativas extras
+    - Regras de Negócio e Requisitos - Trazer informações da primeira entrega
+    - Backlog do Produto
+    - Backlog Priorização
+    - Especificação de Caso de Us
+
+## Gravação da reunião
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4v3O1thznyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Histórico de Versão
+
+| Versão | Data | Descrição | Autor | Revisor|
+|--------|------|-----------|-------|--------|
+|`1.0`| 12/09/2025 | Criação do documento| [Paulo Cerqueira]()| - |
+
