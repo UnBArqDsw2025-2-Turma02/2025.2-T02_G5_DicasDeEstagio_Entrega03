@@ -1,11 +1,12 @@
 # Gravações 
 
-Gravação da criação da tela de oportunidades de estágio e vagas de emprego no Figma feita por Daniel Ferreira Nunes:
+## Gravação da criação da tela de oportunidades de estágio e vagas de emprego no Figma 
+**Autor:** Daniel Ferreira Nunes
 
- https://youtu.be/t8TJngz_mWg
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t8TJngz_mWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## Gravação da criação do backlog do produto
+**Autores:** Daniel Ferreira Nunes e Eduardo Ferreira de Aquino
 
-Gravação da criação do backlog do produto feita por Daniel Ferreira Nunes e Eduardo Ferreira de Aquino:
-
-https://youtu.be/8nUCQX5Bwjw
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8nUCQX5Bwjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
  
