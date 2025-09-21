@@ -10,6 +10,19 @@ No diagrama do Guia de Estágio, foram representados alguns atores como Estudant
 
 A elaboração do Diagrama de Caso de Uso foi realizada de forma colaborativa pela equipe, composta por oito integrantes. O diagrama foi realizado em uma reunião utilizando a plataforma draw.io. O diagrama foi modelado de acordo com os requisitos já identificados nas etapas anteriores, seguindo os padrões da UML. Após a realização do diagrama, foi criado um documento para especificar cada caso de uso encontrado.
 
+## __Tabela de Participação na Produção do Artefato__
+
+*Conforme documentado na [Ata 4](../../iniciativas_extras/Planejamento/atas/ata4.md) da reunião de 19/09/2025.*
+
+<label><input type="checkbox" checked abled>[ Mateus Villela Consorte ](https://github.com/MVConsorte)</label><br>
+<label><input type="checkbox" checked abled>[ Paulo Henrique Virgilio Cerqueira ](https://github.com/paulocerqr)</label><br>
+<label><input type="checkbox" checked abled>[ Daniel Ferreira Nunes ](https://github.com/Mach1r0)</label><br>
+<label><input type="checkbox" checked abled>[ Breno Alexandre Soares Garcia ](https://github.com/brenoalexandre0)</label><br>
+<label><input type="checkbox" checked abled>[ Henrique Martins Alencar ](https://github.com/henryqma)</label><br>
+<label><input type="checkbox" checked abled>[ Eduardo Ferreira de Aquino ](https://github.com/fxred)</label><br>
+<label><input type="checkbox" checked abled>[ Felipe Nunes de Mello ](https://github.com/FelipeNunesdM)</label><br>
+<label><input type="checkbox" checked abled>[ Víctor Moreira Almeida ](https://github.com/aqela-batata-alt)</label><br>
+
 ## **Diagrama**
 
 <font size="3"><p style="text-align: center"> **Figura 1** - Diagrama de Casos de Uso </p>
