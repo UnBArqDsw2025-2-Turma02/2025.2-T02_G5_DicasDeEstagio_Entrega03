@@ -8,7 +8,7 @@
 **Professora**: Milene Serrano<br>
 **Turma**: 2 - Faculdade UnB Gama (FCTE)<br>
 **Número do Grupo**: G5<br>
-**Entrega**: 01 (Módulo Base)<br>
+**Entrega**: 02 (Módulo de Modelagem)<br>
 
 ## Sobre o Projeto
 
@@ -40,22 +40,12 @@ Nosso grupo está desenvolvendo a **modelagem de um site sobre dicas de estágio
       <b><a href="https://github.com/FelipeNunesdM">Felipe Nunes de Mello</a></b><br>
       <sub>202023627</sub>
     </td>
-    <td align="center">
-      <img src="https://github.com/luizh-gsoares.png?size=100" width=100><br>
-      <b><a href="https://github.com/luizh-gsoares">Luiz Henrique Guimarães Soares</a></b><br>
-      <sub>222022144</sub>
-    </td>
   </tr>
   <tr>
     <td align="center">
       <img src="https://github.com/henryqma.png?size=100" width=100><br>
       <b><a href="https://github.com/henryqma">Henrique Martins Alencar</a></b><br>
       <sub>211061860</sub>
-    </td>
-    <td align="center">
-      <img src="https://github.com/leticiamonteiroo.png?size=100" width=100><br>
-      <b><a href="https://github.com/leticiamonteiroo">Letícia da Silva Monteiro</a></b><br>
-      <sub>231026859</sub>
     </td>
     <td align="center">
       <img src="https://github.com/MVConsorte.png?size=100" width=100><br>
@@ -78,10 +68,10 @@ Nosso grupo está desenvolvendo a **modelagem de um site sobre dicas de estágio
 ## Navegação da Documentação
 
 ### Principais Seções:
-- **[Base](Base/Introducao.md)** - Artefatos e documentação base do projeto
-- **[BPMN](Base/BPMN/ModelagemBPMN.md)** - Modelagem de processos
-- **[Design Sprint](Base/Design-sprint/DesignSprint.md)** - Metodologia de design aplicada
--
+- **[Modelagem UML](Base/Introducao.md)** - Visão Geral da modelagem UML
+- **[Diagrama UML Organizacional]()** - Visão Geral UML Organizacional
+- **[Diagrama UML Estático](Base/BPMN/ModelagemBPMN.md)** - Visão Geral UML Estático
+- **[Diagrama UML Dinâmico](Base/Design-sprint/DesignSprint.md)** - Visão Geral UML Dinâmico
 
 ## Screenshots da Primeira Entrega
 Adicione 2 ou mais screenshots em termos de artefatos realizados na entrega.
@@ -111,8 +101,4 @@ Adicione 2 ou mais screenshots em termos de artefatos realizados na entrega.
 
 | ID | Descrição | Autor | Revisor | Data |
 |:--:|:---------|:------|:--------|:----:|
-| 01 | Criação do Documento | [Mateus Villela Consorte](https://github.com/MVConsorte) | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | 02/09/25 |
-| 02 | Ajuste no documento | [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) | [Mateus Villela Consorte](https://github.com/MVConsorte) | 04/09/25 |
-| 03 | Melhoria na estrutura e navegação | [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) | - | 05/09/25 |
-
-<font size="2"><p style="text-align: center">Fonte: [Letícia da Silva Monteiro](https://github.com/leticiamonteiroo) e [Luiz Henrique Guimarães Soares](https://github.com/luizh-gsoares) 2025.</p></font>
+| 01 | Criação do Documento | [Mateus Villela Consorte](https://github.com/MVConsorte) | [](https://github.com/) | 21/09/2025 |
