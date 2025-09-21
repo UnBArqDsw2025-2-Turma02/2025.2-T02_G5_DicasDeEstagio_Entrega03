@@ -1,39 +1,32 @@
 /* style.css para personalização do MkDocs Material */
 
-/* Exemplo: Ajuste de cores para elementos principais */
-
-
+/* Definição da nova paleta de cores baseada na logo */
 :root {
-  --md-primary-fg-color: #193A6A;   /* Azul Pantone 654 */
-  --md-secondary-fg-color: #00543C; /* Verde Pantone 348 */
-  --md-auxiliary-fg-color: #FFD600; /* Amarelo Pantone 012C */
-  --md-bg-color: #F8F9FA;           /* Cinza claro */
+  --md-primary-fg-color: #1A2B45;   /* Azul escuro (cor principal da logo) */
+  --md-secondary-fg-color: #00A86B; /* Verde (cor de destaque da logo) */
+  --md-auxiliary-fg-color: #36A9E1; /* Azul claro (detalhe da logo) */
+  --md-bg-color: #F8F9FA;           /* Cinza claro para o fundo */
   --md-font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+  --md-text-color: #333333;         /* Cor de texto padrão para boa legibilidade */
 }
 
 /* Personalização do cabeçalho */
-
-
 .md-header {
   background-color: var(--md-primary-fg-color);
-  color: var(--md-auxiliary-fg-color);
+  color: white; /* Cor do texto do cabeçalho para contraste */
 }
 
 /* Personalização de links */
-
-
 a {
-  color: var(--md-secondary-fg-color);
+  color: var(--md-secondary-fg-color); /* Links em verde */
   text-decoration: underline;
 }
 
 a:hover {
-  color: var(--md-auxiliary-fg-color);
+  color: var(--md-auxiliary-fg-color); /* Efeito hover com azul claro */
 }
 
 /* Personalização de botões */
-
-
 .md-button {
   background-color: var(--md-primary-fg-color);
   color: #fff;
@@ -41,39 +34,41 @@ a:hover {
 }
 .md-button:hover {
   background-color: var(--md-secondary-fg-color);
-  color: var(--md-auxiliary-fg-color);
+  color: #fff;
 }
 
-/* Personalização de títulos */
-
-
-
+/* Personalização de títulos para MELHORAR A LEITURA */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--md-auxiliary-fg-color);
+  color: var(--md-primary-fg-color); /* Títulos em azul escuro para contraste e legibilidade */
   font-weight: bold;
 }
 
-
+/* Configurações gerais do corpo do texto */
 body, .md-typeset {
   background-color: var(--md-bg-color);
   font-family: var(--md-font-family);
-  color: var(--md-primary-fg-color);
+  color: var(--md-text-color); /* Cor do texto principal */
 }
 
 p, li, td, th {
-  color: var(--md-primary-fg-color);
+  color: var(--md-text-color); /* Garante que todo texto de conteúdo seja legível */
 }
 
-
+/* Personalização de blocos de aviso (admonition) */
 .markdown-alert, .md-typeset .admonition {
-  background-color: var(--md-auxiliary-fg-color);
+  background-color: #E7F6F1; /* Um fundo verde bem claro */
   color: var(--md-primary-fg-color);
   border-left: 5px solid var(--md-secondary-fg-color);
 }
 
+/* Rodapé */
 .md-footer {
-  background-color: var(--md-secondary-fg-color);
+  background-color: var(--md-primary-fg-color);
   color: #fff;
 }
 
-/* Adicione outras regras conforme necessário */
+/* Justifica o texto dos parágrafos */
+p {
+    text-align: justify;
+    margin-bottom: 1em;
+}
