@@ -68,10 +68,10 @@ Nosso grupo está desenvolvendo a **modelagem de um site sobre dicas de estágio
 ## Navegação da Documentação
 
 ### Principais Seções:
-- **[Modelagem UML](Base/Introducao.md)** - Visão Geral da modelagem UML
-- **[Diagrama UML Organizacional]()** - Visão Geral UML Organizacional
-- **[Diagrama UML Estático](Base/BPMN/ModelagemBPMN.md)** - Visão Geral UML Estático
-- **[Diagrama UML Dinâmico](Base/Design-sprint/DesignSprint.md)** - Visão Geral UML Dinâmico
+- **[Modelagem UML](Modelagem/index_modelagem.md)** - Visão Geral da modelagem UML
+- **[Diagrama UML Organizacional](Modelagem/organizacional_uml/modelagem_organizacional.md)** - Visão Geral UML Organizacional
+- **[Diagrama UML Estático](Modelagem/estatica_uml/modelagem_estatica.md)** - Visão Geral UML Estático
+- **[Diagrama UML Dinâmico](Modelagem/dinamica_uml/modelagem_dinamica.md)** - Visão Geral UML Dinâmico
 
 ## Screenshots da Primeira Entrega
 Adicione 2 ou mais screenshots em termos de artefatos realizados na entrega.
