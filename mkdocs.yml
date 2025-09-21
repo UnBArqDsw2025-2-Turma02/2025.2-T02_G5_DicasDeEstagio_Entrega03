@@ -1,7 +1,7 @@
 site_name: DicasDeEstagio - G5
 #site_author: Mateus Villela
 site_description: Site voltado para a documentação do Grupo 5 de Arquitetura e Desenvolvimento de Software - 2025.2
-repo_url: https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02_G5_DicasDeEstagio_Entrega01
+repo_url: https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02_G5_DicasDeEstagio_Entrega02
 repo_name: 2025.2-DicasDeEstagio-Entrega1
 
 theme:
@@ -28,28 +28,20 @@ theme:
 
 nav:
   - Início: index.md
-  - 1. Desenho de Software (Base):
-    - Introdução: Base/Introducao.md
-    - 1.1. Design Sprint:
-      - Design Sprint: Base/Design-sprint/DesignSprint.md
-      - Sketch e Decide: Base/Design-sprint/Decide.md
-    - 1.2. Artefatos Generalistas: Base/Artefatos-generalistas/ArtefatosGeneralistas.md
-    - 1.3. Modelagem BPMN: Base/BPMN/ModelagemBPMN.md
-    - 1.4. Participações: Base/Participacoes/Participacoes.md
-    - 1.5. Backlog do Produto: Base/Backlog/backlog.md
-    - 1.6. Iniciativas Extras:
-      - Planejamento:
-        - Ferramentas: Base/Iniciativas-extras/Planejamento/Ferramentas.md
-        - Heatmap Disponibilidade: Base/Iniciativas-extras/Planejamento/HeatmapDisponibilidade.md
-      - Atas de Reunião:
-        - Ata 1 - 24/08/2025: Base/Iniciativas-extras/Planejamento/ata1.md
-        - Ata 2 - 27/08/2025: Base/Iniciativas-extras/Planejamento/ata2.md
-        - Ata 3 - 02/09/2025: Base/Iniciativas-extras/Planejamento/ata3.md
-      - Políticas de Repositório:
-        - Política de Branches: Base/Iniciativas-extras/Planejamento/Politicas-de-repositorio/PoliticaBranches.md
-        - Política de Commits: Base/Iniciativas-extras/Planejamento/Politicas-de-repositorio/PoliticaCommits.md
+  - 2. Desenho de Software (Modelagem):
+    - 2.1. Introdução: Modelagem/index_modelagem.md
+    - 2.2. UML Estático: 
+      - 2.2.1. Visão Geral: Modelagem/estatica_uml/modelagem_estatica.md
+      - 2.2.2. Diagrama de Classes: Modelagem/estatica_uml/diagrama_classes.md
+    - 2.3. UML Dinâmico: 
+      - 2.3.1. Visão Geral: Modelagem/dinamica_uml/modelagem_dinamica.md
+      - 2.3.2. Diagrama de Estados: Modelagem/dinamica_uml/diagrama_estados.md
+    - 2.4. UML Organizacional:
+      - 2.4.1. Visão Geral: Modelagem/organizacional_uml/modelagem_organizacional.md
+      - 2.4.2. Diagrama de Casos de Uso: Modelagem/organizacional_uml/diagrama_casos_uso.md
+    - 2.5. Iniciativas Extras:
+      - 2.5.1. Introdução: iniciativas_extras/index_iniciativas.md
 
-        
 markdown_extensions:
   - pymdownx.details
   - tables
@@ -61,7 +53,7 @@ markdown_extensions:
 
 plugins:
   - search
-#  - mkdocs-pdf
+  - mkdocs-pdf
 
 extra_css:
   - assets/css/custom.css
