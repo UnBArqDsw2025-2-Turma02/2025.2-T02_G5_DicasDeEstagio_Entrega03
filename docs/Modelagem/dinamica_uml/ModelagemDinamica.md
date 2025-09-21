@@ -1,4 +1,4 @@
-# 2.2. Módulo Notação UML – Modelagem Dinâmica
+# Módulo Notação UML – Modelagem Dinâmica
 
 Foco_2: Modelagem UML Dinâmica.
 

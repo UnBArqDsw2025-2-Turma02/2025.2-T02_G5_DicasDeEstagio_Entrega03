@@ -1,4 +1,4 @@
-# 2.1. Módulo Notação UML – Modelagem Estática
+# Módulo Notação UML – Modelagem Estática
 
 Foco_1: Modelagem UML Estática.
 

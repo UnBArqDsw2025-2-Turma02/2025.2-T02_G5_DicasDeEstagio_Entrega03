@@ -1,4 +1,4 @@
-# 2.3. Módulo Notação UML – Modelagem Organizacional OU Casos de Uso
+# Módulo Notação UML – Modelagem Organizacional OU Casos de Uso
 
 Foco_3: Modelagem Organizacional OU Casos de Uso.
 
