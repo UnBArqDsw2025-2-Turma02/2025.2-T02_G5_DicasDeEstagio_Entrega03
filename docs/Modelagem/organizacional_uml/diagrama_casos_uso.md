@@ -185,6 +185,6 @@ O diagrama de casos de uso fornece uma visão funcional do sistema Dicas de Est�
 
 ## **Histórico de Versão**
 
-| ID | Descrição | Autor | Revisor | Data |
-|:--:|:---------|:------|:--------|:----:|
-| 1.0 | Criação do documento | [Henrique Alencar](https://github.com/henryqma) | | 21/09/2025 |
+| Versão | Data | Descrição | Autor | Revisor |
+|--------|------|-----------|-------|---------|
+| 1.0  | 21/09/2025 | Criação do documento | [Henrique Alencar](https://github.com/henryqma)| [Paulo Cerqueira](https://github.com/paulocerqr) |

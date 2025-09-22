@@ -63,4 +63,4 @@ Para a criação do diagrama de estados, nosso grupo utilizou a notação UML (U
 
 | Versão | Data | Descrição | Autor | Revisor |
 |--------|------|-----------|-------|---------|
-| 1.0  | 21/09/2025 | Criação e adaptação do documento para os novos diagramas de estados | [Paulo Cerqueira](https://github.com/paulocerqr)| [Revisor]() |
+| 1.0  | 21/09/2025 | Criação e adaptação do documento para os novos diagramas de estados | [Paulo Cerqueira](https://github.com/paulocerqr)| [Henrique Alencar](https://github.com/henryqma) |
