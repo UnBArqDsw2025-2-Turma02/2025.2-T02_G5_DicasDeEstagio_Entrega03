@@ -88,6 +88,8 @@ A priorização do backlog foi feita utilizando a técnica MoSCoW, que classific
 | US-13     | Candidatar-se a uma Vaga                       | Could      | 
 
 
-| Versão | Descrição | Autor | Revisor | Data |
-|--------|-------------------------------------------------------------|------------------------------------------|------------|------------------------------------------|git
-| 1.0    | Criação do documento e organização de todo o conteúdo       | [Daniel Ferreira](https://github.com/Mach1r0) e [Eduardo Ferreira](https://github.com/fxred) |  [Eduardo Ferreira](https://github.com/fxred) |  14/09/2025 |
+## Histórico de Versões
+
+| Versão | Descrição                                         | Autor                                                                 | Revisor                                              | Data       |
+|--------|---------------------------------------------------|-----------------------------------------------------------------------|------------------------------------------------------|------------|
+| 1.0    | Criação do documento e organização de todo o conteúdo | [Daniel Ferreira](https://github.com/Mach1r0), [Eduardo Ferreira](https://github.com/fxred) | [Eduardo Ferreira](https://github.com/fxred)         | 14/09/2025 |

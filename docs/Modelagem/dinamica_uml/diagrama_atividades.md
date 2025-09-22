@@ -1,10 +1,10 @@
 ## Introdução
 
-Um diagrama de atividades é uma ferramenta essencial da Linguagem de Modelagem Unificada (UML) utilizada para representar visualmente os fluxos de trabalho de um sistema ou processo. Ele descreve a dinâmica do sistema, mostrando a sequência de atividades, os pontos de decisão e os fluxos paralelos, desde um ponto de partida até um ponto de conclusão.
+Um diagrama de atividades é uma ferramenta essencial da Linguagem de Modelagem Unificada (UML) utilizada para representar visualmente os fluxos de trabalho. Conforme definem Booch, Rumbaugh e Jacobson, ele é projetado para "modelar a dinâmica de um sistema, enfatizando o fluxo de controle de uma atividade para outra". Em sua essência, o diagrama descreve a sequência de atividades, os pontos de decisão e os fluxos paralelos, desde um ponto de partida até um ponto de conclusão.
 
-No contexto do projeto **Dicas de Estágio**, este diagrama é fundamental para visualizar e validar os principais fluxos de interação do usuário com a plataforma. Ele mapeia a jornada do usuário desde o primeiro acesso ao site, passando pelos processos de cadastro e login, até a interação com funcionalidades essenciais como consulta a fóruns, submissão de avaliações e gerenciamento do perfil e currículo.
+No contexto do projeto Dicas de Estágio, o diagrama é fundamental para visualizar e validar a jornada do usuário. Como destaca Gilleanes Guedes, o diagrama de atividades serve para "detalhar os passos a serem percorridos para a realização de uma determinada tarefa", o que, no nosso caso, se traduz nos processos de cadastro, login, consulta a fóruns, submissão de avaliações e gerenciamento de perfil e currículo.
 
-O objetivo deste documento é apresentar e detalhar este fluxo, servindo como referência clara para as equipes de desenvolvimento, design e testes, garantindo que a implementação do sistema esteja alinhada com a experiência do usuário planejada.
+O objetivo deste documento é apresentar este fluxo detalhado, servindo como referência clara para as equipes de desenvolvimento, design e testes, garantindo que a implementação do sistema esteja alinhada com a experiência do usuário planejada.
 
 ## Metodologia
 
@@ -69,3 +69,4 @@ A gravação do processo de elaboração do diagrama de atividades pode ser visu
 |:--:|:---------|:------|:--------|:----:|
 | 1.0 | Criação do documento | [Daniel Ferreira Nunes](https://github.com/mach1r0) | [Eduardo Ferreira](https://github.com/fxred) | 21/09/2025 |
 | 1.1 | Edição do documento e adição do draw.io | [Eduardo Ferreira](https://github.com/fxred) | [Daniel Ferreira Nunes](https://github.com/mach1r0) | 21/09/2025 |
+| 1.2 | Refatoração da introdução| [Daniel Ferreira](https://github.com/mach1r0) | | 22/09/2025 |
