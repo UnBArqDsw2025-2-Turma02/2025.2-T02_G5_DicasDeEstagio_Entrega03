@@ -27,7 +27,7 @@ A elaboração do Diagrama de Caso de Uso foi realizada de forma colaborativa pe
 
 <font size="3"><p style="text-align: center"> **Figura 1** - Diagrama de Casos de Uso </p>
 
-![Diagrama Casos de Uso](../../assets/imgs/outros/entrega2/diagrama_caso_uso.png)
+![Diagrama Casos de Uso](../../assets/imgs/entrega2/diagrama_caso_uso.png)
 
 <font size="3"><p style="text-align: center"> **Autores**: [Breno](https://github.com/brenoalexandre0), [Daniel](https://github.com/Mach1r0), [Eduardo](https://github.com/fxred), [Felipe](https://github.com/FelipeNunesdM), [Henrique](https://github.com/henryqma), [Mateus](https://github.com/MVConsorte), [Paulo](https://github.com/paulocerqr), [Victor](https://github.com/aqela-batata-alt) </p>
 
@@ -185,6 +185,6 @@ O diagrama de casos de uso fornece uma visão funcional do sistema Dicas de Est�
 
 ## **Histórico de Versão**
 
-| ID | Descrição | Autor | Revisor | Data |
-|:--:|:---------|:------|:--------|:----:|
-| 1.0 | Criação do documento | [Henrique Alencar](https://github.com/henryqma) | | 21/09/2025 |
+| Versão | Data | Descrição | Autor | Revisor |
+|--------|------|-----------|-------|---------|
+| 1.0  | 21/09/2025 | Criação do documento | [Henrique Alencar](https://github.com/henryqma)| [Paulo Cerqueira](https://github.com/paulocerqr) |
