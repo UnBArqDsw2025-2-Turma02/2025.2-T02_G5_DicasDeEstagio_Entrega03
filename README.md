@@ -1,16 +1,11 @@
-# RepositorioTemplate
-
-Repositório que deve ser utilizado como template inicial pelos grupos da matéria de Arquitetura e Desenho de Software.
-
 ## Introdução
-
-Este repositório traz um template de repo de documentação a ser seguido pelos grupos de arquitetura e desenho de software.
+Este repositório serve como base para a documentação dos projetos desenvolvidos na disciplina de Arquitetura e Desenho de Software da Universidade de Brasília (UnB). Ele fornece um template estruturado para que os grupos possam organizar e apresentar suas entregas de forma padronizada, facilitando a colaboração, revisão e manutenção das informações ao longo do semestre. Em específico, esse repositório se refere à entrega 2 (Módulo de Modelagem), do grupo 5, da turma 2 (2025.2), o qual está modelando o "DicasDeEstagio".
 
 ## Tecnologia
 
 A documentação do projeto é gerenciada com [MkDocs](https://www.mkdocs.org/) e está disponível em: 
 
-https://unbarqdsw2025-2-turma02.github.io/2025.2-T02_G5_DicasDeEstagio_Entrega01/
+https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02_G5_DicasDeEstagio_Entrega02
 
 ## 🚀 Executando a Documentação Localmente
 
