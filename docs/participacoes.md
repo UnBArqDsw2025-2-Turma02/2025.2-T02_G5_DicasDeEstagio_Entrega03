@@ -6,7 +6,7 @@ Breve relato sobre as participações/contribuições de cada membro à entrega.
 
 | Membro | Contribuição | Significância da Contribuição <br> para o Projeto <br> (Excelente/Boa/Regular/Ruim/Nula) | Comprobatórios |
 | ------ | ------ | ------ | ------ |
-| [Breno Garcia](https://github.com/brenoalexandre0) | | | |
+| [Breno Garcia](https://github.com/brenoalexandre0) | Ajuda na criação do diagrama de classes | Excelente | [classes](Modelagem/estatica_uml/diagrama_classes.md) |
 | [Daniel Nunes](https://github.com/Mach1r0) | Ajuda na criação do diagrama de classes e do diagrama de implementação | Excelente | [classes](Modelagem/estatica_uml/diagrama_classes.md) e [implementação](Modelagem/estatica_uml/diagrama_implementacao.md) |
 | [Eduardo de Aquino](https://github.com/fxred) | Ajuda na criação do diagrama de classes e do diagrama de implementação | Excelente | [classes](Modelagem/estatica_uml/diagrama_classes.md) e [implementação](Modelagem/estatica_uml/diagrama_implementacao.md) |
 | [Felipe de Mello](https://github.com/FelipeNunesdM) | Ajuda na criação do diagrama de classes | Excelente | [classes](Modelagem/estatica_uml/diagrama_classes.md)|
@@ -19,7 +19,7 @@ Breve relato sobre as participações/contribuições de cada membro à entrega.
 
 | Membro | Contribuição | Significância da Contribuição <br> para o Projeto <br> (Excelente/Boa/Regular/Ruim/Nula) | Comprobatórios |
 | ------ | ------ | ------ | ------ |
-| [Breno Garcia](https://github.com/brenoalexandre0) | | | |
+| [Breno Garcia](https://github.com/brenoalexandre0) | Contribuição na criação do diagrama de estados | Excelente | [estados](Modelagem/dinamica_uml/diagrama_estados.md) |
 | [Daniel Nunes](https://github.com/Mach1r0) | Contribuição na criação do diagrama de atividades | Excelente | [atividades](Modelagem/dinamica_uml/diagrama_atividades.md) |
 | [Eduardo de Aquino](https://github.com/fxred) | Contribuição na criação do diagrama de atividades e estados| Excelente| [atividades](Modelagem/dinamica_uml/diagrama_atividades.md) e [estados](Modelagem/dinamica_uml/diagrama_estados.md) |
 | [Felipe de Mello](https://github.com/FelipeNunesdM) | Contribuição na criação do diagrama de estados| Excelente| [estados](Modelagem/dinamica_uml/diagrama_estados.md) |
@@ -32,7 +32,7 @@ Breve relato sobre as participações/contribuições de cada membro à entrega.
 
 | Membro | Contribuição | Significância da Contribuição <br> para o Projeto <br> (Excelente/Boa/Regular/Ruim/Nula) | Comprobatórios |
 | ------ | ------ | ------ | ------ |
-| [Breno Garcia](https://github.com/brenoalexandre0) | | | |
+| [Breno Garcia](https://github.com/brenoalexandre0) | Contribuição na criação do diagrama de caso de uso | Excelente | [caso de uso](Modelagem/organizacional_uml/diagrama_casos_uso.md) |
 | [Daniel Nunes](https://github.com/Mach1r0) | Contribuição na criação do diagrama de caso de uso | Excelente |  [caso de uso](Modelagem/organizacional_uml/diagrama_casos_uso.md) |
 | [Eduardo de Aquino](https://github.com/fxred) | Contribuição na criação do diagrama de caso de uso | Excelente |  [caso de uso](Modelagem/organizacional_uml/diagrama_casos_uso.md) |
 | [Felipe de Mello](https://github.com/FelipeNunesdM) | Contribuição na criação do diagrama de caso de uso | Excelente |  [caso de uso](Modelagem/organizacional_uml/diagrama_casos_uso.md) |
