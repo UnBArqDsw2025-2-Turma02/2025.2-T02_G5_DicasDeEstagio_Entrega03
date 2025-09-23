@@ -51,7 +51,7 @@ Breve relato sobre as participações/contribuições de cada membro à entrega.
 | [Eduardo de Aquino](https://github.com/fxred) | Organização do backlog  | Excelente |  [requisitos](iniciativas_extras/Backlog/backlog.md)  |
 | [Felipe de Mello](https://github.com/FelipeNunesdM) | | | |
 | [Henrique Alencar](https://github.com/henryqma) | | | |
-| [Mateus Consorte](https://github.com/MVConsorte) | Criação do questionário | Excelente  | [questionarios](iniciativas_extras/incremento_elicitacao/questionario.md) |
+| [Mateus Consorte](https://github.com/MVConsorte) | Criação do questionário | Excelente  | [questionarios](iniciativas_extras/incremento_elicitacao/questionario.md), [Estrutura de pastas/arquivos](assets/pdfs/EAP-adaptado-pastas-arquivos.pdf) |
 | [Paulo Cerqueira](https://github.com/paulocerqr) | Criação do questionário | Excelente  | [questionarios](iniciativas_extras/incremento_elicitacao/questionario.md) |
 | [Victor Almeida](https://github.com/aqela-batata-alt) | | | |
 
