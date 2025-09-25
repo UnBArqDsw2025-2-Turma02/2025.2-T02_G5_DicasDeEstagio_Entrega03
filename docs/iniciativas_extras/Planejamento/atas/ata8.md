@@ -57,6 +57,42 @@ Os resultados alcançados pelo grupo foram:
   - **Não ocorreu uma divisão clara prévia para a confecção dos artefatos.**
 
 ### Cronograma:
+Data de entrega: 24/10 - Potencialmente com Gravação de vídeo e envio para a professora (a ser informado pela profa.) - Cerca de 4 semanas.
+
+#### Entrega mínimas:
+- Todos em GoF Criacionais - Modelagem & Código & Execução
+- Todos em GoF Estruturais - Modelagem & Código & Execução
+- Todos em GoF Comportamental - Modelagem & Código & Execução
+- Participações
+
+#### Configuração de Ambiente (29/09 - 10/10)
+
+#### Inspeção de Fagan (Iniciativa extra)
+- Etapas 1 a 3 da Inspeção de Fagan de artefatos a corrigir: (25/09 - 28/09)
+  - Planning (25/09)
+  - Overview (25/09 - 26/09)
+  - Preparation (Listas de verificação) (26/09 - 28/09)
+- Etapas 4 (Reunião de Inspeção): (29/09 ou 01/09 - a depender dos integrantes em iniciativa extra)
+  - Sugestões de correção
+    - Corrigir Diagrama de Estados
+    - Melhorar o Diagrama de Classe
+    - Diagrama de Pacotes (agrega classes)
+    - Ajustar Diagrama de atividades
+    - Atualizar tabela de requisitos e Backlog (Priorizado para desenvolvimento)
+    - Matriz de Rastreabilidade dos requisitos (para a origem e para a modelagem/produto)
+- Etapa 5 (Correções - Rework) (29/09 - 05/10):
+  - Etapa em que se corrige os pontos evidenciados na reunião de inspeção.
+
+#### Incremento de Elicitação - Entrevista (Iniciativa extra):
+- Planejar a entrevista (25/09 - 28/09)
+  - Local
+  - Pessoas designadas
+  - Stakeholders (verificar disponibilidades)
+  - Roteiro de Entrevista
+  - Termo de Consentimento Livre e esclarecido
+  - Materiais e documentos necessários
+- Entrevista Piloto (28/09)
+- Período de entrevistas (28/09 - 10/10)
 
 
 ## Pautas para a próxima reunião:
