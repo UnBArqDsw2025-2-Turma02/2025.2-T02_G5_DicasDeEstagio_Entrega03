@@ -17,6 +17,7 @@ Este artefato resume como se deu todo o andamento da reunião realizada na data 
 <label><input type="checkbox" checked abled>[ Mateus Villela Consorte ](https://github.com/MVConsorte)</label><br>
 <label><input type="checkbox" checked abled>[ Víctor Moreira Almeida ](https://github.com/aqela-batata-alt)</label><br>
 
+
 ## Informações da reunião
 
 <font size="2" >
@@ -35,11 +36,40 @@ Este artefato resume como se deu todo o andamento da reunião realizada na data 
 
 </font>
 
+
 ## Resultados da reunião
 
 Os resultados alcançados pelo grupo foram:
 
- - Criação do Diagrama de atividades.
+### Retrospectiva:
+- O que deu certo?
+  - Houve maior união entre a equipe para a entrega.
+  - Foi mais produtivo que a entrega 1.
+  - Botar tabela de participação no artefato logo em cima da página do artefato já com o link comprobatório.
+  - **Reunião em equipe é interessante para produzir, mas com divisão prévia de tarefas.**
+
+- O que deu errado?
+  - Deixar pra última hora.
+  - Ainda houve desorganização no processo e produção dos artefatos.
+  - Muitas reuniões longas de produção com toda a equipe (tende ser um gargalo, já que essa disponibilidade é rara e tende a ser menos produtiva).
+  - Padrões de branch e commit não foram utilizados adequadamente.
+  - Sempre registrar senso crítico acerca do artefato (dúvidas, questionamentos, erros e aspectos inadequados podem ser registrados e a professora considera como um agregador na entrega).
+  - **Não ocorreu uma divisão clara prévia para a confecção dos artefatos.**
+
+### Cronograma:
+
+
+## Pautas para a próxima reunião:
+- Ponto de dúvida:
+  - Github Projects deu certo?
+  - Issues deu certo?
+  - Teams para além de gravação e reunião?
+  - Usar Docker ou não?
+
+
+- Aspectos a serem decididos:
+  - Usar issue como meio principal de versionamento
+  - Processo de desenvolvimento e modelagem para “codar” (Scrum e história de usuário, OpenUp, NFR Framework?).
 
 
 ## Gravação da reunião
