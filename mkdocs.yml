@@ -55,11 +55,14 @@ nav:
         - Questionário: iniciativas_extras/incremento_elicitacao/questionario.md
     - 2.6. Participações: participacoes.md
     - 2.7. Reuniões - Atas:
-      - Ata 1 - 24/08/2025: iniciativas_extras/Planejamento/atas/ata1.md
-      - Ata 2 - 27/08/2025: iniciativas_extras/Planejamento/atas/ata2.md
-      - Ata 3 - 02/09/2025: iniciativas_extras/Planejamento/atas/ata3.md
-      - Ata 4 - 10/09/2025: iniciativas_extras/Planejamento/atas/ata4.md
-      - Ata 5 - 17/09/2025: iniciativas_extras/Planejamento/atas/ata5.md
+      - Ata 1: iniciativas_extras/Planejamento/atas/ata1.md
+      - Ata 2: iniciativas_extras/Planejamento/atas/ata2.md
+      - Ata 3: iniciativas_extras/Planejamento/atas/ata3.md
+      - Ata 4: iniciativas_extras/Planejamento/atas/ata4.md
+      - Ata 5: iniciativas_extras/Planejamento/atas/ata5.md
+      - Ata 6: iniciativas_extras/Planejamento/atas/ata6.md
+      - Ata 7: iniciativas_extras/Planejamento/atas/ata7.md
+      - Ata 8: iniciativas_extras/Planejamento/atas/ata8.md
 
 markdown_extensions:
   - pymdownx.details
