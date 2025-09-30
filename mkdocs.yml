@@ -1,8 +1,8 @@
 site_name: DicasDeEstagio - G5
 #site_author: Mateus Villela
 site_description: Site voltado para a documentação do Grupo 5 de Arquitetura e Desenvolvimento de Software - 2025.2
-repo_url: https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02_G5_DicasDeEstagio_Entrega02
-repo_name: 2025.2-DicasDeEstagio-Entrega02
+repo_url: https://unbarqdsw2025-2-turma02.github.io/2025.2-T02_G5_DicasDeEstagio_Entrega03/
+repo_name: 2025.2-DicasDeEstagio-Entrega03
 
 theme:
   name: material
