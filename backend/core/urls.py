@@ -16,9 +16,7 @@ routers.register(r'instituicoes', InstituicaoViewSet)
 routers.register(r'forum', ForumViewSet)
 routers.register(r'comentarios', ComentarioForumViewSet)
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(routers.urls)),
-    path('api-auth/', include('rest_framework.urls')),  # Adiciona URLs de login/logout
 ]
