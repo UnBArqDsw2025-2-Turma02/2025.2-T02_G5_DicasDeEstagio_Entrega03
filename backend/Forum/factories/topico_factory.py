@@ -187,7 +187,7 @@ class TopicoDiscussaoCreator(TopicoCreator):
 
 
 class TopicoFactory:
-    
+    # topico = TopicoFactory.create_topico('vaga', user, titulo, conteudo, empresa='TechCorp')
     _creators = {
         'vaga': TopicoVagaCreator(),
         'duvida': TopicoDuvidaCreator(),
