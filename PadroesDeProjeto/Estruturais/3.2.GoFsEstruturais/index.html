@@ -427,36 +427,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-rastro-aos-membros-participantes-commits-recomendacao-para-o-video" class="md-nav__link">
+  <a href="#5-video-de-apresentacao" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Rastro aos membros participantes &amp; Commits (recomendação para o vídeo)
+      5. Vídeo de apresentação
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-riscos-limitacoes-e-extensoes-futuras" class="md-nav__link">
+  <a href="#6-referencias" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Riscos, limitações e extensões futuras
+      6. Referências
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-referencias" class="md-nav__link">
+  <a href="#tabela-de-participacao-na-producao-do-artefato" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Referências
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-itens-de-entrega-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Itens de entrega (checklist)
+      Tabela de Participação na Produção do Artefato
     </span>
   </a>
   
@@ -564,36 +555,27 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-rastro-aos-membros-participantes-commits-recomendacao-para-o-video" class="md-nav__link">
+  <a href="#5-video-de-apresentacao" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Rastro aos membros participantes &amp; Commits (recomendação para o vídeo)
+      5. Vídeo de apresentação
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-riscos-limitacoes-e-extensoes-futuras" class="md-nav__link">
+  <a href="#6-referencias" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Riscos, limitações e extensões futuras
+      6. Referências
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#7-referencias" class="md-nav__link">
+  <a href="#tabela-de-participacao-na-producao-do-artefato" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Referências
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-itens-de-entrega-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Itens de entrega (checklist)
+      Tabela de Participação na Produção do Artefato
     </span>
   </a>
   
@@ -709,46 +691,22 @@ class ForumViewSet(viewsets.ModelViewSet):
 </li>
 </ol>
 <hr>
-<h2 id="5-rastro-aos-membros-participantes-commits-recomendacao-para-o-video">5. Rastro aos membros participantes &amp; Commits (recomendação para o vídeo)</h2>
-<p>No vídeo de apresentação inclua:
-- Captura da página de commits do repositório (GitHub/GitLab) mostrando os autores e mensagens.
-- Um slide rápido com a tabela de participantes e responsabilidades (quem implementou o decorator, quem escreveu testes, quem criou documentação e diagramas).</p>
-<p>Comandos úteis:</p>
-<pre><code class="language-bash"># Ver histórico resumido com autor e mensagem
-git log --pretty=format:"%h %an %s" --reverse
+<h2 id="5-video-de-apresentacao">5. Vídeo de apresentação</h2>
+<iframe width="1307" height="735" src="https://www.youtube.com/embed/VPRuDv5MTB8" title="Gofs Estruturais" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-# Ver alterações por autor
-git shortlog -sne
-</code></pre>
-<p>Sugestão: inclua no repositório um arquivo <code>TEAM.md</code> com a lista de participantes e responsabilidades.</p>
-<hr>
-<h2 id="6-riscos-limitacoes-e-extensoes-futuras">6. Riscos, limitações e extensões futuras</h2>
-<ul>
-<li>Atualmente, implementamos apenas <code>LoggingDecorator</code>. A arquitetura facilita adicionar:</li>
-<li><code>CacheDecorator</code> (caching por usuário/URL),</li>
-<li><code>PerformanceDecorator</code> (adicionar header X-Execution-Time),</li>
-<li>
-<p><code>AuthorizationDecorator</code> (checar roles antes de executar).</p>
-</li>
-<li>
-<p>Observação: Aplicar decorators em métodos de <code>ViewSet</code> é prático; aplicar ao nível da classe exigiria um decorator especializado
-  (ou <code>method_decorator</code> do Django para aplicar por nome de método).</p>
-</li>
-</ul>
-<hr>
-<h2 id="7-referencias">7. Referências</h2>
+<h2 id="6-referencias">6. Referências</h2>
 <ul>
 <li>Gamma et al., "Design Patterns: Elements of Reusable Object-Oriented Software"</li>
 <li>PlantUML — https://plantuml.com</li>
 <li>Django docs — https://docs.djangoproject.com</li>
 </ul>
 <hr>
-<h2 id="8-itens-de-entrega-checklist">8. Itens de entrega (checklist)</h2>
-<ul>
-<li>[x] Código em <code>backend/core/decorators.py</code></li>
-<li>[x] Testes em <code>backend/core/tests_decorators.py</code> (8 testes OK)</li>
-</ul>
-<hr></div>
+<h2 id="tabela-de-participacao-na-producao-do-artefato">Tabela de Participação na Produção do Artefato</h2>
+<p><label><input type="checkbox" checked disabled> <a href="https://github.com/paulocerqr"> Paulo Henrique Virgilio Cerqueira </a></label><br> Criação do diagrama de classes e sequência, implementação do LoggingDecorator, elaboração do roteiro e apresentação em vídeo.<br>
+<label><input type="checkbox" checked disabled> <a href="https://github.com/Mach1r0"> Daniel Ferreira Nunes </a></label><br>
+    Análise do padrão Decorator, implementação do ViewDecorator, escrita dos testes unitários, elaboração do roteiro e apresentação em vídeo.<br>
+<label><input type="checkbox" checked disabled> <a href="https://github.com/fxred"> Eduardo Ferreira de Aquino </a></label><br>
+    Pesquisa sobre o padrão Decorator, auxílio na modelagem UML, revisão do código e elaboração do roteiro e apresentação em vídeo.<br></p></div>
 
 
 
