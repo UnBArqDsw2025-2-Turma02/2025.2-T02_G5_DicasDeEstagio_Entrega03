@@ -95,40 +95,6 @@ vaga = topico_factory.create_topico('vaga', user, titulo, conteudo, ...)
 
 Dessa forma, a instanciação é encapsulada dentro das fábricas concretas, permitindo a expansão do sistema para novos tipos de tópicos sem alterar o código existente.
 
-### 4.3. Tipos de Tópicos Suportados
-
-O sistema atualmente suporta cinco tipos de tópicos, cada um com características específicas:
-
-#### 4.3.1. Tópicos de Vaga (`TopicoVagaCreator`)
-- **Finalidade**: Publicação de oportunidades de estágio ou emprego
-- **Campos específicos**: salário, requisitos, empresa, tipo_vaga
-- **Formatação**: `[VAGA - {TIPO}] {título}`
-- **Exemplo**: `[VAGA - ESTÁGIO] Desenvolvedor Python Júnior`
-
-#### 4.3.2. Tópicos de Dúvida (`TopicoDuvidaCreator`)
-- **Finalidade**: Perguntas sobre carreira e estágios
-- **Campos específicos**: categoria, urgência, tags
-- **Formatação**: `[DÚVIDA - {CATEGORIA}] {título}`
-- **Exemplo**: `[DÚVIDA - ENTREVISTAS] Como me preparar para entrevista técnica?`
-
-#### 4.3.3. Tópicos de Experiência (`TopicoExperienciaCreator`)
-- **Finalidade**: Compartilhamento de experiências de estágio
-- **Campos específicos**: empresa, período, área, nota_experiencia
-- **Formatação**: `[EXPERIÊNCIA] {título}`
-- **Exemplo**: `[EXPERIÊNCIA] Minha experiência como estagiário na empresa X`
-
-#### 4.3.4. Tópicos de Dica (`TopicoDicaCreator`)
-- **Finalidade**: Compartilhamento de dicas de carreira
-- **Campos específicos**: categoria_dica, nível, aplicabilidade
-- **Formatação**: `[DICA - {CATEGORIA}] {título}`
-- **Exemplo**: `[DICA - PRODUTIVIDADE] Como se organizar no estágio`
-
-#### 4.3.5. Tópicos de Discussão (`TopicoDiscussaoCreator`)
-- **Finalidade**: Discussões gerais sobre temas diversos
-- **Campos específicos**: tema, tipo_discussao
-- **Formatação**: `[DISCUSSÃO - {TEMA}] {título}`
-- **Exemplo**: `[DISCUSSÃO - TRABALHO REMOTO] Home office para estagiários`
-
 ### 4.4. Códigos na Íntegra
 
 A seguir, estão apresentados os códigos que implementam as classes relacionadas ao _Factory Method_ para tópicos do fórum.
@@ -142,7 +108,6 @@ A seguir, estão apresentados os códigos que implementam as classes relacionada
 from abc import ABC, abstractmethod
 from django.utils import timezone
 from ..models import Forum
-
 
 class TopicoCreator(ABC):
     
@@ -229,99 +194,6 @@ class TopicoDuvidaCreator(TopicoCreator):
         
         return topico
 
-
-class TopicoExperienciaCreator(TopicoCreator):
-    def create_topico(self, user, titulo, conteudo, empresa=None, periodo=None, 
-                     area=None, nota_experiencia=None, **kwargs):
-        self.validar_conteudo(titulo, conteudo)
-        
-        titulo_formatado = self.formatar_titulo(titulo, "EXPERIÊNCIA")
-        
-        conteudo_enriquecido = conteudo
-        
-        if empresa:
-            conteudo_enriquecido += f"\n\n**Empresa:** {empresa}"
-        
-        if periodo:
-            conteudo_enriquecido += f"\n**Período:** {periodo}"
-        
-        if area:
-            conteudo_enriquecido += f"\n**Área:** {area}"
-        
-        if nota_experiencia:
-            estrelas = "*" * int(nota_experiencia)
-            conteudo_enriquecido += f"\n**Avaliação:** {estrelas} ({nota_experiencia}/5)"
-        
-        conteudo_enriquecido += f"\n\n**Compartilhado em:** {timezone.now().strftime('%d/%m/%Y às %H:%M')}"
-        conteudo_enriquecido += f"\n**Compartilhe sua experiência também!**"
-        
-        topico = Forum.objects.create(
-            user=user,
-            titulo=titulo_formatado,
-            conteudo=conteudo_enriquecido,
-            visualizacoes=0,
-            is_active=True
-        )
-        
-        return topico
-
-
-class TopicoDicaCreator(TopicoCreator):
-    def create_topico(self, user, titulo, conteudo, categoria_dica="Carreira", 
-                     nivel="Iniciante", aplicabilidade="Geral", **kwargs):
-        self.validar_conteudo(titulo, conteudo)
-        
-        titulo_formatado = self.formatar_titulo(titulo, f"DICA - {categoria_dica.upper()}")
-        
-        conteudo_enriquecido = conteudo
-        conteudo_enriquecido += f"\n\n**Categoria:** {categoria_dica}"
-        conteudo_enriquecido += f"\n**Nível:** {nivel}"
-        conteudo_enriquecido += f"\n**Aplicabilidade:** {aplicabilidade}"
-        
-        if nivel.lower() == "iniciante":
-            conteudo_enriquecido += f"\n\n**Perfeito para quem está começando!**"
-        elif nivel.lower() == "avançado":
-            conteudo_enriquecido += f"\n\n**Para quem já tem experiência!**"
-        
-        conteudo_enriquecido += f"\n\n**Dica compartilhada em:** {timezone.now().strftime('%d/%m/%Y às %H:%M')}"
-        conteudo_enriquecido += f"\n**Ajudou? Deixe um comentário!**"
-        
-        topico = Forum.objects.create(
-            user=user,
-            titulo=titulo_formatado,
-            conteudo=conteudo_enriquecido,
-            visualizacoes=0,
-            is_active=True
-        )
-        
-        return topico
-
-
-class TopicoDiscussaoCreator(TopicoCreator):
-    def create_topico(self, user, titulo, conteudo, tema="Geral", 
-                     tipo_discussao="Aberta", **kwargs):
-        self.validar_conteudo(titulo, conteudo)
-        
-        titulo_formatado = self.formatar_titulo(titulo, f"DISCUSSÃO - {tema.upper()}")
-        
-        conteudo_enriquecido = conteudo
-        conteudo_enriquecido += f"\n\n**Tema:** {tema}"
-        conteudo_enriquecido += f"\n**Tipo:** {tipo_discussao}"
-        
-        conteudo_enriquecido += f"\n\n**Discussão iniciada em:** {timezone.now().strftime('%d/%m/%Y às %H:%M')}"
-        conteudo_enriquecido += f"\n**Participe! Queremos ouvir sua opinião!**"
-        
-        topico = Forum.objects.create(
-            user=user,
-            titulo=titulo_formatado,
-            conteudo=conteudo_enriquecido,
-            visualizacoes=0,
-            is_active=True
-        )
-        
-        return topico
-
-
 class TopicoFactory:
     
     _creators = {
@@ -382,132 +254,33 @@ class TopicoFactory:
 ```
 </details>
 
-## 5. Verificação e Validação
+### Passo-a-passo de execução dos testes
 
-A validação da implementação foi realizada por meio de testes unitários no Django (`backend/Forum/tests.py`), abrangendo:
-
-- Criação de instâncias de cada tipo de tópico pelas respectivas fábricas;
-- Garantia de que `TopicoCreator` não pode ser instanciada diretamente (por ser abstrata);
-- Testes de integridade para campos obrigatórios (_ValueError_);
-- Testes de validação de conteúdo mínimo;
-- Testes de formatação correta de títulos;
-- Testes de funcionalidade da classe `TopicoFactory`.
-
-### 5.1. Resultados dos Testes
-
-Os testes implementados cobrem os seguintes cenários:
-
-#### 5.1.1. Testes de Criação por Tipo
-- `test_criar_topico_vaga`: Valida criação de tópicos de vaga com campos específicos
-- `test_criar_topico_duvida`: Valida criação de tópicos de dúvida com categorização
-- `test_criar_topico_experiencia`: Valida criação de tópicos de experiência com avaliação
-- `test_criar_topico_dica`: Valida criação de tópicos de dica com níveis
-- `test_criar_topico_discussao`: Valida criação de tópicos de discussão temática
-
-#### 5.1.2. Testes de Validação
-- `test_tipo_topico_inexistente`: Verifica tratamento de tipos não suportados
-- `test_validacao_titulo_curto`: Valida rejeição de títulos muito curtos
-- `test_validacao_conteudo_curto`: Valida rejeição de conteúdo insuficiente
-
-#### 5.1.3. Testes de Formatação
-- `test_formatacao_titulo_com_prefixo`: Verifica adição correta de prefixos
-- `test_titulo_ja_com_prefixo`: Evita duplicação de prefixos
-
-### 5.2. Passo-a-passo de execução dos testes
-
-**5.2.1. Navegar para o diretório do projeto**
+**Navegar para o diretório do projeto**
 
 ```bash
 cd /home/cerq/Documentos/arqEntrega03/2025.2-T02_G5_DicasDeEstagio_Entrega03/backend
 ```
 
-**5.2.2. Ativar o ambiente virtual (se necessário)**
+**Ativar o ambiente virtual (se necessário)**
 
 ```bash
 source ../.venv/bin/activate
 ```
 
-**5.2.3. Executar os testes do Factory Method**
+**Executar os testes do Factory Method**
 
 ```bash
 python manage.py test Forum.tests.TopicoFactoryTestCase -v 2
 ```
 
-**5.2.4. Executar comando de demonstração**
+**Executar comando de demonstração**
 
 ```bash
 python manage.py test_topico_factory --criar-exemplos
 ```
 
 Ao executar os testes, o Django cria um banco de dados temporário e verifica se as fábricas e validações funcionam conforme o esperado, garantindo que o padrão _Factory Method_ foi corretamente aplicado para os tópicos do fórum.
-
-## 6. Integração com API REST
-
-O padrão _Factory Method_ foi integrado com a API REST do Django através de endpoints específicos no `ForumViewSet`:
-
-### 6.1. Endpoints Disponíveis
-
-#### 6.1.1. POST `/api/forum/criar_topico_por_tipo/`
-Cria um novo tópico usando o Factory Method:
-
-```json
-{
-    "tipo_topico": "vaga",
-    "titulo": "Desenvolvedor Python",
-    "conteudo": "Vaga para desenvolvedor Python júnior",
-    "salario": "R$ 2.500,00",
-    "requisitos": "Python, Django",
-    "empresa": "Tech Corp",
-    "tipo_vaga": "Estágio"
-}
-```
-
-#### 6.1.2. GET `/api/forum/tipos_disponiveis/`
-Retorna informações sobre todos os tipos de tópicos disponíveis.
-
-#### 6.1.3. GET `/api/forum/listar_por_tipo/?tipo=vaga`
-Lista tópicos filtrados por tipo específico.
-
-#### 6.1.4. GET `/api/forum/estatisticas_tipos/`
-Retorna estatísticas de uso dos diferentes tipos de tópicos.
-
-## 7. Vídeo de explicação
-
-[ESPAÇO PARA VÍDEO - A SER CRIADO]
-
-## 8. Justificativas e Senso Crítico
-
-A escolha do padrão _Factory Method_ se mostrou adequada para este contexto, pois:
-
-- **Organização por tipo**: Cada tipo de tópico possui características específicas que são tratadas de forma padronizada;
-- **Extensibilidade**: Facilita a adição de novos tipos de tópicos sem modificar o código existente;
-- **Validação consistente**: Garante que todos os tópicos passem pelas mesmas validações básicas;
-- **Formatação automática**: Aplica formatação específica conforme o tipo de tópico;
-- **Reutilização de código**: Evita duplicação de lógica de criação.
-
-Em termos arquiteturais, a adoção do _Factory Method_ contribuiu para:
-
-- **Baixo acoplamento**: O cliente não precisa conhecer as classes específicas de cada tipo;
-- **Alta coesão**: Cada factory tem responsabilidade única e bem definida;
-- **Testabilidade**: Cada tipo pode ser testado isoladamente;
-- **Manutenibilidade**: Mudanças em um tipo não afetam os outros.
-
-### 8.1. Benefícios Específicos para Fóruns
-
-- **Categorização automática**: Títulos são automaticamente categorizados com prefixos;
-- **Enriquecimento de conteúdo**: Cada tipo adiciona informações específicas relevantes;
-- **Validação específica**: Diferentes tipos podem ter validações particulares no futuro;
-- **Métricas diferenciadas**: Permite análise separada de diferentes tipos de conteúdo.
-
-### 8.2. Limitações e Considerações
-
-Como limitação, observa-se que:
-
-- O número de classes criadoras cresce conforme novos tipos são adicionados;
-- Cada tipo requer manutenção individual de sua lógica específica;
-- A complexidade pode aumentar se os tipos tiverem muitas variações.
-
-Entretanto, essas limitações são compensadas pela clareza, organização e manutenibilidade do código resultante.
 
 ## 9. Conclusão
 

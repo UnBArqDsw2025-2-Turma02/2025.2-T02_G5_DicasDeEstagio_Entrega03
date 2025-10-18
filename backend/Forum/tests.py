@@ -175,7 +175,7 @@ class TopicoFactoryTestCase(TestCase):
         
         creator = TopicoFactory.get_creator('experiencia')
         self.assertIsInstance(creator, TopicoExperienciaCreator)
-    
+
     def test_formatacao_titulo_com_prefixo(self):
         """Testa se o prefixo é adicionado corretamente ao título"""
         topico = TopicoFactory.create_topico(
