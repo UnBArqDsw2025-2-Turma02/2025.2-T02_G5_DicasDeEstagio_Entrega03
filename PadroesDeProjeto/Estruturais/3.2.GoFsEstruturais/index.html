@@ -605,25 +605,30 @@
 <p>No contexto de aplicações web (Django/DRF), decorators são ideais para <em>cross-cutting concerns</em> (preocupações transversais) como logging, caching, autenticação/validação ou medição de performance. A implementação deste módulo foca no <code>LoggingDecorator</code> — uma implementação concreta que registra informações sobre requisições HTTP.</p>
 <hr />
 <h2 id="2-diagrama-de-implementacao">2. Diagrama de Implementação</h2>
-<p><img alt="alt text" src="../image-1.png" />
-<strong>Interpretação:</strong></p>
+<p><img alt="Diagrama de classes e sequência" src="../image-2.png" /></p>
+<p><strong>Interpretação (resumida e direta):</strong></p>
 <ul>
 <li>
-<p>O diagrama de classes mostra a relação estrutural:</p>
+<p>Diagrama de classes (papéis):</p>
 <ul>
-<li><code>FunctionView</code> (Component) é o <em>callable</em> original da view.</li>
-<li><code>ViewDecorator</code> (Decorator) mantém referência a <code>view_func</code> e delega a execução.</li>
-<li><code>LoggingDecorator</code> (ConcreteDecorator) estende <code>ViewDecorator</code> e adiciona a funcionalidade de logging.</li>
+<li><code>FunctionView</code> — o callable original da view (implementa <code>__call__(request)</code>).</li>
+<li><code>ViewDecorator</code> — classe base que envolve um <code>view_func</code> (atributo <code>_view_func</code>) e delega a execução.</li>
+<li><code>LoggingDecorator</code> — concrete decorator que estende <code>ViewDecorator</code> e adiciona comportamento de logging antes e depois da execução.</li>
 </ul>
 </li>
 <li>
-<p>O diagrama de sequência mostra o fluxo em tempo de execução:</p>
-<ul>
-<li>Cliente → Resolvedor de URL → <code>LoggingDecorator</code> → View → Banco de dados → View → <code>LoggingDecorator</code> → Cliente</li>
-<li>O <code>LoggingDecorator</code> registra a entrada, delega a execução para a view e, ao final, registra a saída ou um possível erro.</li>
-</ul>
+<p>Diagrama de sequência (fluxo de execução):</p>
+<ol>
+<li>Cliente faz a requisição; o resolvedor de URL escolhe a view decorada.</li>
+<li>A requisição entra no <code>LoggingDecorator</code> que registra entrada (method, path, user).</li>
+<li>O <code>LoggingDecorator</code> chama <code>_view_func(request, ...)</code> — a view executa sua lógica e acessa o banco, se necessário.</li>
+<li>A view retorna um <code>response</code> para o decorator.</li>
+<li>O <code>LoggingDecorator</code> registra status e tempo de execução e devolve a resposta ao cliente.</li>
+<li>Em caso de exceção, o decorator registra o erro e re-lança a exceção.</li>
+</ol>
 </li>
 </ul>
+<p>Observação: os <code>ViewSets</code> do projeto (por exemplo <code>ForumViewSet</code>, <code>ComentarioForumViewSet</code>) usam métodos decorados (<code>list</code>, <code>retrieve</code>, <code>create</code>), o que permite aplicar o <code>LoggingDecorator</code> apenas onde desejado, sem alterar a lógica interna da view.</p>
 <hr />
 <h2 id="3-estrategias-concretas-concretecomponent-e-concretedecorators">3. Estratégias Concretas (ConcreteComponent e ConcreteDecorators)</h2>
 <p>No repositório, a modelagem segue as convenções abaixo:</p>
@@ -704,11 +709,34 @@ class ForumViewSet(viewsets.ModelViewSet):
 </ul>
 <hr />
 <h2 id="tabela-de-participacao-na-producao-do-artefato">Tabela de Participação na Produção do Artefato</h2>
-<p><label><input type="checkbox" checked disabled> <a href="https://github.com/paulocerqr"> Paulo Henrique Virgilio Cerqueira </a></label><br> Criação do diagrama de classes e sequência, implementação do LoggingDecorator, elaboração do roteiro e apresentação em vídeo.<br>
-<label><input type="checkbox" checked disabled> <a href="https://github.com/Mach1r0"> Daniel Ferreira Nunes </a></label><br>
-    Análise do padrão Decorator, implementação do ViewDecorator, escrita dos testes unitários, elaboração do roteiro e apresentação em vídeo.<br>
-<label><input type="checkbox" checked disabled> <a href="https://github.com/fxred"> Eduardo Ferreira de Aquino </a></label><br>
-    Pesquisa sobre o padrão Decorator, auxílio na modelagem UML, revisão do código e elaboração do roteiro e apresentação em vídeo.<br></p>
+<p style="text-align: center;">Tabela 1: Participantes da implementação do Factory Method</p>
+
+<table>
+<thead>
+<tr>
+<th>Nome do Integrante</th>
+<th>Artefato</th>
+<th>Link Comprobatório</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Daniel Ferreira Nunes</td>
+<td>Factory Method</td>
+<td><a href="https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02_G5_DicasDeEstagio_Entrega03/pull/3">PR #3</a></td>
+</tr>
+<tr>
+<td>Paulo Cerqueira</td>
+<td>Factory Method</td>
+<td><a href="https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02_G5_DicasDeEstagio_Entrega03/pull/3">PR #3</a></td>
+</tr>
+<tr>
+<td>Eduardo Ferreira de Aquino</td>
+<td>Factory Method</td>
+<td><a href="https://github.com/UnBArqDsw2025-2-Turma02/2025.2-T02_G5_DicasDeEstagio_Entrega03/commit/8b8380f488a0ea6d51c404936ab46af3e50e876e">commit</a></td>
+</tr>
+</tbody>
+</table>
 
 
 
