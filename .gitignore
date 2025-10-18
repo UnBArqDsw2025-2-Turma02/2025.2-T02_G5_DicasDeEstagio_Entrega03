@@ -4,3 +4,10 @@ __pycache__/
 *.pyc
 site/
 .env
+
+node_modules/
+dist/
+build/
+.DS_Store
+.vscode/
+.idea/  
