@@ -26,7 +26,7 @@ class TopicoCreator(ABC):
 
 
 class TopicoVagaCreator(TopicoCreator):
-    
+    # cria topicos de vagas de emprego/estagio
     def create_topico(self, user, titulo, conteudo, salario=None, requisitos=None, 
                      empresa=None, tipo_vaga="Estágio", **kwargs):
         self.validar_conteudo(titulo, conteudo)
@@ -59,7 +59,7 @@ class TopicoVagaCreator(TopicoCreator):
 
 
 class TopicoDuvidaCreator(TopicoCreator):
-    
+    # cria topicos de duvidas sobre carreiraa
     def create_topico(self, user, titulo, conteudo, categoria="Geral", 
                      urgencia="Normal", tags=None, **kwargs):
         self.validar_conteudo(titulo, conteudo)
@@ -92,7 +92,7 @@ class TopicoDuvidaCreator(TopicoCreator):
 
 
 class TopicoExperienciaCreator(TopicoCreator):
-    
+    # cria topicos de relatos de experiências
     def create_topico(self, user, titulo, conteudo, empresa=None, periodo=None, 
                      area=None, nota_experiencia=None, **kwargs):
         self.validar_conteudo(titulo, conteudo)
@@ -129,7 +129,7 @@ class TopicoExperienciaCreator(TopicoCreator):
 
 
 class TopicoDicaCreator(TopicoCreator):
-    
+    # cria topicos de dicas de carreira
     def create_topico(self, user, titulo, conteudo, categoria_dica="Carreira", 
                      nivel="Iniciante", aplicabilidade="Geral", **kwargs):
         self.validar_conteudo(titulo, conteudo)
@@ -161,7 +161,7 @@ class TopicoDicaCreator(TopicoCreator):
 
 
 class TopicoDiscussaoCreator(TopicoCreator):
-    
+    # cria topicos de discussões gerais
     def create_topico(self, user, titulo, conteudo, tema="Geral", 
                      tipo_discussao="Aberta", **kwargs):
         self.validar_conteudo(titulo, conteudo)
