@@ -51,9 +51,9 @@ class TopicoFactoryTestCase(TestCase):
         self.assertIsInstance(topico, Forum)
         self.assertEqual(topico.user, self.user)
         self.assertIn('[VAGA - ESTÁGIO]', topico.titulo)
-        self.assertIn('**Empresa:** Tech Corp', topico.conteudo)
-        self.assertIn('**Salário:** R$ 2.500,00', topico.conteudo)
-        self.assertIn('**Requisitos:** Python, Django', topico.conteudo)
+        self.assertIn('🏢 **Empresa:** Tech Corp', topico.conteudo)
+        self.assertIn('💰 **Salário:** R$ 2.500,00', topico.conteudo)
+        self.assertIn('📋 **Requisitos:** Python, Django', topico.conteudo)
         self.assertTrue(topico.is_active)
     
     def test_criar_topico_duvida(self):
@@ -70,10 +70,10 @@ class TopicoFactoryTestCase(TestCase):
         
         self.assertIsInstance(topico, Forum)
         self.assertIn('[DÚVIDA - ENTREVISTAS]', topico.titulo)
-        self.assertIn('**Categoria:** Entrevistas', topico.conteudo)
-        self.assertIn('**Urgência:** Alta', topico.conteudo)
-        self.assertIn('**Tags:** entrevista, dicas', topico.conteudo)
-        self.assertIn('**URGENTE:**', topico.conteudo)
+        self.assertIn('📂 **Categoria:** Entrevistas', topico.conteudo)
+        self.assertIn('⚡ **Urgência:** Alta', topico.conteudo)
+        self.assertIn('🏷️ **Tags:** entrevista, dicas', topico.conteudo)
+        self.assertIn('🚨 **URGENTE:**', topico.conteudo)
     
     def test_criar_topico_experiencia(self):
         """Testa a criação de tópico de experiência"""
@@ -90,10 +90,10 @@ class TopicoFactoryTestCase(TestCase):
         
         self.assertIsInstance(topico, Forum)
         self.assertIn('[EXPERIÊNCIA]', topico.titulo)
-        self.assertIn('**Empresa:** Empresa X', topico.conteudo)
-        self.assertIn('**Período:** 6 meses', topico.conteudo)
-        self.assertIn('**Área:** Desenvolvimento', topico.conteudo)
-        self.assertIn('**** (4/5)', topico.conteudo)
+        self.assertIn('🏢 **Empresa:** Empresa X', topico.conteudo)
+        self.assertIn('📅 **Período:** 6 meses', topico.conteudo)
+        self.assertIn('💼 **Área:** Desenvolvimento', topico.conteudo)
+        self.assertIn('⭐⭐⭐⭐ (4/5)', topico.conteudo)
     
     def test_criar_topico_dica(self):
         """Testa a criação de tópico de dica"""
@@ -109,9 +109,9 @@ class TopicoFactoryTestCase(TestCase):
         
         self.assertIsInstance(topico, Forum)
         self.assertIn('[DICA - PRODUTIVIDADE]', topico.titulo)
-        self.assertIn('**Categoria:** Produtividade', topico.conteudo)
-        self.assertIn('**Nível:** Iniciante', topico.conteudo)
-        self.assertIn('**Perfeito para quem está começando!**', topico.conteudo)
+        self.assertIn('💡 **Categoria:** Produtividade', topico.conteudo)
+        self.assertIn('🎯 **Nível:** Iniciante', topico.conteudo)
+        self.assertIn('🌱 **Perfeito para quem está começando!**', topico.conteudo)
     
     def test_criar_topico_discussao(self):
         """Testa a criação de tópico de discussão"""
@@ -126,8 +126,8 @@ class TopicoFactoryTestCase(TestCase):
         
         self.assertIsInstance(topico, Forum)
         self.assertIn('[DISCUSSÃO - TRABALHO REMOTO]', topico.titulo)
-        self.assertIn('**Tema:** Trabalho Remoto', topico.conteudo)
-        self.assertIn('**Tipo:** Debate', topico.conteudo)
+        self.assertIn('🗣️ **Tema:** Trabalho Remoto', topico.conteudo)
+        self.assertIn('💭 **Tipo:** Debate', topico.conteudo)
     
     def test_tipo_topico_inexistente(self):
         """Testa o tratamento de erro para tipo de tópico inexistente"""

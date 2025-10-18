@@ -30,48 +30,56 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         self.stdout.write(self.style.SUCCESS("=== Testando Factory Method para Tópicos ==="))
         
+        # Verificar se existem usuários
         user = User.objects.first()
         if not user:
-            self.stdout.write(self.style.ERROR("Nenhum usuário encontrado. Crie um usuário primeiro."))
+            self.stdout.write(self.style.ERROR("❌ Nenhum usuário encontrado. Crie um usuário primeiro."))
             return
         
-        self.stdout.write(f"Usando usuário: {user.email}")
+        self.stdout.write(f"👤 Usando usuário: {user.email}")
         
+        # Limpar tópicos se solicitado
         if options['limpar']:
             self.limpar_topicos_factory()
         
+        # Mostrar tipos disponíveis
         self.mostrar_tipos_disponiveis()
         
+        # Criar exemplos
         if options['criar_exemplos']:
             self.criar_todos_exemplos(user)
         elif options['tipo']:
             self.criar_exemplo_especifico(user, options['tipo'])
         else:
-            self.stdout.write(self.style.WARNING("Use --criar-exemplos ou --tipo=<tipo> para criar tópicos"))
+            self.stdout.write(self.style.WARNING("💡 Use --criar-exemplos ou --tipo=<tipo> para criar tópicos"))
         
+        # Mostrar estatísticas finais
         self.mostrar_estatisticas()
     
     def mostrar_tipos_disponiveis(self):
-        self.stdout.write("\nTipos de Tópicos Disponíveis:")
+        """Mostra os tipos de tópicos disponíveis"""
+        self.stdout.write("\n📋 Tipos de Tópicos Disponíveis:")
         tipos = TopicoFactory.get_tipos_disponiveis()
         
         for tipo, info in tipos.items():
-            self.stdout.write(f"  {tipo.upper()}: {info['nome']}")
-            self.stdout.write(f"     {info['descricao']}")
-            self.stdout.write(f"     Campos: {', '.join(info['campos_extras'])}")
+            self.stdout.write(f"  🏷️ {tipo.upper()}: {info['nome']}")
+            self.stdout.write(f"     📝 {info['descricao']}")
+            self.stdout.write(f"     🔧 Campos: {', '.join(info['campos_extras'])}")
             self.stdout.write("")
     
     def limpar_topicos_factory(self):
+        """Remove tópicos criados pelo factory"""
         prefixos = ['[VAGA', '[DÚVIDA', '[EXPERIÊNCIA', '[DICA', '[DISCUSSÃO']
         
         for prefixo in prefixos:
             count = Forum.objects.filter(titulo__startswith=prefixo).count()
             if count > 0:
                 Forum.objects.filter(titulo__startswith=prefixo).delete()
-                self.stdout.write(f"Removidos {count} tópicos do tipo {prefixo}")
+                self.stdout.write(f"🗑️ Removidos {count} tópicos do tipo {prefixo}")
     
     def criar_todos_exemplos(self, user):
-        self.stdout.write("\nCriando exemplos de todos os tipos...")
+        """Cria exemplos de todos os tipos de tópicos"""
+        self.stdout.write("\n🚀 Criando exemplos de todos os tipos...")
         
         exemplos = [
             ('vaga', self.criar_exemplo_vaga),
@@ -84,12 +92,13 @@ class Command(BaseCommand):
         for tipo, metodo in exemplos:
             try:
                 topico = metodo(user)
-                self.stdout.write(f"{tipo.upper()}: {topico.titulo}")
+                self.stdout.write(f"✅ {tipo.upper()}: {topico.titulo}")
             except Exception as e:
-                self.stdout.write(f"Erro ao criar {tipo}: {e}")
+                self.stdout.write(f"❌ Erro ao criar {tipo}: {e}")
     
     def criar_exemplo_especifico(self, user, tipo):
-        self.stdout.write(f"\nCriando exemplo do tipo: {tipo.upper()}")
+        """Cria um exemplo de tipo específico"""
+        self.stdout.write(f"\n🎯 Criando exemplo do tipo: {tipo.upper()}")
         
         metodos = {
             'vaga': self.criar_exemplo_vaga,
@@ -101,11 +110,12 @@ class Command(BaseCommand):
         
         try:
             topico = metodos[tipo](user)
-            self.stdout.write(f"Criado: {topico.titulo}")
+            self.stdout.write(f"✅ Criado: {topico.titulo}")
         except Exception as e:
-            self.stdout.write(f"Erro: {e}")
+            self.stdout.write(f"❌ Erro: {e}")
     
     def criar_exemplo_vaga(self, user):
+        """Cria exemplo de tópico de vaga"""
         return TopicoFactory.create_topico(
             tipo_topico='vaga',
             user=user,
@@ -119,6 +129,7 @@ class Command(BaseCommand):
         )
     
     def criar_exemplo_duvida(self, user):
+        """Cria exemplo de tópico de dúvida"""
         return TopicoFactory.create_topico(
             tipo_topico='duvida',
             user=user,
@@ -131,6 +142,7 @@ class Command(BaseCommand):
         )
     
     def criar_exemplo_experiencia(self, user):
+        """Cria exemplo de tópico de experiência"""
         return TopicoFactory.create_topico(
             tipo_topico='experiencia',
             user=user,
@@ -144,6 +156,7 @@ class Command(BaseCommand):
         )
     
     def criar_exemplo_dica(self, user):
+        """Cria exemplo de tópico de dica"""
         return TopicoFactory.create_topico(
             tipo_topico='dica',
             user=user,
@@ -156,6 +169,7 @@ class Command(BaseCommand):
         )
     
     def criar_exemplo_discussao(self, user):
+        """Cria exemplo de tópico de discussão"""
         return TopicoFactory.create_topico(
             tipo_topico='discussao',
             user=user,
@@ -167,7 +181,8 @@ class Command(BaseCommand):
         )
     
     def mostrar_estatisticas(self):
-        self.stdout.write("\nEstatísticas dos Tópicos:")
+        """Mostra estatísticas dos tópicos"""
+        self.stdout.write("\n📊 Estatísticas dos Tópicos:")
         
         prefixos = {
             'VAGA': '[VAGA',
@@ -193,6 +208,6 @@ class Command(BaseCommand):
         self.stdout.write(f"  TOTAL: {total_geral} tópicos")
         
         if total_geral > 0:
-            self.stdout.write(f"\nFactory Method funcionando perfeitamente!")
+            self.stdout.write(f"\n🎉 Factory Method funcionando perfeitamente!")
         else:
-            self.stdout.write(f"\nNenhum tópico encontrado. Use --criar-exemplos")
+            self.stdout.write(f"\n⚠️ Nenhum tópico encontrado. Use --criar-exemplos")
