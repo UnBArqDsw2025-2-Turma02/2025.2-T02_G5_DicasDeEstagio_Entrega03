@@ -597,15 +597,15 @@
 
 
 
-<div><p>Com certeza! Aqui está o texto completo em Markdown, com a citação e a referência devidamente integradas.</p>
-<hr>
+<p>Com certeza! Aqui está o texto completo em Markdown, com a citação e a referência devidamente integradas.</p>
+<hr />
 <h1 id="modulo-padroes-de-projeto-gofs-estruturais-decorator">Módulo: Padrões de Projeto GoFs Estruturais — Decorator</h1>
 <h2 id="1-introducao-ao-decorator-padrao-estrutural">1. Introdução ao Decorator (Padrão Estrutural)</h2>
 <p>O padrão Decorator é um padrão de projeto estrutural que, conforme definido por Gamma et al. (1995), permite <strong>"anexar responsabilidades adicionais a um objeto dinamicamente. Os Decorators fornecem uma alternativa flexível à herança para estender funcionalidades."</strong></p>
 <p>No contexto de aplicações web (Django/DRF), decorators são ideais para <em>cross-cutting concerns</em> (preocupações transversais) como logging, caching, autenticação/validação ou medição de performance. A implementação deste módulo foca no <code>LoggingDecorator</code> — uma implementação concreta que registra informações sobre requisições HTTP.</p>
-<hr>
+<hr />
 <h2 id="2-diagrama-de-implementacao">2. Diagrama de Implementação</h2>
-<p><img alt="alt text" src="../image-1.png">
+<p><img alt="alt text" src="../image-1.png" />
 <strong>Interpretação:</strong></p>
 <ul>
 <li>
@@ -624,7 +624,7 @@
 </ul>
 </li>
 </ul>
-<hr>
+<hr />
 <h2 id="3-estrategias-concretas-concretecomponent-e-concretedecorators">3. Estratégias Concretas (ConcreteComponent e ConcreteDecorators)</h2>
 <p>No repositório, a modelagem segue as convenções abaixo:</p>
 <ul>
@@ -665,7 +665,7 @@ class ForumViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
 </code></pre>
-<hr>
+<hr />
 <h2 id="4-metodologia">4. Metodologia</h2>
 <p>Abordagem para a implementação e para a apresentação:</p>
 <ol>
@@ -692,7 +692,7 @@ class ForumViewSet(viewsets.ModelViewSet):
 </ul>
 </li>
 </ol>
-<hr>
+<hr />
 <h2 id="5-video-de-apresentacao">5. Vídeo de apresentação</h2>
 <iframe width="640" height="360" src="https://www.youtube.com/embed/VPRuDv5MTB8" title="Gofs Estruturais" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -702,13 +702,13 @@ class ForumViewSet(viewsets.ModelViewSet):
 <li>PlantUML — <a href="https://plantuml.com">https://plantuml.com</a></li>
 <li>Django Docs — <a href="https://docs.djangoproject.com">https://docs.djangoproject.com</a></li>
 </ul>
-<hr>
+<hr />
 <h2 id="tabela-de-participacao-na-producao-do-artefato">Tabela de Participação na Produção do Artefato</h2>
 <p><label><input type="checkbox" checked disabled> <a href="https://github.com/paulocerqr"> Paulo Henrique Virgilio Cerqueira </a></label><br> Criação do diagrama de classes e sequência, implementação do LoggingDecorator, elaboração do roteiro e apresentação em vídeo.<br>
 <label><input type="checkbox" checked disabled> <a href="https://github.com/Mach1r0"> Daniel Ferreira Nunes </a></label><br>
     Análise do padrão Decorator, implementação do ViewDecorator, escrita dos testes unitários, elaboração do roteiro e apresentação em vídeo.<br>
 <label><input type="checkbox" checked disabled> <a href="https://github.com/fxred"> Eduardo Ferreira de Aquino </a></label><br>
-    Pesquisa sobre o padrão Decorator, auxílio na modelagem UML, revisão do código e elaboração do roteiro e apresentação em vídeo.<br></p></div>
+    Pesquisa sobre o padrão Decorator, auxílio na modelagem UML, revisão do código e elaboração do roteiro e apresentação em vídeo.<br></p>
 
 
 
