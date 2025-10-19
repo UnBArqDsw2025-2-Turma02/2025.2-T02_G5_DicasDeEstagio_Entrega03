@@ -5,9 +5,14 @@ __pycache__/
 site/
 .env
 
+
+*json
+*.sqlite3
+*.log
+.DS_Store
+.idea/    ]
+*.js
+*js.map
 node_modules/
 dist/
 build/
-.DS_Store
-.vscode/
-.idea/  
