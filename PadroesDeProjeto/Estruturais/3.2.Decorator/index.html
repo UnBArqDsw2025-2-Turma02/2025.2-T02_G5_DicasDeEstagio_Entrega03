@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../Criacionais/3.1.GoFsCriacionais/">
+        <link rel="prev" href="../../Criacionais/3.1.Factory_Method/">
       
       
-        <link rel="next" href="../../Comportamentais/3.3.GoFsComportamentais/">
+        <link rel="next" href="../../Comportamentais/3.3.Iterator/">
       
       
       <link rel="icon" href="../../../assets/imgs/outros/entrega1/LogoPrincipalG5.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>3.2 GOFS Estruturais - DicasDeEstagio - G5</title>
+        <title>Decorator - DicasDeEstagio - G5</title>
       
     
     
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3.2 GOFS Estruturais
+              Decorator
             
           </span>
         </div>
@@ -317,13 +317,51 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../Criacionais/3.1.GoFsCriacionais/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
     3.1 GOFS Criacionais
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            3.1 GOFS Criacionais
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Criacionais/3.1.Factory_Method/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Factory Method
     
   </span>
   
@@ -333,6 +371,54 @@
   
 
               
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    3.2 GOFS Estruturais
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            3.2 GOFS Estruturais
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -355,7 +441,7 @@
   
   
   <span class="md-ellipsis">
-    3.2 GOFS Estruturais
+    Decorator
     
   </span>
   
@@ -368,7 +454,7 @@
   
   
   <span class="md-ellipsis">
-    3.2 GOFS Estruturais
+    Decorator
     
   </span>
   
@@ -462,15 +548,34 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
               
                 
   
   
   
   
-    <li class="md-nav__item">
-      <a href="../../Comportamentais/3.3.GoFsComportamentais/" class="md-nav__link">
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -479,7 +584,42 @@
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            3.3 GOFS Comportamentais
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Comportamentais/3.3.Iterator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Iterator
+    
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -603,7 +743,9 @@
 <p>No contexto de aplicações web (Django/DRF), decorators são ideais para cross-cutting concerns (preocupações transversais) como logging, caching, autenticação/validação ou medição de performance. A implementação deste módulo foca no LoggingDecorator — uma implementação concreta que registra informações sobre requisições HTTP.</p>
 <hr>
 <h2 id="2-diagrama-de-implementacao">2. Diagrama de Implementação</h2>
-<p><img alt="Diagrama de classes e sequência" src="image-2.png"></p>
+<p><img alt="Diagrama de classes e sequência" src="../decoratorImg.jpeg"></p>
+<p style="text-align: center;">Autores: Paulo Cerqueira, Daniel Ferreira Nunes, Eduardo Ferreira de Aquino</p>
+
 <p><em>Interpretação (resumida e direta):</em></p>
 <ul>
 <li>
