@@ -4,3 +4,15 @@ __pycache__/
 *.pyc
 site/
 .env
+
+
+*json
+*.sqlite3
+*.log
+.DS_Store
+.idea/    ]
+*.js
+*js.map
+node_modules/
+dist/
+build/
