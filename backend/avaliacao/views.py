@@ -1,17 +1,3 @@
-# core/forms.py (O mesmo de antes)
-from django import forms
-from .models import Empresa
-
-class AvaliacaoForm(forms.Form):
-    empresa = forms.ModelChoiceField(queryset=Empresa.objects.all(), required=False)
-    nota_geral = forms.IntegerField(min_value=1, max_value=5, required=False)
-    titulo = forms.CharField(max_length=200, required=False)
-    pros = forms.CharField(widget=forms.Textarea, required=False)
-    contras = forms.CharField(widget=forms.Textarea, required=False)
-    cargo = forms.CharField(max_length=100, required=False)
-    anonima = forms.BooleanField(required=False)
-
-# core/views.py
 from django.shortcuts import render, redirect
 from django.views import View
 from django.contrib import messages
