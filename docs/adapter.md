@@ -59,7 +59,7 @@ Relação direta com o código:
 
 ---
 
-## Referência Bibliográfica (#ref-bib)
+## Referência Bibliográfica {#ref-bib}
 
 [1] Adapter – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/adapter. Acesso em: 23 out. 2025.
 [2] Serrano, Milene. Arquitetura e Desenho de Software – Aula GoFs Estruturais. Universidade de Brasília, [s.d.]. Disponível em: https://aprender3.unb.br/pluginfile.php/3178543/mod_page/content/1/Arquitetura%20e%20Desenho%20de%20Software%20-%20Aula%20GoFs%20Estruturais%20-%20Profa.%20Milene.pdf. Acesso em: 23 out. 2025.
