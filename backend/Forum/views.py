@@ -1,18 +1,21 @@
 from django.shortcuts import render
 from rest_framework import viewsets, status
-from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 from .models import Forum, ComentarioForum
 from .serializers import ForumSerializer, ForumListSerializer, ComentarioForumSerializer
 from .factories.topico_factory import TopicoFactory
 from .iterators.forum_iterators import ForumCollection
+from rest_framework.decorators import action
+from core.decorators import log_request
+import logging
+import time
 
+logger = logging.getLogger(__name__)
 
 class ForumViewSet(viewsets.ModelViewSet):
     queryset = Forum.objects.all()
     serializer_class = ForumSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
     
     def get_serializer_class(self):
         if self.action == 'list':
@@ -29,50 +32,45 @@ class ForumViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(instance)
         return Response(serializer.data)
     
-    @action(detail=True, methods=['get'])
     def comentarios(self, request, pk=None):
         topico = self.get_object()
         comentarios = topico.comentarios.filter(is_active=True, comentario_pai=None)
         serializer = ComentarioForumSerializer(comentarios, many=True)
         return Response(serializer.data)
     
-    @action(detail=False, methods=['post'], url_path='criar-por-tipo')
     def criar_topico_por_tipo(self, request):
-        try:
-            tipo_topico = request.data.get('tipo_topico')
-            titulo = request.data.get('titulo')
-            conteudo = request.data.get('conteudo')
-            
-            if not all([tipo_topico, titulo, conteudo]):
-                return Response(
-                    {'error': 'Campos obrigatórios: tipo_topico, titulo, conteudo'},
-                    status=status.HTTP_400_BAD_REQUEST
-                )
-            
-            topico = TopicoFactory.create_topico(
-                tipo_topico=tipo_topico,
-                user=request.user,
-                titulo=titulo,
-                conteudo=conteudo,
-                **{k: v for k, v in request.data.items() 
-                   if k not in ['tipo_topico', 'titulo', 'conteudo']}
-            )
-            
-            serializer = self.get_serializer(topico)
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-            
-        except ValueError as e:
+        if not request.user.is_authenticated:
             return Response(
-                {'error': str(e)},
+                {
+                    'error': 'Autenticação necessária',
+                    'detail': 'Você precisa estar autenticado para criar tópicos',
+                    'dica': 'Use o endpoint /api/auth/register/ para criar uma conta'
+                },
+                status=status.HTTP_401_UNAUTHORIZED
+            )
+        
+        tipo_topico = request.data.get('tipo_topico')
+        titulo = request.data.get('titulo')
+        conteudo = request.data.get('conteudo')
+        
+        if not all([tipo_topico, titulo, conteudo]):
+            return Response(
+                {'error': 'Campos obrigatórios: tipo_topico, titulo, conteudo'},
                 status=status.HTTP_400_BAD_REQUEST
             )
-        except Exception as e:
-            return Response(
-                {'error': f'Erro interno: {str(e)}'},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
+        
+        topico = TopicoFactory.create_topico(
+            tipo_topico=tipo_topico,
+            user=request.user,
+            titulo=titulo,
+            conteudo=conteudo,
+            **{k: v for k, v in request.data.items() 
+               if k not in ['tipo_topico', 'titulo', 'conteudo']}
+        )
+        
+        serializer = self.get_serializer(topico)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
     
-    @action(detail=False, methods=['get'], url_path='tipos-disponiveis')
     def tipos_disponiveis(self, request):
         tipos_info = TopicoFactory.get_tipos_disponiveis()
         
@@ -86,7 +84,6 @@ class ForumViewSet(viewsets.ModelViewSet):
             }
         })
     
-    @action(detail=False, methods=['get'], url_path='por-tipo/(?P<tipo>[^/.]+)')
     def listar_por_tipo(self, request, tipo=None):
         if not tipo:
             return Response(
@@ -124,7 +121,6 @@ class ForumViewSet(viewsets.ModelViewSet):
             'topicos': serializer.data
         })
     
-    @action(detail=False, methods=['get'], url_path='estatisticas-tipos')
     def estatisticas_tipos(self, request):
         marcadores = {
             'vaga': '[VAGA',
@@ -174,7 +170,6 @@ class ForumViewSet(viewsets.ModelViewSet):
             'data_consulta': request.META.get('HTTP_DATE', 'N/A')
         })
     
-    @action(detail=False, methods=['get'], url_path='iterator-por-tipo/(?P<tipo>[^/.]+)')
     def listar_por_tipo_iterator(self, request, tipo=None):
         if not tipo:
             return Response(
@@ -216,7 +211,6 @@ class ForumViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
     
-    @action(detail=False, methods=['get'], url_path='demonstracao-minima')
     def demonstracao_iterator_minimo(self, request):
         try:
             tipos_factory = TopicoFactory.get_tipos_disponiveis()
@@ -281,14 +275,12 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
     
-    @action(detail=True, methods=['get'])
     def respostas(self, request, pk=None):
         comentario = self.get_object()
         respostas = comentario.respostas.filter(is_active=True)
         serializer = self.get_serializer(respostas, many=True)
         return Response(serializer.data)
     
-    @action(detail=False, methods=['get'], url_path='navegar-por-tipo/(?P<tipo>[^/.]+)')
     def navegar_por_tipo_iterator(self, request, tipo=None):
         """
         Endpoint que usa o padrão Iterator para navegar por tópicos de um tipo específico
@@ -372,7 +364,6 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
     
-    @action(detail=True, methods=['get'], url_path='comentarios-arvore')
     def comentarios_arvore_iterator(self, request, pk=None):
         """
         Endpoint que usa Iterator para navegar através da árvore de comentários
@@ -442,12 +433,11 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
     
-    @action(detail=False, methods=['get'], url_path='paginado-avancado')
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    
     def topicos_paginado_iterator(self, request):
         """
-        Endpoint que demonstra Iterator Paginado para grandes volumes de dados
-        
-        URL: /api/forum/paginado-avancado/
+        Endpoint que demonstra Iterator Paginado para grandes volumes de dados        URL: /api/forum/paginado-avancado/
         """
         try:
             # Parâmetros de consulta
@@ -522,7 +512,6 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
     
-    @action(detail=False, methods=['get'], url_path='demonstracao-padroes')
     def demonstracao_padroes(self, request):
         """
         Endpoint que demonstra a integração entre Factory Method e Iterator
