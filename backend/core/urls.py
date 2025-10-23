@@ -18,5 +18,4 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('api/forum/', include('Forum.urls')),
     path('api/auth/', include('users.urls')),
-
 ]

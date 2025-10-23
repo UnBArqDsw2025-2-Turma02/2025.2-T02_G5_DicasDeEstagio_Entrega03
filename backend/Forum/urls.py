@@ -1,6 +1,7 @@
 from django.urls import path
 from rest_framework import routers
 from .views import ForumViewSet, ComentarioForumViewSet
+from .view_decorator import criar_topico_com_decorator, deletar_topico_com_decorator
 
 app_name = 'forum'
 
@@ -9,7 +10,14 @@ router.register(r'topicos', ForumViewSet, basename='topico')
 router.register(r'comentarios', ComentarioForumViewSet, basename='comentario')
 
 urlpatterns = router.urls + [
-    # Endpoints customizados do ForumViewSet
+    path('criar-decorado/', 
+         criar_topico_com_decorator, 
+         name='criar-decorado'),
+    
+    path('deletar-decorado/<int:pk>/', 
+         deletar_topico_com_decorator, 
+         name='deletar-decorado'),
+    
     path('criar-por-tipo/', 
          ForumViewSet.as_view({'post': 'criar_topico_por_tipo'}), 
          name='criar-por-tipo'),
@@ -38,7 +46,6 @@ urlpatterns = router.urls + [
          ForumViewSet.as_view({'get': 'comentarios'}), 
          name='topico-comentarios'),
     
-    # Endpoints do ComentarioForumViewSet
     path('comentarios/<int:pk>/respostas/', 
          ComentarioForumViewSet.as_view({'get': 'respostas'}), 
          name='comentario-respostas'),

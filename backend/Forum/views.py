@@ -1,17 +1,11 @@
-from django.shortcuts import render
 from rest_framework import viewsets, status
 from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.decorators import action
 from .models import Forum, ComentarioForum
 from .serializers import ForumSerializer, ForumListSerializer, ComentarioForumSerializer
 from .factories.topico_factory import TopicoFactory
 from .iterators.forum_iterators import ForumCollection
-from rest_framework.decorators import action
-from core.decorators import log_request
-import logging
-import time
-
-logger = logging.getLogger(__name__)
 
 class ForumViewSet(viewsets.ModelViewSet):
     queryset = Forum.objects.all()
@@ -433,8 +427,6 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
     
-            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-    
     def topicos_paginado_iterator(self, request):
         """
         Endpoint que demonstra Iterator Paginado para grandes volumes de dados        URL: /api/forum/paginado-avancado/
@@ -582,21 +574,4 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
                 {'error': f'Erro na demonstração: {str(e)}'}, 
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
-
-
-class ComentarioForumViewSet(viewsets.ModelViewSet):
-    queryset = ComentarioForum.objects.all()
-    serializer_class = ComentarioForumSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
-    
-    def perform_create(self, serializer):
-        """Define o usuário atual ao criar um comentário"""
-        serializer.save(user=self.request.user)
-    
-    @action(detail=True, methods=['get'])
-    def respostas(self, request, pk=None):
-        comentario = self.get_object()
-        respostas = comentario.respostas.filter(is_active=True)
-        serializer = self.get_serializer(respostas, many=True)
-        return Response(serializer.data)
 
