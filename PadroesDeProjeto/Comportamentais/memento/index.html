@@ -693,9 +693,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sourcemaking-memento-disponivel-em-httpssourcemakingcomdesign_patternsmemento" class="md-nav__link">
+  <a href="#-sourcemaking-memento-disponivel-em-httpssourcemakingcomdesign_patternsmemento" class="md-nav__link">
     <span class="md-ellipsis">
-      SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.
+      - SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.
     </span>
   </a>
   
@@ -862,9 +862,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sourcemaking-memento-disponivel-em-httpssourcemakingcomdesign_patternsmemento" class="md-nav__link">
+  <a href="#-sourcemaking-memento-disponivel-em-httpssourcemakingcomdesign_patternsmemento" class="md-nav__link">
     <span class="md-ellipsis">
-      SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.
+      - SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.
     </span>
   </a>
   
@@ -970,42 +970,52 @@ class HistoricoAvaliacao:
             del self.request.session[self.SESSION_KEY]
             print("RASCUNHO LIMPO.")
 </code></pre>
-<p>Participantes mapeados no repositório:
-- Originator: <code>EditorAvaliacao</code> em <code>backend/avaliacao/memento_avaliacao.py</code> — mantém o estado atual do formulário e sabe criar/restaurar snapshots.
-- Memento: <code>AvaliacaoMemento</code> em <code>backend/avaliacao/memento_avaliacao.py</code> — armazena o snapshot do estado do editor sem expor detalhes internos.
-- Caretaker: <code>HistoricoAvaliacao</code> em <code>backend/avaliacao/memento_avaliacao.py</code> — decide quando e onde salvar o memento (sessão do usuário) e quando restaurá-lo/limpá-lo.</p>
-<p>Relação direta com o código:
-- <code>EditorAvaliacao.salvar_para_memento()</code> → cria <code>AvaliacaoMemento</code> com o estado atual.
-- <code>EditorAvaliacao.restaurar_de_memento(m)</code> → restaura o estado previamente salvo.
-- <code>HistoricoAvaliacao.salvar_rascunho(m)</code> → persiste o estado do memento na sessão e marca <code>session.modified = True</code>.
-- <code>HistoricoAvaliacao.carregar_rascunho()</code> → retorna <code>AvaliacaoMemento</code> se houver estado salvo na sessão; <code>limpar_rascunho()</code> remove o rascunho.
-- <code>EnviarAvaliacaoView</code> (em <code>backend/avaliacao/views.py</code>) integra o fluxo: carrega rascunho no GET; no POST, salva rascunho (<code>action == 'save_draft'</code>) ou envia a avaliação e limpa o rascunho (<code>action == 'submit'</code>).</p>
-<p>Fluxo resumido:
-1) GET: cria <code>EditorAvaliacao</code> e <code>HistoricoAvaliacao</code>; se houver rascunho na sessão, restaura o estado e popula o formulário com <code>initial</code>.
+<p>Participantes mapeados no repositório:</p>
+<ul>
+<li>Originator: <code>EditorAvaliacao</code> em <code>backend/avaliacao/memento_avaliacao.py</code> — mantém o estado atual do formulário e sabe criar/restaurar snapshots.</li>
+<li>Memento: <code>AvaliacaoMemento</code> em <code>backend/avaliacao/memento_avaliacao.py</code> — armazena o snapshot do estado do editor sem expor detalhes internos.</li>
+<li>Caretaker: <code>HistoricoAvaliacao</code> em <code>backend/avaliacao/memento_avaliacao.py</code> — decide quando e onde salvar o memento (sessão do usuário) e quando restaurá-lo/limpá-lo.</li>
+</ul>
+<p>Relação direta com o código:</p>
+<ul>
+<li><code>EditorAvaliacao.salvar_para_memento()</code> → cria <code>AvaliacaoMemento</code> com o estado atual.</li>
+<li><code>EditorAvaliacao.restaurar_de_memento(m)</code> → restaura o estado previamente salvo.</li>
+<li><code>HistoricoAvaliacao.salvar_rascunho(m)</code> → persiste o estado do memento na sessão e marca <code>session.modified = True</code>.</li>
+<li><code>HistoricoAvaliacao.carregar_rascunho()</code> → retorna <code>AvaliacaoMemento</code> se houver estado salvo na sessão; <code>limpar_rascunho()</code> remove o rascunho.</li>
+<li><code>EnviarAvaliacaoView</code> (em <code>backend/avaliacao/views.py</code>) integra o fluxo: carrega rascunho no GET; no POST, salva rascunho (<code>action == 'save_draft'</code>) ou envia a avaliação e limpa o rascunho (<code>action == 'submit'</code>).</li>
+</ul>
+<p>Fluxo resumido:</p>
+<p>1) GET: cria <code>EditorAvaliacao</code> e <code>HistoricoAvaliacao</code>; se houver rascunho na sessão, restaura o estado e popula o formulário com <code>initial</code>.
 2) POST salvar: <code>editor.set_state_from_dict(request.POST)</code> → <code>m = editor.salvar_para_memento()</code> → <code>historico.salvar_rascunho(m)</code>.
 3) POST enviar: valida <code>form</code>, constrói a avaliação com o Builder e salva; em seguida, <code>historico.limpar_rascunho()</code> para descartar o snapshot.</p>
 <hr>
 <h2 id="senso-critico">Senso Crítico</h2>
-<p>Benefícios:
-- Encapsulamento preservado: o originator controla como o estado é capturado/restaurado; o caretaker não depende dos detalhes internos <a href="#ref-bib">[1][2]</a>.
-- Experiência do usuário: rascunhos evitam perda de trabalho e permitem retomada fluida do preenchimento.
-- Testabilidade: é simples simular snapshots e checar restauração sem dependências externas (apenas sessão).
-- Extensibilidade: a mesma abordagem pode evoluir para múltiplas versões de rascunho (histórico) ou undo/redo.</p>
-<p>Trade-offs e cuidados:
-- Overhead de memória: snapshots podem ficar grandes; é necessário definir limites ou TTL ("tempo de vida" da informação) na sessão.
-- Serialização/compatibilidade: mudanças de esquema do estado exigem migração ou tolerância a chaves ausentes.
-- Segurança e privacidade: dados sensíveis no snapshot precisam de cuidado (criptografia/mascaramento) e política de retenção.
-- Concorrência/dispositivos: sessões em múltiplos dispositivos podem conflitar; estabeleça regras (último vence, merge, múltiplas versões).</p>
+<p>Benefícios:</p>
+<ul>
+<li>Encapsulamento preservado: o originator controla como o estado é capturado/restaurado; o caretaker não depende dos detalhes internos <a href="#ref-bib">[1][2]</a>.</li>
+<li>Experiência do usuário: rascunhos evitam perda de trabalho e permitem retomada fluida do preenchimento.</li>
+<li>Testabilidade: é simples simular snapshots e checar restauração sem dependências externas (apenas sessão).</li>
+<li>Extensibilidade: a mesma abordagem pode evoluir para múltiplas versões de rascunho (histórico) ou undo/redo.</li>
+</ul>
+<p>Trade-offs e cuidados:</p>
+<ul>
+<li>Overhead de memória: snapshots podem ficar grandes; é necessário definir limites ou TTL ("tempo de vida" da informação) na sessão.</li>
+<li>Serialização/compatibilidade: mudanças de esquema do estado exigem migração ou tolerância a chaves ausentes.</li>
+<li>Segurança e privacidade: dados sensíveis no snapshot precisam de cuidado (criptografia/mascaramento) e política de retenção.</li>
+<li>Concorrência/dispositivos: sessões em múltiplos dispositivos podem conflitar; estabeleça regras (último vence, merge, múltiplas versões).</li>
+</ul>
 <hr>
 <h2 id="conclusao">Conclusão</h2>
 <p>O Memento aplicado à Avaliação fornece um mecanismo claro e desacoplado para rascunhos persistidos em sessão, preservando o encapsulamento do editor e melhorando a UX. Com pequenos incrementos (limite/expiração de rascunhos, múltiplas versões e testes automatizados de restauração), a solução evolui para cenários mais robustos, incluindo suporte a undo/redo quando fizer sentido ao produto.</p>
 <hr>
 <h2 id="ref-bib">Referência Bibliográfica</h2>
-<p>[1] Memento – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/memento. Acesso em: 23 out. 2025.
-[2] SERRANO, Milene. Arquitetura e Desenho de Software – Aula GoFs Comportamentais. Universidade de Brasília, [s.d.]. Disponível em: https://aprender3.unb.br/pluginfile.php/3178544/mod_page/content/1/Arquitetura%20e%20Desenho%20de%20Software%20-%20Aula%20GoFs%20Estruturais%20-%20Profa.%20Milene.pdf. Acesso em: 23 out. 2025.
-[3] Wikipedia. Memento pattern. Disponível em: https://en.wikipedia.org/wiki/Memento_pattern. Acesso em: 23 out. 2025.</p>
+<ul>
+<li>[1] Memento – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/memento. Acesso em: 23 out. 2025.</li>
+<li>[2] SERRANO, Milene. Arquitetura e Desenho de Software – Aula GoFs Comportamentais. Universidade de Brasília, [s.d.]. Disponível em: https://aprender3.unb.br/pluginfile.php/3178544/mod_page/content/1/Arquitetura%20e%20Desenho%20de%20Software%20-%20Aula%20GoFs%20Estruturais%20-%20Profa.%20Milene.pdf. Acesso em: 23 out. 2025.</li>
+<li>[3] Wikipedia. Memento pattern. Disponível em: https://en.wikipedia.org/wiki/Memento_pattern. Acesso em: 23 out. 2025.</li>
+</ul>
 <h2 id="bibliografias">Bibliografias</h2>
-<h2 id="sourcemaking-memento-disponivel-em-httpssourcemakingcomdesign_patternsmemento">SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.</h2>
+<h2 id="-sourcemaking-memento-disponivel-em-httpssourcemakingcomdesign_patternsmemento">- SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.</h2>
 <h2 id="historico-de-versoes">Histórico de Versões</h2>
 <table>
 <thead>
