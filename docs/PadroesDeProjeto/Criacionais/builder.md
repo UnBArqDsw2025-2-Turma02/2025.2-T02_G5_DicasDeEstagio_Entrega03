@@ -9,6 +9,7 @@ O padrão Builder separa a construção de um objeto complexo da sua representa�
 Na abordagem em questão, a avaliação trata-se de um das funcionalidades cernes da aplicação, mesmo que em um primeiro momento não seja grande, eventualmente, escalando-o, certamente haverá problemas no processo de inicalização e construção de objetos. Assim, para mitigar tal aspectos, foi planjado a adição do builder para gerenciar o processo de criação de objetos.
 
 Concretamente, a montagem de uma `Avaliacao` envolve:
+
 - Campos obrigatórios e opcionais heterogêneos: obrigatórios (usuário, empresa, nota_geral) e opcionais (título, prós, contras, cargo, anonima), que nem sempre chegam juntos e podem depender do contexto de uso (formulário web hoje; importações/integrações amanhã).
 - Regras condicionais de domínio: quando a avaliação é anônima, o cargo exibido deve ser derivado (ex.: “Ex-funcionário(a) (slug-do-cargo)”), enquanto avaliações não anônimas exibem o cargo informado. Essa política aparece em `set_contexto_profissional`.
 - Validações de faixa e consistência: por exemplo, `nota_geral` limitada entre 1 e 5 (verificada em `set_nota_geral`), além do mínimo necessário antes de liberar o resultado (`usuario`, `empresa`, `nota_geral` em `get_result`).
@@ -22,7 +23,9 @@ Concretamente, a montagem de uma `Avaliacao` envolve:
  ![Diagrama Casos de Uso](../../assets/imgs/buildermethod.png)
 
 <font size="3"><p style="text-align: center"> **Autores**: [Henrique Alencar](https://github.com/henryqma) e [Mateus Consorte](https://github.com/MVConsorte) </p>
-_
+
+---
+
 ## Implementação
 
 ```python
@@ -99,12 +102,14 @@ class AvaliacaoBuilder(IAvaliacaoBuilder):
 ```
 
 Participantes mapeados no repositório:
+
 - Builder (concreto): `AvaliacaoBuilder` em `backend/avaliacao/builders.py`.
 - Builder (interface): `IAvaliacaoBuilder` em `backend/avaliacao/builders.py`.
 - Produto: `Avaliacao` em `backend/avaliacao/models.py`.
 - Cliente/Diretor: `EnviarAvaliacaoView` em `backend/avaliacao/views.py` (orquestra a sequência de chamadas do Builder conforme os dados do formulário).
 
 Principais responsabilidades no código:
+
 - `set_identificacao(usuario, empresa)`: associa usuário e empresa.
 - `set_nota_geral(nota)`: valida a faixa (1 a 5) e define o valor.
 - `add_detalhes_texto(titulo, pros, contras)`: popula detalhes textuais.
@@ -112,6 +117,7 @@ Principais responsabilidades no código:
 - `get_result()`: verifica invariantes mínimas (usuário, empresa, nota) e retorna o objeto pronto, executando `reset()` para permitir reuso do Builder.
 
 Exemplo de fluxo (View `EnviarAvaliacaoView.post`):
+
 1) Instancia o `AvaliacaoBuilder`.
 2) Encadeia as etapas com `cleaned_data` do formulário.
 3) Chama `get_result()` e salva a avaliação resultante.
@@ -121,20 +127,24 @@ Exemplo de fluxo (View `EnviarAvaliacaoView.post`):
 ## Senso Crítico
 
 Quando usar Builder aqui faz sentido:
+
 - O objeto possui campos obrigatórios e opcionais montados em etapas.
 - Regras de negócio interferem na montagem (ex.: anonimato altera cargo exibido).
 - Deseja-se manter a View enxuta e expressiva, delegando regras ao Builder.
 
 Quando talvez não valha a pena:
+
 - Objetos simples, com poucos campos e sem validações encadeadas.
 - Se toda validação migrar para serializers/forms, duplicando lógica com o Builder.
 
 No entanto, no geral, sem um Builder, as problemáticas nas etapas de construção do objeto tendem a se espalhar por controllers/views, levando a:
+
 - Código cliente inchado e duplicado, difícil de manter e testar.
 - Invariantes de domínio implementadas de maneira inconsistente em lugares diferentes.
 - Maior chance de salvar objetos em estado inválido, devido à criação “em fatias”.
 
 O uso do Builder endereça diretamente esses riscos [[1][2][3]](#ref-bib):
+
 - Centraliza as regras de montagem e validações, expondo uma interface que guia a ordem dos passos.
 - Garante invariantes mínimas antes de liberar o produto via `get_result()` e faz `reset()` para evitar reuso indevido do mesmo objeto.
 - Reduz o acoplamento da View com detalhes de construção, mantendo o código cliente mais expressivo e focado no fluxo da funcionalidade.
@@ -149,13 +159,13 @@ O Builder adotado para `Avaliacao` melhora a legibilidade do fluxo de criação,
 
 ## Referência Bibliográfica {#ref-bib}
 
-[1] Builder – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/builder. Acesso em: 23 out. 2025.
-[2] Serrano, Milene. Arquitetura e Desenho de Software – Aula GoFs Criacionais. Universidade de Brasília, [s.d.].
-[3] Wikipedia. Builder pattern. Disponível em: https://en.wikipedia.org/wiki/Builder_pattern. Acesso em: 23 out. 2025.
+- [1] Builder – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/builder. Acesso em: 23 out. 2025.
+- [2] Serrano, Milene. Arquitetura e Desenho de Software – Aula GoFs Criacionais. Universidade de Brasília, [s.d.].
+- [3] Wikipedia. Builder pattern. Disponível em: https://en.wikipedia.org/wiki/Builder_pattern. Acesso em: 23 out. 2025.
 
 ## Bibliografia
 
-SOURCEMAKING. Builder Design Pattern in Python. SourceMaking.com, 2007–2025. Disponível em: https://sourcemaking.com/design_patterns/builder/python/1.
+- SOURCEMAKING. Builder Design Pattern in Python. SourceMaking.com, 2007–2025. Disponível em: https://sourcemaking.com/design_patterns/builder/python/1.
 
 ---
 
