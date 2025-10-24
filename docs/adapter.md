@@ -9,13 +9,88 @@ O padrão *Adapter* permite que classes com interfaces incompatíveis colaborem 
 A problemática em questão envolve a funcionalidade de avaliação de empresas/organizações, onde o usuário poderá fazer uma avaliação de uma determinada empresa em que tenha conhecimento. Nesse ínterim, a problemática que a cerca está vinculada à conexão com uma API pública de CNPJ, reponsável por retornar a existencia de uma determinada empresa e suas informações, evitando que empresas ficticias sejam avaliadas e, ao mesmo tempo, reduzindo os esforços adicionais de fazer a busca, seja manual, seja por mecanismos de raspagem de dados na Web (Web Scrapping). Caso optassemos por uma conexão direta, sem uma interfaçe intermediária, a consequência seria que, na necessidade de manutenção ou modificação da API utilizada, a funcionalidade de "avaliação" potencialmente quebraria, se não inteira, na parte que lhe concerne verificar a adição de novas empresas à aplicação.
 
 
----
-
 ## Modelagem
 
----
+<font size="3"><p style="text-align: center"> **Figura 1** - Adapter Method </p>
+
+ ![Adapter](../../assets/imgs/adaptermethod.png)
+
+<font size="3"><p style="text-align: center"> **Autores**: [Henrique Alencar](https://github.com/henryqma) e [Mateus Consorte](https://github.com/MVConsorte) </p>
 
 ## Implementação
+
+```python
+
+class OpenCNPJClient:
+
+    BASE_URL = "https://publica.cnpj.ws/cnpj/"
+
+    def _limpar_cnpj(self, cnpj: str) -> str:
+        return re.sub(r'[^0-9]', '', cnpj)
+
+    def buscar_por_cnpj(self, cnpj: str) -> Optional[Dict[str, Any]]:
+
+        cnpj_limpo = self._limpar_cnpj(cnpj)
+        url = f"{self.BASE_URL}{cnpj_limpo}"
+        
+        print(f"ADAPTEE: Buscando dados brutos em: {url}")
+        
+        try:
+
+            response = requests.get(url, timeout=5)
+            
+            response.raise_for_status() 
+            
+            return response.json()
+            
+        except requests.exceptions.HTTPError as e:
+            if e.response.status_code == 404:
+                print(f"ADAPTEE: CNPJ {cnpj} não encontrado (404).")
+                return None
+            print(f"ADAPTEE: Erro HTTP: {e}")
+            raise 
+            
+        except requests.exceptions.RequestException as e:
+            print(f"ADAPTEE: Erro de conexão: {e}")
+            raise
+
+class OpenCNPJAdapter:
+    def __init__(self, client: OpenCNPJClient):
+        self._client = client
+
+    def get_empresa_data(self, cnpj: str) -> Optional[Dict[str, Any]]:
+        try:
+            dados_brutos = self._client.buscar_por_cnpj(cnpj)
+            
+            if dados_brutos is None:
+                return None
+
+            print("ADAPTER: Traduzindo dados brutos para o formato interno...")
+
+            estabelecimento = dados_brutos.get("estabelecimento", {})
+            cidade = estabelecimento.get("cidade", {})
+            estado = estabelecimento.get("estado", {})
+
+            traduzido = {
+                'cnpj': dados_brutos.get("cnpj"),
+                'nome': dados_brutos.get("razao_social"),
+                'nome_fantasia': dados_brutos.get("nome_fantasia"),
+                'cidade': cidade.get("nome"),
+                'uf': estado.get("sigla"),
+                'logradouro': estabelecimento.get("logradouro"),
+                'numero': estabelecimento.get("numero"),
+                'bairro': estabelecimento.get("bairro"),
+            }
+
+            print(f"ADAPTER: Dados traduzidos com sucesso.")
+            return traduzido
+
+        except Exception as e:
+            print(f"ADAPTER: Erro durante o processo de busca ou tradução: {e}")
+            return None
+
+```
+
 
 Participantes mapeados no repositório:
 - Cliente (Client): comando de gestão `backend/avaliacao/atualizar_empresa.py`.
@@ -73,3 +148,4 @@ Relação direta com o código:
 | ------ | ---------- | ---------------------------------------- | ------------------------------------- | ----------- | ------------------------------------------------------------------ |
 | 1.0    | 23/10/2025 |    Abertura do arquivo     | [Consorte](https://github.com/MVConsorte) | -    | - |
 | 1.1    | 23/10/2025 | Preenchida a seção "Padrão GoF Estrutual: Adapter" e problemática com definição, participantes e mapeamento de código. Referenciada | [Consorte](https://github.com/MVConsorte) | - | - |
+| 1.2    | 23/10/2025 |    Adicionando modelagem     | [Henrique](https://github.com/henryqma) | -    | - |
