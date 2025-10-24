@@ -693,15 +693,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-sourcemaking-memento-disponivel-em-httpssourcemakingcomdesign_patternsmemento" class="md-nav__link">
-    <span class="md-ellipsis">
-      - SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#historico-de-versoes" class="md-nav__link">
     <span class="md-ellipsis">
       Histórico de Versões
@@ -862,15 +853,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#-sourcemaking-memento-disponivel-em-httpssourcemakingcomdesign_patternsmemento" class="md-nav__link">
-    <span class="md-ellipsis">
-      - SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#historico-de-versoes" class="md-nav__link">
     <span class="md-ellipsis">
       Histórico de Versões
@@ -985,9 +967,9 @@ class HistoricoAvaliacao:
 <li><code>EnviarAvaliacaoView</code> (em <code>backend/avaliacao/views.py</code>) integra o fluxo: carrega rascunho no GET; no POST, salva rascunho (<code>action == 'save_draft'</code>) ou envia a avaliação e limpa o rascunho (<code>action == 'submit'</code>).</li>
 </ul>
 <p>Fluxo resumido:</p>
-<p>1) GET: cria <code>EditorAvaliacao</code> e <code>HistoricoAvaliacao</code>; se houver rascunho na sessão, restaura o estado e popula o formulário com <code>initial</code>.
-2) POST salvar: <code>editor.set_state_from_dict(request.POST)</code> → <code>m = editor.salvar_para_memento()</code> → <code>historico.salvar_rascunho(m)</code>.
-3) POST enviar: valida <code>form</code>, constrói a avaliação com o Builder e salva; em seguida, <code>historico.limpar_rascunho()</code> para descartar o snapshot.</p>
+<p>1) GET: cria <code>EditorAvaliacao</code> e <code>HistoricoAvaliacao</code>; se houver rascunho na sessão, restaura o estado e popula o formulário com <code>initial</code>.</p>
+<p>2) POST salvar: <code>editor.set_state_from_dict(request.POST)</code> → <code>m = editor.salvar_para_memento()</code> → <code>historico.salvar_rascunho(m)</code>.</p>
+<p>3) POST enviar: valida <code>form</code>, constrói a avaliação com o Builder e salva; em seguida, <code>historico.limpar_rascunho()</code> para descartar o snapshot.</p>
 <hr>
 <h2 id="senso-critico">Senso Crítico</h2>
 <p>Benefícios:</p>
@@ -1015,7 +997,7 @@ class HistoricoAvaliacao:
 <li>[3] Wikipedia. Memento pattern. Disponível em: https://en.wikipedia.org/wiki/Memento_pattern. Acesso em: 23 out. 2025.</li>
 </ul>
 <h2 id="bibliografias">Bibliografias</h2>
-<h2 id="-sourcemaking-memento-disponivel-em-httpssourcemakingcomdesign_patternsmemento">- SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.</h2>
+<p>SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.</p>
 <h2 id="historico-de-versoes">Histórico de Versões</h2>
 <table>
 <thead>
