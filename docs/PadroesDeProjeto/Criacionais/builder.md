@@ -119,7 +119,9 @@ Principais responsabilidades no código:
 Exemplo de fluxo (View `EnviarAvaliacaoView.post`):
 
 1) Instancia o `AvaliacaoBuilder`.
+
 2) Encadeia as etapas com `cleaned_data` do formulário.
+
 3) Chama `get_result()` e salva a avaliação resultante.
 
 ---
