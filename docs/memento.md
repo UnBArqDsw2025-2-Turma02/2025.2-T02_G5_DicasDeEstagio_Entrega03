@@ -14,9 +14,78 @@ Na funcionalidade de avaliação, o usuário pode iniciar o preenchimento de um 
 
 ## Modelagem
 
----
+<font size="3"><p style="text-align: center"> **Figura 1** - Memento Method </p>
+
+ ![Memento](../../assets/imgs/mementomethod.png)
+
+<font size="3"><p style="text-align: center"> **Autores**: [Henrique Alencar](https://github.com/henryqma) e [Mateus Consorte](https://github.com/MVConsorte) </p>
 
 ## Implementação
+
+```python
+class AvaliacaoMemento:
+    def __init__(self, state: Dict[str, Any]):
+        self._state = state.copy()
+
+    def get_state(self) -> Dict[str, Any]:
+        return self._state
+
+class EditorAvaliacao:
+    _state: Dict[str, Any]
+
+    def __init__(self, state: Dict[str, Any] = None):
+        self._state = state or self.get_empty_state()
+
+    def get_empty_state(self) -> Dict[str, Any]:
+        return {
+            'titulo': '', 'pros': '', 'contras': '',
+            'nota_geral': None, 'cargo': '', 'anonima': False,
+            'empresa': None 
+        }
+    
+    def set_state_from_dict(self, data: Dict[str, Any]):
+        self._state = {
+            'titulo': data.get('titulo', ''),
+            'pros': data.get('pros', ''),
+            'contras': data.get('contras', ''),
+            'nota_geral': data.get('nota_geral'),
+            'cargo': data.get('cargo', ''),
+            'anonima': bool(data.get('anonima')),
+            'empresa': data.get('empresa')
+        }
+
+    def get_state(self) -> Dict[str, Any]:
+        return self._state
+
+    def salvar_para_memento(self) -> AvaliacaoMemento:
+        return AvaliacaoMemento(self._state)
+
+    def restaurar_de_memento(self, memento: AvaliacaoMemento):
+        self._state = memento.get_state()
+
+class HistoricoAvaliacao:
+    SESSION_KEY = 'avaliacao_draft'
+
+    def __init__(self, request):
+        self.request = request
+
+    def salvar_rascunho(self, memento: AvaliacaoMemento):
+        self.request.session[self.SESSION_KEY] = memento.get_state()
+        self.request.session.modified = True
+        print(f"RASCUNHO SALVO: {memento.get_state()}")
+
+    def carregar_rascunho(self) -> Optional[AvaliacaoMemento]:
+        state = self.request.session.get(self.SESSION_KEY)
+        if state:
+            print(f"RASCUNHO CARREGADO: {state}")
+            return AvaliacaoMemento(state)
+        return None
+
+    def limpar_rascunho(self):
+        if self.SESSION_KEY in self.request.session:
+            del self.request.session[self.SESSION_KEY]
+            print("RASCUNHO LIMPO.")
+```
 
 Participantes mapeados no repositório:
 - Originator: `EditorAvaliacao` em `backend/avaliacao/memento_avaliacao.py` — mantém o estado atual do formulário e sabe criar/restaurar snapshots.
@@ -76,3 +145,4 @@ SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/
 | ------ | ---------- | ---------------------------------------- | ------------------------------------- | ----------- | ------------------------------------------------------------------ |
 | 1.0    | 23/10/2025 |    Abertura do arquivo     | [Consorte](https://github.com/MVConsorte) | -    | - |
 | 1.1    | 23/10/2025 | Seção com explicação teórica (com citações numéricas), problemática, mapeamento ao código e trade-offs | [Consorte](https://github.com/MVConsorte) | - | - |
+| 1.2    | 23/10/2025 |    Adicionando modelagem     | [Henrique](https://github.com/henryqma) | -    | - |
