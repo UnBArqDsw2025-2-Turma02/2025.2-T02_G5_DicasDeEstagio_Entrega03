@@ -957,13 +957,15 @@ class OpenCNPJAdapter:
             return None
 
 </code></pre>
-<p>Participantes mapeados no repositório:
-- Cliente (Client): comando de gestão <code>backend/avaliacao/atualizar_empresa.py</code>.
-- Adaptee: <code>OpenCNPJClient</code> em <code>backend/avaliacao/open_cnpj.py</code> (realiza a chamada HTTP e retorna o JSON bruto).
-- Adapter: <code>OpenCNPJAdapter</code> em <code>backend/avaliacao/open_cnpj.py</code> (transforma o JSON bruto no formato esperado pelo domínio).
-- Target (interface esperada): dicionário normalizado com chaves compatíveis com nosso modelo de dados de Empresa (ex.: <code>cnpj</code>, <code>nome</code>, <code>nome_fantasia</code>, <code>cidade</code>, <code>uf</code>, etc.). <em>Observação: o modelo <code>Empresa</code> atual está simplificado; a lista de campos alvo reflete a intenção da integração e deve evoluir.</em></p>
-<p>Fluxo resumido:
-1) O cliente recebe um CNPJ e delega ao Adapter.
+<p>Participantes mapeados no repositório:</p>
+<ul>
+<li>Cliente (Client): comando de gestão <code>backend/avaliacao/atualizar_empresa.py</code>.</li>
+<li>Adaptee: <code>OpenCNPJClient</code> em <code>backend/avaliacao/open_cnpj.py</code> (realiza a chamada HTTP e retorna o JSON bruto).</li>
+<li>Adapter: <code>OpenCNPJAdapter</code> em <code>backend/avaliacao/open_cnpj.py</code> (transforma o JSON bruto no formato esperado pelo domínio).</li>
+<li>Target (interface esperada): dicionário normalizado com chaves compatíveis com nosso modelo de dados de Empresa (ex.: <code>cnpj</code>, <code>nome</code>, <code>nome_fantasia</code>, <code>cidade</code>, <code>uf</code>, etc.). <em>Observação: o modelo <code>Empresa</code> atual está simplificado; a lista de campos alvo reflete a intenção da integração e deve evoluir.</em></li>
+</ul>
+<p>Fluxo resumido:</p>
+<p>1) O cliente recebe um CNPJ e delega ao Adapter.
 2) O Adapter invoca o Adaptee (cliente HTTP) para buscar os dados na API externa.
 3) O Adapter traduz o JSON bruto para um dicionário com chaves internas padronizadas.
 4) O cliente persiste os dados usando a interface do domínio (ex.: <code>update_or_create</code>).</p>
@@ -971,25 +973,33 @@ class OpenCNPJAdapter:
 <h2 id="execucao">Execução</h2>
 <hr>
 <h2 id="senso-critico">Senso Crítico</h2>
-<p>Benefícios:
-- Isolamento de dependência externa: mudanças na API pública impactam prioritariamente o Adapter, não o domínio nem o cliente.
-- Testabilidade: é possível mockar <code>OpenCNPJClient</code> no teste do Adapter e validar a tradução de dados sem chamadas reais à rede.
-- Evolução segura: adicionar ou renomear campos mapeados fica contido no Adapter, reduzindo regressões.</p>
-<p>Trade-offs e cuidados:
-- Complexidade: o Adapter concentra regras de mapeamento; mantenha-o pequeno, coeso e bem testado.
-- Tipagem/contratos: definir um “target” explícito (ex.: dataclass/serializer) evita dicionários soltos e erros de chave.
-- Erros e timeouts: a chamada externa deve ter timeout (já aplicado) e tratamento robusto para retornar None/erros controlados ao cliente.</p>
-<p>Relação direta com o código:
-- <code>OpenCNPJClient.buscar_por_cnpj(cnpj)</code>: acessa <code>https://publica.cnpj.ws/cnpj/{cnpj}</code> e retorna o JSON bruto.
-- <code>OpenCNPJAdapter.get_empresa_data(cnpj)</code>: extrai e renomeia campos como <code>razao_social</code> → <code>nome</code>, além de planificar dados de cidade/estado.
-- <code>Command.handle(...)</code> em <code>atualizar_empresa.py</code>: consome o Adapter e tenta persistir via <code>update_or_create</code>.</p>
+<p>Benefícios:</p>
+<ul>
+<li>Isolamento de dependência externa: mudanças na API pública impactam prioritariamente o Adapter, não o domínio nem o cliente.</li>
+<li>Testabilidade: é possível mockar <code>OpenCNPJClient</code> no teste do Adapter e validar a tradução de dados sem chamadas reais à rede.</li>
+<li>Evolução segura: adicionar ou renomear campos mapeados fica contido no Adapter, reduzindo regressões.</li>
+</ul>
+<p>Trade-offs e cuidados:</p>
+<ul>
+<li>Complexidade: o Adapter concentra regras de mapeamento; mantenha-o pequeno, coeso e bem testado.</li>
+<li>Tipagem/contratos: definir um “target” explícito (ex.: dataclass/serializer) evita dicionários soltos e erros de chave.</li>
+<li>Erros e timeouts: a chamada externa deve ter timeout (já aplicado) e tratamento robusto para retornar None/erros controlados ao cliente.</li>
+</ul>
+<p>Relação direta com o código:</p>
+<ul>
+<li><code>OpenCNPJClient.buscar_por_cnpj(cnpj)</code>: acessa <code>https://publica.cnpj.ws/cnpj/{cnpj}</code> e retorna o JSON bruto.</li>
+<li><code>OpenCNPJAdapter.get_empresa_data(cnpj)</code>: extrai e renomeia campos como <code>razao_social</code> → <code>nome</code>, além de planificar dados de cidade/estado.</li>
+<li><code>Command.handle(...)</code> em <code>atualizar_empresa.py</code>: consome o Adapter e tenta persistir via <code>update_or_create</code>.</li>
+</ul>
 <hr>
 <h2 id="conclusao">Conclusão</h2>
 <p>A implementação do padrão Adapter, através da classe OpenCNPJAdapter, demonstrou-se uma solução robusta para o desafio de integrar a funcionalidade de avaliação com a API pública de CNPJ. Ao atuar como um "tradutor" entre o cliente HTTP (OpenCNPJClient) e o domínio da aplicação, o adapter efetivamente isola o núcleo do sistema de detalhes de implementação e da estrutura de dados de um serviço externo. Isso não apenas protege a funcionalidade de avaliação contra futuras mudanças na API, mas também melhora significativamente a testabilidade do código, permitindo que a dependência externa seja facilmente simulada (mockada), garantindo assim maior manutenibilidade e resiliência ao projeto.</p>
 <h2 id="ref-bib">Referência Bibliográfica</h2>
-<p>[1] Adapter – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/adapter. Acesso em: 23 out. 2025.
-[2] Serrano, Milene. Arquitetura e Desenho de Software – Aula GoFs Estruturais. Universidade de Brasília, [s.d.]. Disponível em: https://aprender3.unb.br/pluginfile.php/3178543/mod_page/content/1/Arquitetura%20e%20Desenho%20de%20Software%20-%20Aula%20GoFs%20Estruturais%20-%20Profa.%20Milene.pdf. Acesso em: 23 out. 2025.
-[3] WIKIPEDIA. Adapter pattern. Disponível em: https://en.wikipedia.org/wiki/Adapter_pattern. Acesso em: 23 out. 2025.</p>
+<ul>
+<li>[1] Adapter – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/adapter. Acesso em: 23 out. 2025.</li>
+<li>[2] Serrano, Milene. Arquitetura e Desenho de Software – Aula GoFs Estruturais. Universidade de Brasília, [s.d.]. Disponível em: https://aprender3.unb.br/pluginfile.php/3178543/mod_page/content/1/Arquitetura%20e%20Desenho%20de%20Software%20-%20Aula%20GoFs%20Estruturais%20-%20Profa.%20Milene.pdf. Acesso em: 23 out. 2025.</li>
+<li>[3] WIKIPEDIA. Adapter pattern. Disponível em: https://en.wikipedia.org/wiki/Adapter_pattern. Acesso em: 23 out. 2025.</li>
+</ul>
 <hr>
 <h2 id="historico-de-versoes">Histórico de Versões</h2>
 <table>
