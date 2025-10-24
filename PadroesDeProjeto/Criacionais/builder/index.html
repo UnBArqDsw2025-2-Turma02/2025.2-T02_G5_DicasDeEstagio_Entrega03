@@ -982,9 +982,9 @@ class AvaliacaoBuilder(IAvaliacaoBuilder):
 <li><code>get_result()</code>: verifica invariantes mínimas (usuário, empresa, nota) e retorna o objeto pronto, executando <code>reset()</code> para permitir reuso do Builder.</li>
 </ul>
 <p>Exemplo de fluxo (View <code>EnviarAvaliacaoView.post</code>):</p>
-<p>1) Instancia o <code>AvaliacaoBuilder</code>.
-2) Encadeia as etapas com <code>cleaned_data</code> do formulário.
-3) Chama <code>get_result()</code> e salva a avaliação resultante.</p>
+<p>1) Instancia o <code>AvaliacaoBuilder</code>.</p>
+<p>2) Encadeia as etapas com <code>cleaned_data</code> do formulário.</p>
+<p>3) Chama <code>get_result()</code> e salva a avaliação resultante.</p>
 <hr>
 <h2 id="senso-critico">Senso Crítico</h2>
 <p>Quando usar Builder aqui faz sentido:</p>
