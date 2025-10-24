@@ -8,13 +8,13 @@
 **Professora**: Milene Serrano<br>
 **Turma**: 2 - Faculdade UnB Gama (FCTE)<br>
 **Número do Grupo**: G5<br>
-**Entrega**: 02 (Módulo de Modelagem)<br>
+**Entrega**: 03 (Módulo de Padrões de Projeto)<br>
 
 ## Sobre o Projeto
 
 Este repositório faz parte do trabalho da disciplina **Arquitetura e Desenho de Software**, ministrada pela professora **Milene Serrano**.
 
-Nosso grupo está desenvolvendo a **modelagem de um site sobre dicas de estágio**, reunindo em um só lugar tudo que os estudantes precisam saber para conquistar, avaliar e aproveitar oportunidades de estágio. O objetivo é criar uma plataforma que auxilie os alunos no processo, fornecendo informações úteis e acessíveis para o desenvolvimento acadêmico e profissional.
+Nosso grupo está desenvolvendo a **Padrões de Projeto de um site sobre dicas de estágio**, reunindo em um só lugar tudo que os estudantes precisam saber para conquistar, avaliar e aproveitar oportunidades de estágio. O objetivo é criar uma plataforma que auxilie os alunos no processo, fornecendo informações úteis e acessíveis para o desenvolvimento acadêmico e profissional.
 
 ## Integrantes
 
@@ -73,8 +73,6 @@ Nosso grupo está desenvolvendo a **modelagem de um site sobre dicas de estágio
 - **[Diagrama UML Estático](Modelagem/estatica_uml/modelagem_estatica.md)** - Visão Geral UML Estático
 - **[Diagrama UML Dinâmico](Modelagem/dinamica_uml/modelagem_dinamica.md)** - Visão Geral UML Dinâmico
 
-## Screenshots da Primeira Entrega
-Adicione 2 ou mais screenshots em termos de artefatos realizados na entrega.
 
 ## Há algo a ser executado?
 
@@ -92,13 +90,4 @@ Adicione 2 ou mais screenshots em termos de artefatos realizados na entrega.
 - **MkDocs** - Gerador de documentação estática
 - **Material for MkDocs** - Tema moderno e responsivo
 - **Python** - Linguagem base para as ferramentas
-
----
-
-## Histórico de Versões
-
-<font size="3"><p style="text-align: center">Tabela 1: Histórico de versões</p></font>
-
-| ID | Descrição | Autor | Revisor | Data |
-|:--:|:---------|:------|:--------|:----:|
-| 01 | Criação do Documento | [Mateus Villela Consorte](https://github.com/MVConsorte) | [](https://github.com/) | 21/09/2025 |
+- **Django** - Framework Python para implementação do projeto
