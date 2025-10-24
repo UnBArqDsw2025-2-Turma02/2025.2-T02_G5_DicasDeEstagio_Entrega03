@@ -111,10 +111,6 @@ Fluxo resumido:
 
 ---
 
-## Execução
-
----
-
 ## Senso Crítico
 
 Benefícios:
