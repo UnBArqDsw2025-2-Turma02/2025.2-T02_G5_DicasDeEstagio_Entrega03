@@ -1,4 +1,3 @@
-# 🧪 Comandos CURL para Testar Iterator + Decorator
 
 ## Token de Acesso
 ```bash

@@ -5,7 +5,7 @@ from rest_framework.decorators import action
 from .models import Forum, ComentarioForum
 from .serializers import ForumSerializer, ForumListSerializer, ComentarioForumSerializer
 from .factories.topico_factory import TopicoFactory
-from .iterators.forum_iterators import ForumCollection
+from .iterators.forum_iterators import ForumCollection, TopicoPorTipoIterator
 
 class ForumViewSet(viewsets.ModelViewSet):
     queryset = Forum.objects.all()
@@ -276,12 +276,7 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
         return Response(serializer.data)
     
     def navegar_por_tipo_iterator(self, request, tipo=None):
-        """
-        Endpoint que usa o padrão Iterator para navegar por tópicos de um tipo específico
-        Demonstra a integração entre Factory Method e Iterator
-        
-        URL: /api/forum/navegar-por-tipo/vaga/
-        """
+   
         if not tipo:
             return Response(
                 {'error': 'Tipo de tópico é obrigatório'}, 
@@ -289,8 +284,8 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
             )
         
         try:
-            # Criar coleção de tópicos usando o padrão Iterator
-            forum_collection = ForumCollection(self.queryset)
+            # Criar coleção de tópicos usando o padrão Iterator (usar Forum.objects, não self.queryset)
+            forum_collection = ForumCollection(Forum.objects.all())
             iterator = forum_collection.create_iterator_por_tipo(tipo)
             
             # Parâmetros de paginação
@@ -360,25 +355,25 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
     
     def comentarios_arvore_iterator(self, request, pk=None):
         """
-        Endpoint que usa Iterator para navegar através da árvore de comentários
-        Implementa travessia em profundidade (DFS)
-        
-        URL: /api/forum/{id}/comentarios-arvore/
+        Endpoint simplificado para listar comentários de um tópico
+        URL: /api/forum/topicos/{id}/comentarios-arvore/
         """
         try:
-            topico = self.get_object()
+            # Buscar o tópico
+            topico = Forum.objects.get(pk=pk)
             incluir_inativos = request.query_params.get('incluir_inativos', 'false').lower() == 'true'
             
-            # Criar iterator para comentários em árvore
-            iterator_comentarios = ComentarioArvoreIterator(topico, incluir_inativos)
+            # Buscar comentários
+            if incluir_inativos:
+                comentarios = topico.comentarios.all()
+            else:
+                comentarios = topico.comentarios.filter(is_active=True)
             
-            # Estruturar comentários com informações de hierarquia
+            # Estruturar comentários
             comentarios_estruturados = []
-            nivel_map = {}  # Mapear comentário -> nível na árvore
+            nivel_map = {}
             
-            while iterator_comentarios.has_next():
-                comentario = iterator_comentarios.next()
-                
+            for comentario in comentarios:
                 # Calcular nível na árvore
                 if comentario.comentario_pai is None:
                     nivel = 0
@@ -408,19 +403,21 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
                 },
                 'comentarios': comentarios_estruturados,
                 'estatisticas': {
-                    'total_visitados': iterator_comentarios.get_visited_count(),
+                    'total_visitados': len(comentarios_estruturados),
                     'niveis_profundidade': max(nivel_map.values()) + 1 if nivel_map else 0,
                     'comentarios_raiz': len([c for c in comentarios_estruturados if c['nivel_hierarquia'] == 0]),
                     'comentarios_resposta': len([c for c in comentarios_estruturados if c['e_resposta']])
                 },
                 'metadados': {
-                    'padrao_usado': 'Iterator Pattern',
-                    'tipo_iterator': 'ComentarioArvoreIterator (DFS)',
-                    'algoritmo_travessia': 'Depth-First Search',
                     'incluiu_inativos': incluir_inativos
                 }
             })
             
+        except Forum.DoesNotExist:
+            return Response(
+                {'error': 'Tópico não encontrado'}, 
+                status=status.HTTP_404_NOT_FOUND
+            )
         except Exception as e:
             return Response(
                 {'error': f'Erro ao processar comentários: {str(e)}'}, 
@@ -429,16 +426,17 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
     
     def topicos_paginado_iterator(self, request):
         """
-        Endpoint que demonstra Iterator Paginado para grandes volumes de dados        URL: /api/forum/paginado-avancado/
+        Endpoint que demonstra Iterator Pattern com filtros e ordenação
+        URL: /api/forum/paginado-avancado/
         """
         try:
             # Parâmetros de consulta
-            page_size = int(request.query_params.get('page_size', 10))
             filtro_ativo = request.query_params.get('ativo', 'true').lower() == 'true'
             ordenacao = request.query_params.get('ordem', 'recente')  # recente, antigo, visualizacoes
+            tipo_filtro = request.query_params.get('tipo', None)  # vaga, duvida, dica, etc.
             
-            # Aplicar filtros ao queryset
-            queryset = self.queryset
+            # Aplicar filtros ao queryset (usar Forum.objects, não self.queryset que é ComentarioForum)
+            queryset = Forum.objects.all()
             if filtro_ativo:
                 queryset = queryset.filter(is_active=True)
             
@@ -450,17 +448,21 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
             elif ordenacao == 'visualizacoes':
                 queryset = queryset.order_by('-visualizacoes')
             
-            # Criar coleção e iterator paginado
+            # Criar coleção e iterator
             forum_collection = ForumCollection(queryset)
-            iterator_paginado = forum_collection.create_iterator_paginado(page_size)
             
-            # Coletar todos os itens (ou até um limite para demonstração)
-            limite_items = int(request.query_params.get('limite', 50))
+            # Se especificou tipo, usar iterator filtrado
+            if tipo_filtro:
+                iterator = forum_collection.create_iterator_por_tipo(tipo_filtro)
+            else:
+                # Iterator sem filtro de tipo (todos os tópicos)
+                iterator = TopicoPorTipoIterator(queryset)
+            
+            # Coletar todos os itens
             topicos_coletados = []
-            items_processados = 0
             
-            while iterator_paginado.has_next() and items_processados < limite_items:
-                topico = iterator_paginado.next()
+            while iterator.has_next():
+                topico = iterator.next()
                 topicos_coletados.append({
                     'id': topico.id,
                     'titulo': topico.titulo,
@@ -468,28 +470,24 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
                     'data_criacao': topico.data_criacao,
                     'visualizacoes': topico.visualizacoes,
                     'total_comentarios': topico.total_comentarios,
-                    'pagina': iterator_paginado.get_current_page()
+                    'is_active': topico.is_active
                 })
-                items_processados += 1
             
             return Response({
                 'topicos': topicos_coletados,
                 'configuracao': {
-                    'page_size': page_size,
                     'filtro_ativo': filtro_ativo,
                     'ordenacao': ordenacao,
-                    'limite_aplicado': limite_items
+                    'tipo_filtro': tipo_filtro or 'todos'
                 },
-                'estatisticas_paginacao': {
-                    'total_items': iterator_paginado.get_total_items(),
-                    'total_pages': iterator_paginado.get_total_pages(),
-                    'pagina_atual': iterator_paginado.get_current_page(),
-                    'items_coletados': len(topicos_coletados)
+                'estatisticas': {
+                    'total_items': iterator.get_total(),
+                    'items_retornados': len(topicos_coletados)
                 },
                 'metadados': {
                     'padrao_usado': 'Iterator Pattern',
-                    'tipo_iterator': 'TopicoPaginadoIterator',
-                    'beneficio': 'Carregamento eficiente de grandes volumes'
+                    'tipo_iterator': 'TopicoPorTipoIterator',
+                    'beneficio': 'Navegação eficiente com filtros customizados'
                 }
             })
             
@@ -513,8 +511,8 @@ class ComentarioForumViewSet(viewsets.ModelViewSet):
             # 1. Mostrar tipos disponíveis do Factory Method
             tipos_factory = TopicoFactory.get_tipos_disponiveis()
             
-            # 2. Usar Iterator para contar tópicos por tipo
-            forum_collection = ForumCollection(self.queryset.filter(is_active=True))
+            # 2. Usar Iterator para contar tópicos por tipo (usar Forum.objects, não self.queryset)
+            forum_collection = ForumCollection(Forum.objects.filter(is_active=True))
             estatisticas_iterator = {}
             
             for tipo in tipos_factory.keys():
