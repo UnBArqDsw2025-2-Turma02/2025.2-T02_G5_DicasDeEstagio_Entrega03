@@ -11,6 +11,10 @@
       
       
       
+        <link rel="prev" href="../3.1.Factory_Method/">
+      
+      
+        <link rel="next" href="../../Estruturais/3.2.Decorator/">
       
       
       <link rel="icon" href="../../../assets/imgs/outros/entrega1/LogoPrincipalG5.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Tabela de Disponibilidade - DicasDeEstagio - G5</title>
+        <title>3.1.2. Builder Method - DicasDeEstagio - G5</title>
       
     
     
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tabela-de-disponibilidade" class="md-skip">
+        <a href="#builder-avaliacao" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tabela de Disponibilidade
+              3.1.2. Builder Method
             
           </span>
         </div>
@@ -271,18 +275,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -298,7 +304,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             3. Padrões de Projeto
@@ -309,18 +315,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -336,7 +344,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             3.1. GOFS Criacionais
@@ -350,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../PadroesDeProjeto/Criacionais/3.1.Factory_Method/" class="md-nav__link">
+      <a href="../3.1.Factory_Method/" class="md-nav__link">
         
   
   
@@ -370,10 +378,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../PadroesDeProjeto/Criacionais/builder/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3.1.2. Builder Method
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -384,6 +414,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#padrao-gof-criacional-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Padrão GoF Criacional: Builder
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Padrão GoF Criacional: Builder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problematica-builder-no-contexto-da-funcionalidade-de-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problemática: Builder no contexto da Funcionalidade de Avaliação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelagem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#senso-critico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Senso Crítico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ref-bib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referência Bibliográfica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versões
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -442,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../PadroesDeProjeto/Estruturais/3.2.Decorator/" class="md-nav__link">
+      <a href="../../Estruturais/3.2.Decorator/" class="md-nav__link">
         
   
   
@@ -465,7 +602,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../PadroesDeProjeto/Estruturais/adapter/" class="md-nav__link">
+      <a href="../../Estruturais/adapter/" class="md-nav__link">
         
   
   
@@ -534,7 +671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../PadroesDeProjeto/Comportamentais/3.3.Iterator/" class="md-nav__link">
+      <a href="../../Comportamentais/3.3.Iterator/" class="md-nav__link">
         
   
   
@@ -557,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../PadroesDeProjeto/Comportamentais/memento/" class="md-nav__link">
+      <a href="../../Comportamentais/memento/" class="md-nav__link">
         
   
   
@@ -588,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../PadroesDeProjeto/3.4.ParticipacoesPadroes/" class="md-nav__link">
+      <a href="../../3.4.ParticipacoesPadroes/" class="md-nav__link">
         
   
   
@@ -638,9 +775,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#visualizacao-da-tabela" class="md-nav__link">
+  <a href="#padrao-gof-criacional-builder" class="md-nav__link">
     <span class="md-ellipsis">
-      Visualização da Tabela
+      Padrão GoF Criacional: Builder
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Padrão GoF Criacional: Builder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problematica-builder-no-contexto-da-funcionalidade-de-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problemática: Builder no contexto da Funcionalidade de Avaliação
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modelagem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelagem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#senso-critico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Senso Crítico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ref-bib" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referência Bibliográfica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bibliografia
     </span>
   </a>
   
@@ -649,7 +855,7 @@
         <li class="md-nav__item">
   <a href="#historico-de-versoes" class="md-nav__link">
     <span class="md-ellipsis">
-      Histórico de versões
+      Histórico de Versões
     </span>
   </a>
   
@@ -671,36 +877,175 @@
 
 
 
-<div><h1 id="tabela-de-disponibilidade">Tabela de Disponibilidade</h1>
-<p>Para organizar melhor o andamento do projeto, a equipe elaborou uma <strong>Tabela de Disponibilidade</strong> com os horários em que cada integrante está apto a contribuir.<br>
-Esse recurso foi fundamental para planejar reuniões, dividir tarefas de forma equilibrada e otimizar a colaboração entre os membros.  </p>
-<h3 id="visualizacao-da-tabela">Visualização da Tabela</h3>
-<iframe src="https://docs.google.com/spreadsheets/d/1UsH9o924jKEcFiylSR0mBxa7B8vHhxfpw8AgyVaBkfQ/edit?usp=sharing" width="100%" height="500"></iframe>
+<div><h1 id="builder-avaliacao">Builder - Avaliação</h1>
+<h2 id="padrao-gof-criacional-builder">Padrão GoF Criacional: Builder</h2>
+<p>O padrão Builder separa a construção de um objeto complexo da sua representação final, permitindo montar a instância passo a passo <a href="#ref-bib">[1][2]</a>. Em vez de um construtor com muitos parâmetros, o Builder organiza a criação em etapas, favorecendo legibilidade e evitando objetos parcialmente válidos <a href="#ref-bib">[1]</a>. Assim, ao encapsular a lógica de montagem de uma "Avaliação" em etapas encadeadas, garante-se que, ao final, o objeto esteja consistente antes de ser usado ou salvo <a href="#ref-bib">[1][2][3]</a>. Logo, a problematica principal que o Construtor visa atacar é de reduzir construtores "monstruosos", que possuem muitos parâmetros e que, inclusive, tende a se enraizar por todo o código cliente; e, também, na maioria dos casos, boa parte dos parâmetros não será utilizada, não havendo necessidade de declarar uma quantidade demasiada de parâmetros <a href="#ref-bib">[1]</a>. Enfim , o cliente coordena os passos e, para o resultado final, o Construtor garante as regras e só libera o "produto final" quando pronto.</p>
+<h3 id="problematica-builder-no-contexto-da-funcionalidade-de-avaliacao">Problemática: Builder no contexto da Funcionalidade de Avaliação</h3>
+<p>Na abordagem em questão, a avaliação trata-se de um das funcionalidades cernes da aplicação, mesmo que em um primeiro momento não seja grande, eventualmente, escalando-o, certamente haverá problemas no processo de inicalização e construção de objetos. Assim, para mitigar tal aspectos, foi planjado a adição do builder para gerenciar o processo de criação de objetos.</p>
+<p>Concretamente, a montagem de uma <code>Avaliacao</code> envolve:
+- Campos obrigatórios e opcionais heterogêneos: obrigatórios (usuário, empresa, nota_geral) e opcionais (título, prós, contras, cargo, anonima), que nem sempre chegam juntos e podem depender do contexto de uso (formulário web hoje; importações/integrações amanhã).
+- Regras condicionais de domínio: quando a avaliação é anônima, o cargo exibido deve ser derivado (ex.: “Ex-funcionário(a) (slug-do-cargo)”), enquanto avaliações não anônimas exibem o cargo informado. Essa política aparece em <code>set_contexto_profissional</code>.
+- Validações de faixa e consistência: por exemplo, <code>nota_geral</code> limitada entre 1 e 5 (verificada em <code>set_nota_geral</code>), além do mínimo necessário antes de liberar o resultado (<code>usuario</code>, <code>empresa</code>, <code>nota_geral</code> em <code>get_result</code>).
+- Ordem e atomicidade da construção: sem uma sequência clara, o código cliente corre risco de produzir objetos parcialmente válidos ou de “esquecer” etapas, especialmente à medida que o formulário evoluir com novos campos.</p>
+<h2 id="modelagem">Modelagem</h2>
+<p><font size="3"><p style="text-align: center"> <strong>Figura 1</strong> - Builder Method </p></font></p>
+<p><img alt="Diagrama Casos de Uso" src="../../../assets/imgs/buildermethod.png"></p>
+<p><font size="3"><p style="text-align: center"> <strong>Autores</strong>: <a href="https://github.com/henryqma">Henrique Alencar</a> e <a href="https://github.com/MVConsorte">Mateus Consorte</a> </p>
+_</font></p>
+<h2 id="implementacao">Implementação</h2>
+<pre><code class="language-python">
+class IAvaliacaoBuilder(ABC):
+    @abstract_method
+    def reset(self):
+        pass
 
+    @abstract_method
+    def set_identificacao(self, usuario: User, empresa: Empresa):
+        pass
+
+    @abstract_method
+    def set_nota_geral(self, nota: int):
+        pass
+
+    @abstract_method
+    def add_detalhes_texto(self, titulo: str, pros: str, contras: str):
+        pass
+
+    @abstract_method
+    def set_contexto_profissional(self, cargo: str, anonimo: bool):
+        pass
+
+    @abstract_method
+    def get_result(self) -&gt; Avaliacao:
+        pass
+
+class AvaliacaoBuilder(IAvaliacaoBuilder):
+
+    _avaliacao: Avaliacao = None
+
+    def __init__(self):
+        self.reset()
+
+    def reset(self):
+        self._avaliacao = Avaliacao()
+
+    def set_identificacao(self, usuario: User, empresa: Empresa) -&gt; 'AvaliacaoBuilder':
+        self._avaliacao.usuario = usuario
+        self._avaliacao.empresa = empresa
+        return self 
+
+    def set_nota_geral(self, nota: int) -&gt; 'AvaliacaoBuilder':
+        if not 1 &lt;= nota &lt;= 5:
+            raise ValueError("Nota deve estar entre 1 e 5")
+        self._avaliacao.nota_geral = nota
+        return self
+
+    def add_detalhes_texto(self, titulo: str, pros: str, contras: str) -&gt; 'AvaliacaoBuilder':
+        self._avaliacao.titulo = titulo
+        self._avaliacao.pros = pros
+        self._avaliacao.contras = contras
+        return self
+
+    def set_contexto_profissional(self, cargo: str, anonimo: bool) -&gt; 'AvaliacaoBuilder':
+        self._avaliacao.anonima = anonimo
+        if not anonimo:
+            self._avaliacao.cargo = cargo
+        else:
+            self._avaliacao.cargo = f"Ex-funcionário(a) ({slugify(cargo)})"
+
+        return self
+
+    def get_result(self) -&gt; Avaliacao:
+        if not all([self._avaliacao.usuario, self._avaliacao.empresa, self._avaliacao.nota_geral]):
+            raise ValueError("Uma avaliação deve ter no mínimo usuário, empresa e nota.")
+
+        produto_final = self._avaliacao
+        self.reset() 
+        return produto_final
+
+</code></pre>
+<p>Participantes mapeados no repositório:
+- Builder (concreto): <code>AvaliacaoBuilder</code> em <code>backend/avaliacao/builders.py</code>.
+- Builder (interface): <code>IAvaliacaoBuilder</code> em <code>backend/avaliacao/builders.py</code>.
+- Produto: <code>Avaliacao</code> em <code>backend/avaliacao/models.py</code>.
+- Cliente/Diretor: <code>EnviarAvaliacaoView</code> em <code>backend/avaliacao/views.py</code> (orquestra a sequência de chamadas do Builder conforme os dados do formulário).</p>
+<p>Principais responsabilidades no código:
+- <code>set_identificacao(usuario, empresa)</code>: associa usuário e empresa.
+- <code>set_nota_geral(nota)</code>: valida a faixa (1 a 5) e define o valor.
+- <code>add_detalhes_texto(titulo, pros, contras)</code>: popula detalhes textuais.
+- <code>set_contexto_profissional(cargo, anonimo)</code>: define anonimato e ajusta o cargo; quando anônima, gera um valor derivado via <code>slugify</code>.
+- <code>get_result()</code>: verifica invariantes mínimas (usuário, empresa, nota) e retorna o objeto pronto, executando <code>reset()</code> para permitir reuso do Builder.</p>
+<p>Exemplo de fluxo (View <code>EnviarAvaliacaoView.post</code>):
+1) Instancia o <code>AvaliacaoBuilder</code>.
+2) Encadeia as etapas com <code>cleaned_data</code> do formulário.
+3) Chama <code>get_result()</code> e salva a avaliação resultante.</p>
 <hr>
-<h2 id="historico-de-versoes">Histórico de versões</h2>
-<p><font size="3"><p style="text-align: center">Tabela 1: Histórico de versões</p></font></p>
+<h2 id="senso-critico">Senso Crítico</h2>
+<p>Quando usar Builder aqui faz sentido:
+- O objeto possui campos obrigatórios e opcionais montados em etapas.
+- Regras de negócio interferem na montagem (ex.: anonimato altera cargo exibido).
+- Deseja-se manter a View enxuta e expressiva, delegando regras ao Builder.</p>
+<p>Quando talvez não valha a pena:
+- Objetos simples, com poucos campos e sem validações encadeadas.
+- Se toda validação migrar para serializers/forms, duplicando lógica com o Builder.</p>
+<p>No entanto, no geral, sem um Builder, as problemáticas nas etapas de construção do objeto tendem a se espalhar por controllers/views, levando a:
+- Código cliente inchado e duplicado, difícil de manter e testar.
+- Invariantes de domínio implementadas de maneira inconsistente em lugares diferentes.
+- Maior chance de salvar objetos em estado inválido, devido à criação “em fatias”.</p>
+<p>O uso do Builder endereça diretamente esses riscos <a href="#ref-bib">[1][2][3]</a>:
+- Centraliza as regras de montagem e validações, expondo uma interface que guia a ordem dos passos.
+- Garante invariantes mínimas antes de liberar o produto via <code>get_result()</code> e faz <code>reset()</code> para evitar reuso indevido do mesmo objeto.
+- Reduz o acoplamento da View com detalhes de construção, mantendo o código cliente mais expressivo e focado no fluxo da funcionalidade.</p>
+<hr>
+<h2 id="conclusao">Conclusão</h2>
+<p>O Builder adotado para <code>Avaliacao</code> melhora a legibilidade do fluxo de criação, concentra validações e protege invariantes do domínio. A View atua como diretora e o <code>AvaliacaoBuilder</code> entrega um objeto pronto para persistência. Manter o Builder coeso, coberto por testes e ajustar pequenos detalhes (por exemplo, decoradores abstratos) sustentará a evolução segura dessa funcionalidade.</p>
+<hr>
+<h2 id="ref-bib">Referência Bibliográfica</h2>
+<p>[1] Builder – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/builder. Acesso em: 23 out. 2025.
+[2] Serrano, Milene. Arquitetura e Desenho de Software – Aula GoFs Criacionais. Universidade de Brasília, [s.d.].
+[3] Wikipedia. Builder pattern. Disponível em: https://en.wikipedia.org/wiki/Builder_pattern. Acesso em: 23 out. 2025.</p>
+<h2 id="bibliografia">Bibliografia</h2>
+<p>SOURCEMAKING. Builder Design Pattern in Python. SourceMaking.com, 2007–2025. Disponível em: https://sourcemaking.com/design_patterns/builder/python/1.</p>
+<hr>
+<h2 id="historico-de-versoes">Histórico de Versões</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">Versão</th>
-<th style="text-align: center;">Descrição</th>
-<th style="text-align: center;">Autor</th>
-<th style="text-align: center;">Data</th>
-<th style="text-align: center;">Revisor</th>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição</th>
+<th>Autor(es)</th>
+<th>Revisor(es)</th>
+<th>Detalhes da Revisão</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">1.0</td>
-<td style="text-align: center;">Criação da Tabela de Disponibilidade</td>
-<td style="text-align: center;"><a href="https://github.com/leticiamonteiroo">Letícia da Silva Monteiro</a></td>
-<td style="text-align: center;"><a href="https://github.com/luizh-gsoares">Luiz Henrique Guimarães Soares</a></td>
-<td style="text-align: center;">05/09/2025</td>
+<td>1.0</td>
+<td>23/10/2025</td>
+<td>Abertura do arquivo</td>
+<td><a href="https://github.com/MVConsorte">Consorte</a></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>23/10/2025</td>
+<td>seção "Padrão GoF Criacional: Builder" com definição, mapeamento ao código e recomendações</td>
+<td><a href="https://github.com/MVConsorte">Consorte</a></td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>23/10/2025</td>
+<td>Adicionando modelagem</td>
+<td><a href="https://github.com/henryqma">Henrique</a></td>
+<td>-</td>
+<td>-</td>
 </tr>
 </tbody>
-</table>
-<p><font size="2"><p style="text-align: center">Fonte: <a href="https://github.com/leticiamonteiroo">Letícia da Silva Monteiro</a> e <a href="https://github.com/luizh-gsoares">Luiz Henrique Guimarães Soares</a> 2025.</p></font></p></div>
+</table></div>
 
 
 
