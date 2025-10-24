@@ -15,13 +15,91 @@ Concretamente, a montagem de uma `Avaliacao` envolve:
 - Ordem e atomicidade da construção: sem uma sequência clara, o código cliente corre risco de produzir objetos parcialmente válidos ou de “esquecer” etapas, especialmente à medida que o formulário evoluir com novos campos.
 
 
----
-
 ## Modelagem
 
----
+<center>
+
+**Figura 1** - Builder method
+
+![Builder](./assets/imgs/buildermethod.png)
+
+_Autores: [Henrique Alencar](https://github.com/henryqma) e [Mateus Consorte](https://github.com/MVConsorte)_
+
+</center>
 
 ## Implementação
+
+'''python
+class IAvaliacaoBuilder(ABC):
+    @abstract_method
+    def reset(self):
+        pass
+
+    @abstract_method
+    def set_identificacao(self, usuario: User, empresa: Empresa):
+        pass
+
+    @abstract_method
+    def set_nota_geral(self, nota: int):
+        pass
+    
+    @abstract_method
+    def add_detalhes_texto(self, titulo: str, pros: str, contras: str):
+        pass
+        
+    @abstract_method
+    def set_contexto_profissional(self, cargo: str, anonimo: bool):
+        pass
+
+    @abstract_method
+    def get_result(self) -> Avaliacao:
+        pass
+
+class AvaliacaoBuilder(IAvaliacaoBuilder):
+
+    _avaliacao: Avaliacao = None
+
+    def __init__(self):
+        self.reset()
+
+    def reset(self):
+        self._avaliacao = Avaliacao()
+
+    def set_identificacao(self, usuario: User, empresa: Empresa) -> 'AvaliacaoBuilder':
+        self._avaliacao.usuario = usuario
+        self._avaliacao.empresa = empresa
+        return self 
+    
+    def set_nota_geral(self, nota: int) -> 'AvaliacaoBuilder':
+        if not 1 <= nota <= 5:
+            raise ValueError("Nota deve estar entre 1 e 5")
+        self._avaliacao.nota_geral = nota
+        return self
+
+    def add_detalhes_texto(self, titulo: str, pros: str, contras: str) -> 'AvaliacaoBuilder':
+        self._avaliacao.titulo = titulo
+        self._avaliacao.pros = pros
+        self._avaliacao.contras = contras
+        return self
+    
+    def set_contexto_profissional(self, cargo: str, anonimo: bool) -> 'AvaliacaoBuilder':
+        self._avaliacao.anonima = anonimo
+        if not anonimo:
+            self._avaliacao.cargo = cargo
+        else:
+            self._avaliacao.cargo = f"Ex-funcionário(a) ({slugify(cargo)})"
+            
+        return self
+
+    def get_result(self) -> Avaliacao:
+        if not all([self._avaliacao.usuario, self._avaliacao.empresa, self._avaliacao.nota_geral]):
+            raise ValueError("Uma avaliação deve ter no mínimo usuário, empresa e nota.")
+            
+        produto_final = self._avaliacao
+        self.reset() 
+        return produto_final
+
+'''
 
 Participantes mapeados no repositório:
 - Builder (concreto): `AvaliacaoBuilder` em `backend/avaliacao/builders.py`.
@@ -90,3 +168,4 @@ SOURCEMAKING. Builder Design Pattern in Python. SourceMaking.com, 2007–2025. D
 | ------ | ---------- | ---------------------------------------- | ------------------------------------- | ----------- | ------------------------------------------------------------------ |
 | 1.0    | 23/10/2025 |    Abertura do arquivo     | [Consorte](https://github.com/MVConsorte) | -    | - |
 | 1.1    | 23/10/2025 | seção "Padrão GoF Criacional: Builder" com definição, mapeamento ao código e recomendações | [Consorte](https://github.com/MVConsorte) | - | - |
+| 1.2    | 23/10/2025 |    Adicionando modelagem     | [Henrique](https://github.com/henryqma) | -    | - |
