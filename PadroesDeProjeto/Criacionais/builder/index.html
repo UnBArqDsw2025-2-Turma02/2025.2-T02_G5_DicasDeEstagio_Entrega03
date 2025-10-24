@@ -882,16 +882,18 @@
 <p>O padrão Builder separa a construção de um objeto complexo da sua representação final, permitindo montar a instância passo a passo <a href="#ref-bib">[1][2]</a>. Em vez de um construtor com muitos parâmetros, o Builder organiza a criação em etapas, favorecendo legibilidade e evitando objetos parcialmente válidos <a href="#ref-bib">[1]</a>. Assim, ao encapsular a lógica de montagem de uma "Avaliação" em etapas encadeadas, garante-se que, ao final, o objeto esteja consistente antes de ser usado ou salvo <a href="#ref-bib">[1][2][3]</a>. Logo, a problematica principal que o Construtor visa atacar é de reduzir construtores "monstruosos", que possuem muitos parâmetros e que, inclusive, tende a se enraizar por todo o código cliente; e, também, na maioria dos casos, boa parte dos parâmetros não será utilizada, não havendo necessidade de declarar uma quantidade demasiada de parâmetros <a href="#ref-bib">[1]</a>. Enfim , o cliente coordena os passos e, para o resultado final, o Construtor garante as regras e só libera o "produto final" quando pronto.</p>
 <h3 id="problematica-builder-no-contexto-da-funcionalidade-de-avaliacao">Problemática: Builder no contexto da Funcionalidade de Avaliação</h3>
 <p>Na abordagem em questão, a avaliação trata-se de um das funcionalidades cernes da aplicação, mesmo que em um primeiro momento não seja grande, eventualmente, escalando-o, certamente haverá problemas no processo de inicalização e construção de objetos. Assim, para mitigar tal aspectos, foi planjado a adição do builder para gerenciar o processo de criação de objetos.</p>
-<p>Concretamente, a montagem de uma <code>Avaliacao</code> envolve:
-- Campos obrigatórios e opcionais heterogêneos: obrigatórios (usuário, empresa, nota_geral) e opcionais (título, prós, contras, cargo, anonima), que nem sempre chegam juntos e podem depender do contexto de uso (formulário web hoje; importações/integrações amanhã).
-- Regras condicionais de domínio: quando a avaliação é anônima, o cargo exibido deve ser derivado (ex.: “Ex-funcionário(a) (slug-do-cargo)”), enquanto avaliações não anônimas exibem o cargo informado. Essa política aparece em <code>set_contexto_profissional</code>.
-- Validações de faixa e consistência: por exemplo, <code>nota_geral</code> limitada entre 1 e 5 (verificada em <code>set_nota_geral</code>), além do mínimo necessário antes de liberar o resultado (<code>usuario</code>, <code>empresa</code>, <code>nota_geral</code> em <code>get_result</code>).
-- Ordem e atomicidade da construção: sem uma sequência clara, o código cliente corre risco de produzir objetos parcialmente válidos ou de “esquecer” etapas, especialmente à medida que o formulário evoluir com novos campos.</p>
+<p>Concretamente, a montagem de uma <code>Avaliacao</code> envolve:</p>
+<ul>
+<li>Campos obrigatórios e opcionais heterogêneos: obrigatórios (usuário, empresa, nota_geral) e opcionais (título, prós, contras, cargo, anonima), que nem sempre chegam juntos e podem depender do contexto de uso (formulário web hoje; importações/integrações amanhã).</li>
+<li>Regras condicionais de domínio: quando a avaliação é anônima, o cargo exibido deve ser derivado (ex.: “Ex-funcionário(a) (slug-do-cargo)”), enquanto avaliações não anônimas exibem o cargo informado. Essa política aparece em <code>set_contexto_profissional</code>.</li>
+<li>Validações de faixa e consistência: por exemplo, <code>nota_geral</code> limitada entre 1 e 5 (verificada em <code>set_nota_geral</code>), além do mínimo necessário antes de liberar o resultado (<code>usuario</code>, <code>empresa</code>, <code>nota_geral</code> em <code>get_result</code>).</li>
+<li>Ordem e atomicidade da construção: sem uma sequência clara, o código cliente corre risco de produzir objetos parcialmente válidos ou de “esquecer” etapas, especialmente à medida que o formulário evoluir com novos campos.</li>
+</ul>
 <h2 id="modelagem">Modelagem</h2>
 <p><font size="3"><p style="text-align: center"> <strong>Figura 1</strong> - Builder Method </p></font></p>
 <p><img alt="Diagrama Casos de Uso" src="../../../assets/imgs/buildermethod.png"></p>
-<p><font size="3"><p style="text-align: center"> <strong>Autores</strong>: <a href="https://github.com/henryqma">Henrique Alencar</a> e <a href="https://github.com/MVConsorte">Mateus Consorte</a> </p>
-_</font></p>
+<p><font size="3"><p style="text-align: center"> <strong>Autores</strong>: <a href="https://github.com/henryqma">Henrique Alencar</a> e <a href="https://github.com/MVConsorte">Mateus Consorte</a> </p></font></p>
+<hr>
 <h2 id="implementacao">Implementação</h2>
 <pre><code class="language-python">
 class IAvaliacaoBuilder(ABC):
@@ -964,48 +966,64 @@ class AvaliacaoBuilder(IAvaliacaoBuilder):
         return produto_final
 
 </code></pre>
-<p>Participantes mapeados no repositório:
-- Builder (concreto): <code>AvaliacaoBuilder</code> em <code>backend/avaliacao/builders.py</code>.
-- Builder (interface): <code>IAvaliacaoBuilder</code> em <code>backend/avaliacao/builders.py</code>.
-- Produto: <code>Avaliacao</code> em <code>backend/avaliacao/models.py</code>.
-- Cliente/Diretor: <code>EnviarAvaliacaoView</code> em <code>backend/avaliacao/views.py</code> (orquestra a sequência de chamadas do Builder conforme os dados do formulário).</p>
-<p>Principais responsabilidades no código:
-- <code>set_identificacao(usuario, empresa)</code>: associa usuário e empresa.
-- <code>set_nota_geral(nota)</code>: valida a faixa (1 a 5) e define o valor.
-- <code>add_detalhes_texto(titulo, pros, contras)</code>: popula detalhes textuais.
-- <code>set_contexto_profissional(cargo, anonimo)</code>: define anonimato e ajusta o cargo; quando anônima, gera um valor derivado via <code>slugify</code>.
-- <code>get_result()</code>: verifica invariantes mínimas (usuário, empresa, nota) e retorna o objeto pronto, executando <code>reset()</code> para permitir reuso do Builder.</p>
-<p>Exemplo de fluxo (View <code>EnviarAvaliacaoView.post</code>):
-1) Instancia o <code>AvaliacaoBuilder</code>.
+<p>Participantes mapeados no repositório:</p>
+<ul>
+<li>Builder (concreto): <code>AvaliacaoBuilder</code> em <code>backend/avaliacao/builders.py</code>.</li>
+<li>Builder (interface): <code>IAvaliacaoBuilder</code> em <code>backend/avaliacao/builders.py</code>.</li>
+<li>Produto: <code>Avaliacao</code> em <code>backend/avaliacao/models.py</code>.</li>
+<li>Cliente/Diretor: <code>EnviarAvaliacaoView</code> em <code>backend/avaliacao/views.py</code> (orquestra a sequência de chamadas do Builder conforme os dados do formulário).</li>
+</ul>
+<p>Principais responsabilidades no código:</p>
+<ul>
+<li><code>set_identificacao(usuario, empresa)</code>: associa usuário e empresa.</li>
+<li><code>set_nota_geral(nota)</code>: valida a faixa (1 a 5) e define o valor.</li>
+<li><code>add_detalhes_texto(titulo, pros, contras)</code>: popula detalhes textuais.</li>
+<li><code>set_contexto_profissional(cargo, anonimo)</code>: define anonimato e ajusta o cargo; quando anônima, gera um valor derivado via <code>slugify</code>.</li>
+<li><code>get_result()</code>: verifica invariantes mínimas (usuário, empresa, nota) e retorna o objeto pronto, executando <code>reset()</code> para permitir reuso do Builder.</li>
+</ul>
+<p>Exemplo de fluxo (View <code>EnviarAvaliacaoView.post</code>):</p>
+<p>1) Instancia o <code>AvaliacaoBuilder</code>.
 2) Encadeia as etapas com <code>cleaned_data</code> do formulário.
 3) Chama <code>get_result()</code> e salva a avaliação resultante.</p>
 <hr>
 <h2 id="senso-critico">Senso Crítico</h2>
-<p>Quando usar Builder aqui faz sentido:
-- O objeto possui campos obrigatórios e opcionais montados em etapas.
-- Regras de negócio interferem na montagem (ex.: anonimato altera cargo exibido).
-- Deseja-se manter a View enxuta e expressiva, delegando regras ao Builder.</p>
-<p>Quando talvez não valha a pena:
-- Objetos simples, com poucos campos e sem validações encadeadas.
-- Se toda validação migrar para serializers/forms, duplicando lógica com o Builder.</p>
-<p>No entanto, no geral, sem um Builder, as problemáticas nas etapas de construção do objeto tendem a se espalhar por controllers/views, levando a:
-- Código cliente inchado e duplicado, difícil de manter e testar.
-- Invariantes de domínio implementadas de maneira inconsistente em lugares diferentes.
-- Maior chance de salvar objetos em estado inválido, devido à criação “em fatias”.</p>
-<p>O uso do Builder endereça diretamente esses riscos <a href="#ref-bib">[1][2][3]</a>:
-- Centraliza as regras de montagem e validações, expondo uma interface que guia a ordem dos passos.
-- Garante invariantes mínimas antes de liberar o produto via <code>get_result()</code> e faz <code>reset()</code> para evitar reuso indevido do mesmo objeto.
-- Reduz o acoplamento da View com detalhes de construção, mantendo o código cliente mais expressivo e focado no fluxo da funcionalidade.</p>
+<p>Quando usar Builder aqui faz sentido:</p>
+<ul>
+<li>O objeto possui campos obrigatórios e opcionais montados em etapas.</li>
+<li>Regras de negócio interferem na montagem (ex.: anonimato altera cargo exibido).</li>
+<li>Deseja-se manter a View enxuta e expressiva, delegando regras ao Builder.</li>
+</ul>
+<p>Quando talvez não valha a pena:</p>
+<ul>
+<li>Objetos simples, com poucos campos e sem validações encadeadas.</li>
+<li>Se toda validação migrar para serializers/forms, duplicando lógica com o Builder.</li>
+</ul>
+<p>No entanto, no geral, sem um Builder, as problemáticas nas etapas de construção do objeto tendem a se espalhar por controllers/views, levando a:</p>
+<ul>
+<li>Código cliente inchado e duplicado, difícil de manter e testar.</li>
+<li>Invariantes de domínio implementadas de maneira inconsistente em lugares diferentes.</li>
+<li>Maior chance de salvar objetos em estado inválido, devido à criação “em fatias”.</li>
+</ul>
+<p>O uso do Builder endereça diretamente esses riscos <a href="#ref-bib">[1][2][3]</a>:</p>
+<ul>
+<li>Centraliza as regras de montagem e validações, expondo uma interface que guia a ordem dos passos.</li>
+<li>Garante invariantes mínimas antes de liberar o produto via <code>get_result()</code> e faz <code>reset()</code> para evitar reuso indevido do mesmo objeto.</li>
+<li>Reduz o acoplamento da View com detalhes de construção, mantendo o código cliente mais expressivo e focado no fluxo da funcionalidade.</li>
+</ul>
 <hr>
 <h2 id="conclusao">Conclusão</h2>
 <p>O Builder adotado para <code>Avaliacao</code> melhora a legibilidade do fluxo de criação, concentra validações e protege invariantes do domínio. A View atua como diretora e o <code>AvaliacaoBuilder</code> entrega um objeto pronto para persistência. Manter o Builder coeso, coberto por testes e ajustar pequenos detalhes (por exemplo, decoradores abstratos) sustentará a evolução segura dessa funcionalidade.</p>
 <hr>
 <h2 id="ref-bib">Referência Bibliográfica</h2>
-<p>[1] Builder – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/builder. Acesso em: 23 out. 2025.
-[2] Serrano, Milene. Arquitetura e Desenho de Software – Aula GoFs Criacionais. Universidade de Brasília, [s.d.].
-[3] Wikipedia. Builder pattern. Disponível em: https://en.wikipedia.org/wiki/Builder_pattern. Acesso em: 23 out. 2025.</p>
+<ul>
+<li>[1] Builder – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/builder. Acesso em: 23 out. 2025.</li>
+<li>[2] Serrano, Milene. Arquitetura e Desenho de Software – Aula GoFs Criacionais. Universidade de Brasília, [s.d.].</li>
+<li>[3] Wikipedia. Builder pattern. Disponível em: https://en.wikipedia.org/wiki/Builder_pattern. Acesso em: 23 out. 2025.</li>
+</ul>
 <h2 id="bibliografia">Bibliografia</h2>
-<p>SOURCEMAKING. Builder Design Pattern in Python. SourceMaking.com, 2007–2025. Disponível em: https://sourcemaking.com/design_patterns/builder/python/1.</p>
+<ul>
+<li>SOURCEMAKING. Builder Design Pattern in Python. SourceMaking.com, 2007–2025. Disponível em: https://sourcemaking.com/design_patterns/builder/python/1.</li>
+</ul>
 <hr>
 <h2 id="historico-de-versoes">Histórico de Versões</h2>
 <table>
