@@ -965,10 +965,10 @@ class OpenCNPJAdapter:
 <li>Target (interface esperada): dicionário normalizado com chaves compatíveis com nosso modelo de dados de Empresa (ex.: <code>cnpj</code>, <code>nome</code>, <code>nome_fantasia</code>, <code>cidade</code>, <code>uf</code>, etc.). <em>Observação: o modelo <code>Empresa</code> atual está simplificado; a lista de campos alvo reflete a intenção da integração e deve evoluir.</em></li>
 </ul>
 <p>Fluxo resumido:</p>
-<p>1) O cliente recebe um CNPJ e delega ao Adapter.
-2) O Adapter invoca o Adaptee (cliente HTTP) para buscar os dados na API externa.
-3) O Adapter traduz o JSON bruto para um dicionário com chaves internas padronizadas.
-4) O cliente persiste os dados usando a interface do domínio (ex.: <code>update_or_create</code>).</p>
+<p>1) O cliente recebe um CNPJ e delega ao Adapter.</p>
+<p>2) O Adapter invoca o Adaptee (cliente HTTP) para buscar os dados na API externa.</p>
+<p>3) O Adapter traduz o JSON bruto para um dicionário com chaves internas padronizadas.</p>
+<p>4) O cliente persiste os dados usando a interface do domínio (ex.: <code>update_or_create</code>).</p>
 <hr>
 <h2 id="execucao">Execução</h2>
 <hr>
