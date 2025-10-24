@@ -104,7 +104,9 @@ Relação direta com o código:
 Fluxo resumido:
 
 1) GET: cria `EditorAvaliacao` e `HistoricoAvaliacao`; se houver rascunho na sessão, restaura o estado e popula o formulário com `initial`.
+ 
 2) POST salvar: `editor.set_state_from_dict(request.POST)` → `m = editor.salvar_para_memento()` → `historico.salvar_rascunho(m)`.
+
 3) POST enviar: valida `form`, constrói a avaliação com o Builder e salva; em seguida, `historico.limpar_rascunho()` para descartar o snapshot.
 
 ---
@@ -141,8 +143,7 @@ O Memento aplicado à Avaliação fornece um mecanismo claro e desacoplado para 
 
 ## Bibliografias
 
-- SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.
----
+SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.
 
 ## Histórico de Versões
 
