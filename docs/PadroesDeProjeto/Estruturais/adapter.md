@@ -93,12 +93,14 @@ class OpenCNPJAdapter:
 
 
 Participantes mapeados no repositório:
+
 - Cliente (Client): comando de gestão `backend/avaliacao/atualizar_empresa.py`.
 - Adaptee: `OpenCNPJClient` em `backend/avaliacao/open_cnpj.py` (realiza a chamada HTTP e retorna o JSON bruto).
 - Adapter: `OpenCNPJAdapter` em `backend/avaliacao/open_cnpj.py` (transforma o JSON bruto no formato esperado pelo domínio).
 - Target (interface esperada): dicionário normalizado com chaves compatíveis com nosso modelo de dados de Empresa (ex.: `cnpj`, `nome`, `nome_fantasia`, `cidade`, `uf`, etc.). *Observação: o modelo `Empresa` atual está simplificado; a lista de campos alvo reflete a intenção da integração e deve evoluir.*
 
 Fluxo resumido:
+
 1) O cliente recebe um CNPJ e delega ao Adapter.
 2) O Adapter invoca o Adaptee (cliente HTTP) para buscar os dados na API externa.
 3) O Adapter traduz o JSON bruto para um dicionário com chaves internas padronizadas.
@@ -113,16 +115,19 @@ Fluxo resumido:
 ## Senso Crítico
 
 Benefícios:
+
 - Isolamento de dependência externa: mudanças na API pública impactam prioritariamente o Adapter, não o domínio nem o cliente.
 - Testabilidade: é possível mockar `OpenCNPJClient` no teste do Adapter e validar a tradução de dados sem chamadas reais à rede.
 - Evolução segura: adicionar ou renomear campos mapeados fica contido no Adapter, reduzindo regressões.
 
 Trade-offs e cuidados:
+
 - Complexidade: o Adapter concentra regras de mapeamento; mantenha-o pequeno, coeso e bem testado.
 - Tipagem/contratos: definir um “target” explícito (ex.: dataclass/serializer) evita dicionários soltos e erros de chave.
 - Erros e timeouts: a chamada externa deve ter timeout (já aplicado) e tratamento robusto para retornar None/erros controlados ao cliente.
 
 Relação direta com o código:
+
 - `OpenCNPJClient.buscar_por_cnpj(cnpj)`: acessa `https://publica.cnpj.ws/cnpj/{cnpj}` e retorna o JSON bruto.
 - `OpenCNPJAdapter.get_empresa_data(cnpj)`: extrai e renomeia campos como `razao_social` → `nome`, além de planificar dados de cidade/estado.
 - `Command.handle(...)` em `atualizar_empresa.py`: consome o Adapter e tenta persistir via `update_or_create`.
@@ -135,9 +140,9 @@ A implementação do padrão Adapter, através da classe OpenCNPJAdapter, demons
 
 ## Referência Bibliográfica {#ref-bib}
 
-[1] Adapter – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/adapter. Acesso em: 23 out. 2025.
-[2] Serrano, Milene. Arquitetura e Desenho de Software – Aula GoFs Estruturais. Universidade de Brasília, [s.d.]. Disponível em: https://aprender3.unb.br/pluginfile.php/3178543/mod_page/content/1/Arquitetura%20e%20Desenho%20de%20Software%20-%20Aula%20GoFs%20Estruturais%20-%20Profa.%20Milene.pdf. Acesso em: 23 out. 2025.
-[3] WIKIPEDIA. Adapter pattern. Disponível em: https://en.wikipedia.org/wiki/Adapter_pattern. Acesso em: 23 out. 2025.
+- [1] Adapter – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/adapter. Acesso em: 23 out. 2025.
+- [2] Serrano, Milene. Arquitetura e Desenho de Software – Aula GoFs Estruturais. Universidade de Brasília, [s.d.]. Disponível em: https://aprender3.unb.br/pluginfile.php/3178543/mod_page/content/1/Arquitetura%20e%20Desenho%20de%20Software%20-%20Aula%20GoFs%20Estruturais%20-%20Profa.%20Milene.pdf. Acesso em: 23 out. 2025.
+- [3] WIKIPEDIA. Adapter pattern. Disponível em: https://en.wikipedia.org/wiki/Adapter_pattern. Acesso em: 23 out. 2025.
 
 ---
 
