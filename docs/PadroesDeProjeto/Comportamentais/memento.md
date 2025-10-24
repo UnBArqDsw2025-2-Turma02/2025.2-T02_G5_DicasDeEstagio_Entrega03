@@ -88,11 +88,13 @@ class HistoricoAvaliacao:
 ```
 
 Participantes mapeados no repositório:
+
 - Originator: `EditorAvaliacao` em `backend/avaliacao/memento_avaliacao.py` — mantém o estado atual do formulário e sabe criar/restaurar snapshots.
 - Memento: `AvaliacaoMemento` em `backend/avaliacao/memento_avaliacao.py` — armazena o snapshot do estado do editor sem expor detalhes internos.
 - Caretaker: `HistoricoAvaliacao` em `backend/avaliacao/memento_avaliacao.py` — decide quando e onde salvar o memento (sessão do usuário) e quando restaurá-lo/limpá-lo.
 
 Relação direta com o código:
+
 - `EditorAvaliacao.salvar_para_memento()` → cria `AvaliacaoMemento` com o estado atual.
 - `EditorAvaliacao.restaurar_de_memento(m)` → restaura o estado previamente salvo.
 - `HistoricoAvaliacao.salvar_rascunho(m)` → persiste o estado do memento na sessão e marca `session.modified = True`.
@@ -100,6 +102,7 @@ Relação direta com o código:
 - `EnviarAvaliacaoView` (em `backend/avaliacao/views.py`) integra o fluxo: carrega rascunho no GET; no POST, salva rascunho (`action == 'save_draft'`) ou envia a avaliação e limpa o rascunho (`action == 'submit'`).
 
 Fluxo resumido:
+
 1) GET: cria `EditorAvaliacao` e `HistoricoAvaliacao`; se houver rascunho na sessão, restaura o estado e popula o formulário com `initial`.
 2) POST salvar: `editor.set_state_from_dict(request.POST)` → `m = editor.salvar_para_memento()` → `historico.salvar_rascunho(m)`.
 3) POST enviar: valida `form`, constrói a avaliação com o Builder e salva; em seguida, `historico.limpar_rascunho()` para descartar o snapshot.
@@ -109,12 +112,14 @@ Fluxo resumido:
 ## Senso Crítico
 
 Benefícios:
+
 - Encapsulamento preservado: o originator controla como o estado é capturado/restaurado; o caretaker não depende dos detalhes internos [[1][2]](#ref-bib).
 - Experiência do usuário: rascunhos evitam perda de trabalho e permitem retomada fluida do preenchimento.
 - Testabilidade: é simples simular snapshots e checar restauração sem dependências externas (apenas sessão).
 - Extensibilidade: a mesma abordagem pode evoluir para múltiplas versões de rascunho (histórico) ou undo/redo.
 
 Trade-offs e cuidados:
+
 - Overhead de memória: snapshots podem ficar grandes; é necessário definir limites ou TTL ("tempo de vida" da informação) na sessão.
 - Serialização/compatibilidade: mudanças de esquema do estado exigem migração ou tolerância a chaves ausentes.
 - Segurança e privacidade: dados sensíveis no snapshot precisam de cuidado (criptografia/mascaramento) e política de retenção.
@@ -130,13 +135,13 @@ O Memento aplicado à Avaliação fornece um mecanismo claro e desacoplado para 
 
 ## Referência Bibliográfica {#ref-bib}
 
-[1] Memento – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/memento. Acesso em: 23 out. 2025.
-[2] SERRANO, Milene. Arquitetura e Desenho de Software – Aula GoFs Comportamentais. Universidade de Brasília, [s.d.]. Disponível em: https://aprender3.unb.br/pluginfile.php/3178544/mod_page/content/1/Arquitetura%20e%20Desenho%20de%20Software%20-%20Aula%20GoFs%20Estruturais%20-%20Profa.%20Milene.pdf. Acesso em: 23 out. 2025.
-[3] Wikipedia. Memento pattern. Disponível em: https://en.wikipedia.org/wiki/Memento_pattern. Acesso em: 23 out. 2025.
+- [1] Memento – Padrões de Projeto. Refactoring Guru, 2014–2025. Disponível em: https://refactoring.guru/pt-br/design-patterns/memento. Acesso em: 23 out. 2025.
+- [2] SERRANO, Milene. Arquitetura e Desenho de Software – Aula GoFs Comportamentais. Universidade de Brasília, [s.d.]. Disponível em: https://aprender3.unb.br/pluginfile.php/3178544/mod_page/content/1/Arquitetura%20e%20Desenho%20de%20Software%20-%20Aula%20GoFs%20Estruturais%20-%20Profa.%20Milene.pdf. Acesso em: 23 out. 2025.
+- [3] Wikipedia. Memento pattern. Disponível em: https://en.wikipedia.org/wiki/Memento_pattern. Acesso em: 23 out. 2025.
 
 ## Bibliografias
 
-SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.
+- SourceMaking. Memento. Disponível em: https://sourcemaking.com/design_patterns/memento.
 ---
 
 ## Histórico de Versões
