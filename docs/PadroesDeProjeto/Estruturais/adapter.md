@@ -102,8 +102,11 @@ Participantes mapeados no repositório:
 Fluxo resumido:
 
 1) O cliente recebe um CNPJ e delega ao Adapter.
+
 2) O Adapter invoca o Adaptee (cliente HTTP) para buscar os dados na API externa.
+
 3) O Adapter traduz o JSON bruto para um dicionário com chaves internas padronizadas.
+
 4) O cliente persiste os dados usando a interface do domínio (ex.: `update_or_create`).
 
 ---
